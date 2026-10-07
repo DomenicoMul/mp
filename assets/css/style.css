@@ -848,6 +848,9 @@ p {
  font-family: "Playfair Display", serif;
  color: #136cfc;
  font-style: italic;
+  line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin: 0px;
 
   }
 
