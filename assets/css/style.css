@@ -1452,7 +1452,7 @@ p {
     left: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.6;
+    /*opacity: 0.9;*/
     z-index: -1; }
   .call_to_action_box .call_to_action_content {
     max-width: 520px;
