@@ -982,7 +982,7 @@ p {
 
 .single_service {
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 15px;
  height: 280px;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(196, 196, 196, 0.3);
   -moz-box-shadow: 0px 0px 10px 0px rgba(196, 196, 196, 0.3);
