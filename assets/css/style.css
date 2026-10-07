@@ -1338,14 +1338,17 @@ p {
       .single_experience .experience_title p {
         font-size: 15px; } }
   .single_experience .experience_title .date {
-    font-size: 16px;
-    font-weight: 600;
-    color: #a6a7a8;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #136cfc; 
+    border-radius: 5px;
+    padding: 7px;
     font-family: "Open Sans", sans-serif;
     margin-top: 10px; }
     @media (max-width: 767px) {
       .single_experience .experience_title .date {
-        font-size: 15px; } }
+        font-size: 14px; } }
 .single_experience .experience_number {
   width: 8%;
   text-align: center; }
