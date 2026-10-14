@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Allura&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Montserrat:300,400,500,600,700,800|Open+Sans:400,600,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900header_title&amp;display=swap");
 
-
+@font-face {
+  font-family: 'Hattinand';
+  src: url('font/Hattinand.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* --- RESET E STILI GENERALI --- */
 * {
@@ -83,7 +89,7 @@ ul {
 }
 
 .nav-menu a:hover {
-    border-bottom: 1px dotted #ed5342;
+    border-bottom: 2px solid #ed5342;
 }
 
 
@@ -160,6 +166,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+   
 }
 
 .hero-coral-card h1 {
@@ -174,14 +181,15 @@ ul {
     letter-spacing: -0.02em;  
      text-wrap: pretty;
      padding-left: 50px;
+     
 
 
 }
 
 .hero-signature {
-   font-family: "Allura", cursive;
-  font-weight: 400;
-  font-style: normal;
+   font-family: 'Hattinand',serif;
+   font-weight: 400;
+   font-style: normal;
     font-size: 6rem;
     color: #ffffff;
     line-height: 1;
@@ -191,7 +199,7 @@ ul {
 
 
 .pillowle-signature {
-   font-family: "Allura", cursive;
+  font-family: 'Hattinand',serif;
   font-weight: 400;
   font-style: normal;
     font-size: 4rem;
@@ -200,6 +208,7 @@ ul {
      text-align: center;
      width: 90%; margin: 0 auto!important; 
      margin-top: 40px!important;
+     text-shadow: 2px 2px #000;
 
 }
 
@@ -207,7 +216,7 @@ ul {
 /* Lato Destro: Immagine Unica (50%) */
 .hero-single-image {
     flex: 0 0 50%;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
 }
 
@@ -254,10 +263,13 @@ ul {
     justify-content: flex-start;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s;
+     border-radius: 20px;
+     transition: border-radius 0.4s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    /*transform: translateY(-5px);*/
+     border-radius:0px;
 }
 
 .card-icon {
@@ -276,7 +288,7 @@ ul {
     opacity: 0.9;
 }
 
-.card-1 { background-color: #33061b; }
+.card-1 { background-color: #11258b; }
 .card-2 { background-color: #dd5e4b; }
 .card-3 { background-color: #5b9de9; }
 .card-4 { background-color: #df998d; }
@@ -360,15 +372,13 @@ ul {
 
 .coral-container h2 {
     font-size: 2rem;
-    font-family: serif;
+   
     margin-bottom: 15px;
     text-transform: uppercase;
      line-height: 1.04;
-    color: #39001d;
-     font-family: 'Playfair Display', Georgia, serif;
-     font-weight: 400;
+    color: #39001d;    
+     font-weight: 500;
      font-optical-sizing: auto; 
-    letter-spacing: -0.02em;  
      text-wrap: pretty;
 
 
@@ -403,6 +413,7 @@ ul {
     background-color: #2f0619;
     color: #ede9d0;
     padding: 10px 20px;
+    border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -470,6 +481,8 @@ ul {
     display: flex;
     align-items: center;
     padding: 10px 45px;
+    gap: 10px; /* Spazio tra i pulsanti */
+  
 }
 
 .posts-grid {
@@ -644,6 +657,10 @@ ul {
     font-size: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: background-color 0.2s, color 0.2s, transform 0.2s;
+
+    
+
+
 }
 
 .post-carousel-btn:hover {
@@ -652,8 +669,8 @@ ul {
     border-color: #7030a0;
 }
 
-.post-prev-btn { left: 0; }
-.post-next-btn { right: 0; }
+.post-prev-btn { top: -30px; margin-left: 88%;  }
+.post-next-btn { top: -30px; margin-left: 92.5%; }
 
 .archive-btn-container {
     margin-top: 40px;
@@ -663,10 +680,10 @@ ul {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background-color: #11258b;
+    background-color: #39001d;
     color: #ffffff;
     padding: 12px 28px;
-    
+    border-radius: 20px;
     font-weight: 600;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
@@ -675,7 +692,7 @@ ul {
 }
 
 .archive-btn:hover {
-    background-color: #7030a0;
+    background-color: #5a0933;
     transform: translateY(-2px);
 }
 
@@ -792,15 +809,16 @@ ul {
     height: 52px;
     background-color: #34051c;
     border: 1px solid #34051c;
-    
+    font-family: 'Playfair Display', Georgia, serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.05rem;
     color: #ebd9ba;
     margin-bottom: 25px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 1.4rem;
 }
 
 .timeline-content {
@@ -841,18 +859,18 @@ ul {
     align-self: flex-start;
 }
 
-.tag-persone { background-color: #f87171; }
-.tag-valore { background-color: #52b788; }
-.tag-futuro { background-color: #93c5fd; color: #1e3a8a !important; }
-.tag-ai { background-color: #33061b; }
-
+.tag-persone { background-color: #df998d; }
+.tag-valore { background-color: #dd5e4b; }
+.tag-futuro { background-color: #5b9de9; }
+.tag-ai { background-color: #11258b; }
+.tag-formazione { background-color: #162584; }
 
 
 /* --- SEZIONE: PILLO(W)LE BANNER --- */
 .pillole-banner-section {
     width: 100%;
     padding: 80px 20px;
-    background: linear-gradient(rgba(11, 31, 54, 0.7), rgba(11, 31, 54, 0.7)), url('../images/pillow-banner.jpg') no-repeat center center/cover;
+    background: url('../images/pillow-banner.jpg') no-repeat center center/cover;
 }
 
 .pillole-container {
@@ -880,7 +898,7 @@ ul {
 
 .pillole-tag {
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 2px;
     color: #39001d;
     display: block;
@@ -976,9 +994,8 @@ ul {
     background-color: #39001d;
     color: #dadada;
     padding: 12px 28px;
-   
+   border-radius: 20px;
     font-weight: 600;
-    
     font-size: 0.85rem;
     letter-spacing: 0.5px;
     display: inline-flex;
@@ -1055,8 +1072,7 @@ ul {
 .contact-btn {
     width: 65px;
     height: 65px;
-    background-color: #33061b;
-    
+    background-color: #33061b;    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1067,7 +1083,7 @@ ul {
 }
 
 .contact-btn:hover {
-    background-color: #7030a0;
+    background-color: #ed5342;
     transform: translateY(-3px);
 }
 
@@ -1263,6 +1279,9 @@ ul {
         text-align: center;
         gap: 15px;
     }
+
+    .post-prev-btn { top: -30px; margin-left: 73%;  }
+    .post-next-btn { top: -30px; margin-left: 82%; }
 }
 
 @media (max-width: 650px) {
@@ -1287,4 +1306,7 @@ ul {
     .posts-carousel-wrapper {
         padding: 10px 35px;
     }
+
+    .post-prev-btn { top: -30px; margin-left: 68%;  }
+    .post-next-btn { top: -30px; margin-left: 80%; }
 }
