@@ -228,6 +228,55 @@ ul {
 }
 
 
+
+/* --- PAGINA  TEMI --- */
+
+.temi-section {
+    margin-top: 80px;
+    padding: 80px 20px;
+    background-color: #fff;
+}
+.temi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tema-ai-panel {
+    background-color:#7030a0;    
+    padding: 30px ;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: border-radius 0.3s ease;
+}
+.tema-ai-panel:hover {
+    border-radius: 0px;
+}
+
+.tema-left {
+    flex: 1;
+    z-index: 2;
+}
+.tema-right {
+    flex: 1;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    color: #fff;
+}
+
+.tema-card-icon {
+    font-size: 2.2rem;
+}
+
+
+
 /* --- SEZIONE 5 CARD / TEMI --- */
 
 .temi-container {
@@ -239,6 +288,10 @@ ul {
     padding: 80px 20px;
     background-color: #fff;
 }
+
+
+
+
 
 .cards-wrapper {
     max-width: 1200px;
@@ -288,7 +341,7 @@ ul {
     opacity: 0.9;
 }
 
-.card-1 { background-color: #11258b; }
+.card-1 { background-color: #7030a0; }
 .card-2 { background-color: #dd5e4b; }
 .card-3 { background-color: #5b9de9; }
 .card-4 { background-color: #df998d; }
@@ -629,7 +682,7 @@ ul {
 .post-link {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #11258b;
+    color: #7030a0;
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -650,8 +703,8 @@ ul {
     width: 44px;
     height: 44px;
     background-color: #ffffff;
-    color: #11258b;
-    border: 1px solid #11258b;   
+    color: #7030a0;
+    border: 1px solid #7030a0;   
     cursor: pointer;
     z-index: 10;
     font-size: 1rem;
@@ -862,7 +915,7 @@ ul {
 .tag-persone { background-color: #df998d; }
 .tag-valore { background-color: #dd5e4b; }
 .tag-futuro { background-color: #5b9de9; }
-.tag-ai { background-color: #11258b; }
+.tag-ai { background-color: #7030a0; }
 .tag-formazione { background-color: #162584; }
 
 
