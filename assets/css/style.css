@@ -134,7 +134,7 @@ ul {
 }
 
 #navbar.scrolled .nav-toggle {
-    color: #39001d;
+    color: #fff;
 }
 
 
@@ -180,7 +180,7 @@ ul {
 
 .hero-profilo-card h1 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(34px, 4.8cqw, 74px);
+    font-size: clamp(50px, 4.8cqw, 74px);
     line-height: 1.04;
     font-weight: 400;
     margin-bottom: 15px;
@@ -188,8 +188,7 @@ ul {
     max-width: 600px;
     font-optical-sizing: auto; 
     letter-spacing: -0.02em;  
-     text-wrap: pretty;
-     
+     text-wrap: pretty;     
  
 }
 
@@ -386,8 +385,10 @@ ul {
     padding: 5px;
     display: flex;
     justify-content: center;
-    color: #39001d;
+    color: #9e6080;
     font-weight: 600;
+    
+   
 }
 
 .temi-news-right {
@@ -416,7 +417,7 @@ ul {
     justify-content: left;
     color: #39001d;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 10px;
     transition: color 0.3s ease; 
     font-style: italic;
@@ -430,20 +431,20 @@ ul {
 
 .tema-link {
     font-size: 0.85rem;
-    font-weight: 600px;
+    font-weight: 400px;
     color: #fff;
     display: inline-flex;
     align-items: center;
     gap: 6px;
     transition: color 0.2s;
-    background-color: #4c1933;
+    background-color: #39001d;
     padding: 10px;
     border-radius: 20px;
     transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
-.tema-link:hover {
-    
+.tema-link:hover {    
     background-color: #7a7979;
 }
 
@@ -656,6 +657,7 @@ ul {
     font-weight: 400;
     letter-spacing: 1px;
     color: #39001d;
+    letter-spacing: 0.5em;
     padding-left: 30px;
     padding-top: 20px;
 }
@@ -692,6 +694,42 @@ padding-left: 30px;
 
 }
 
+.lavagna{
+    font-size: 1.5rem;
+    max-width: 52%;
+    font-weight: 500;
+    padding-left: 50px;
+}
+
+/* Tablet (sotto i 1024px) */
+@media (max-width: 1024px) {
+    .lavagna {
+        max-width: 65%;
+        padding-left: 50px; /* Riduciamo leggermente il padding per dare più spazio */
+    }
+}
+
+
+/* Smartphone (sotto i 768px) */
+@media (max-width: 990px) {
+    .lavagna {
+        max-width: 80%;
+        padding-left: 50px;
+        font-size: 1.2rem; /* Opzionale: riduce un po' il font per mobile */
+    }
+}
+
+
+/* Smartphone (sotto i 768px) */
+@media (max-width: 768px) {
+    .lavagna {
+        max-width: 99%;
+        padding-left: 50px;
+        font-size: 1.2rem; /* Opzionale: riduce un po' il font per mobile */
+    }
+}
+
+
 .book-content p {
     font-size: 0.95rem;
     margin-bottom: 20px;
@@ -717,7 +755,7 @@ padding-left: 30px;
 .book-btn {
     display: inline-block;
     background-color: #2f0619;
-    color: #ede9d0;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -729,7 +767,7 @@ padding-left: 30px;
 }
 
 .book-btn:hover {
-    background-color: #773855;
+    background-color: #5a0933;
     transform: translateY(-2px);
 }
 
@@ -754,7 +792,7 @@ padding-left: 30px;
 .section-subtitle {
     font-size: 0.75rem;
     font-weight: 400;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5em;
     color: #39001d;
     display: block;
     margin-bottom: 8px;
@@ -762,7 +800,7 @@ padding-left: 30px;
 }
 
 .section-title {
-    font-size: 3.5rem;
+     font-size: clamp(50px, 4.8cqw, 74px)!important;
     font-family: 'Playfair Display', Georgia, serif;
     color: #39001d;
     font-weight: 400;    
@@ -770,8 +808,16 @@ padding-left: 30px;
      text-wrap: pretty;
      line-height: 1.04;
     font-optical-sizing: auto;
-    margin-bottom: 20px;    
+     margin-bottom: 15px; 
+     
 }
+
+
+
+
+
+
+
 
 .section-title-big {
     font-size: clamp(34px, 4.8cqw, 80px);
@@ -817,7 +863,7 @@ padding-left: 30px;
 
 .tratto{
    height: 2px;
-   background-color: #ed5342;
+   background-color: #39001d;
    max-width: 150px;
    margin-bottom: 20px;
    
@@ -987,7 +1033,7 @@ padding-left: 30px;
 .post-link {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #7030a0;
+    color: #39001d;
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -995,7 +1041,7 @@ padding-left: 30px;
 }
 
 .post-link:hover {
-    color: #7030a0;
+    color: #6d0c3e;
 }
 
 .post-carousel-btn {
@@ -1022,9 +1068,9 @@ padding-left: 30px;
 }
 
 .post-carousel-btn:hover {
-    background-color: #7030a0;
+    background-color: #39001d;
     color: #ffffff;
-    border-color: #7030a0;
+    border-color: #39001d;
 }
 
 .post-prev-btn { top: -30px; margin-left: 88%;  }
@@ -1045,8 +1091,9 @@ post-prev-btn {
     color: #ffffff;
     padding: 12px 28px;
     border-radius: 20px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.9rem;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
     transition: background-color 0.3s, transform 0.2s;
@@ -1300,7 +1347,42 @@ post-prev-btn {
 .tiffany-banner-section {
     width: 100%;
     padding: 80px 20px;
-    background: url('../images/tiffany.jpg') no-repeat center center/cover;
+   /* background: url('../images/tiffany.jpg') no-repeat center center/cover;*/
+}
+
+.tiffany-title{
+    
+    text-align: center; 
+    margin: 0 auto;
+    padding: 30px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.4rem;
+    line-height: 1.04;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #39001d;
+    max-width: 700px;
+    font-optical-sizing: auto; 
+    letter-spacing: -0.02em;  
+     text-wrap: pretty;
+}
+
+.tiffany-sub-title{
+    
+    text-align: center; 
+    margin: 0 auto;
+    
+     font-size:1.3rem;
+    line-height: 1.04;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #39001d;
+    max-width: 800px;
+    font-optical-sizing: auto; 
+    letter-spacing: -0.02em;  
+     text-wrap: pretty;
+    margin-top: 20px;
+     margin-bottom: 70px;
 }
 
 
@@ -1321,6 +1403,22 @@ post-prev-btn {
     position: relative;
     overflow: hidden;
 }
+
+
+
+.tiffany-panel {
+    background-color:#fff;
+    height: 500px;
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
 
 .pillole-left {
     flex: 1;
@@ -1422,13 +1520,14 @@ post-prev-btn {
 
 .pillole-action-btn {
     background-color: #39001d;
-    color: #dadada;
+    color: #fff;
     padding: 12px 28px;
    border-radius: 20px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.85rem;
     letter-spacing: 0.5px;
     display: inline-flex;
+    text-transform: uppercase;
     align-items: center;
     gap: 10px;
     letter-spacing: 0.3px;
@@ -1438,7 +1537,7 @@ post-prev-btn {
 
 .pillole-action-btn:hover {
     background-color: #61173d;
-    color: #dadada;
+    color: #fff;
     transform: translateY(-2px);
 }
 
@@ -1647,7 +1746,7 @@ post-prev-btn {
         transform: translateY(-50%);
         width: 36px;
         height: 36px;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: #39001d;
         color: #fff;
         border: none;
         border-radius: 50%;
@@ -1771,6 +1870,7 @@ post-prev-btn {
     color: #39001d;
     font-weight: 400!important;
     padding: 80px 80px;
+    text-align: justify;
 
 }
 
@@ -1797,11 +1897,12 @@ post-prev-btn {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--accent-color, #e50914);
-    color: #fff;
-    border: none;
+    background-color:transparent!important;
+    border: 1px solid #fff;
+    color: #ede9cf;
+   
     padding: 12px 30px;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
@@ -1928,7 +2029,8 @@ post-prev-btn {
 }
 
 /* Responsive Mobile: i blocchi si dispongono in colonna verticale */
-@media (max-width: 992px) {
+
+@media (max-width: 1024px) {
     .about-timeline-container {
         flex-direction: column;
         gap: 40px;
@@ -1939,7 +2041,47 @@ post-prev-btn {
     .timeline-side {
         width: 100%;
         flex: none;
+        padding: 40px;
+        line-height: 1.3;
+       
     }
 
     /* Su mobile riportiamo la linea e i testi tutti allineati in modo coerente se preferisci, oppure mantengono l'alternanza */
 }
+
+
+@media (max-width: 768px) {
+    .about-timeline-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .about-text-side, 
+    .timeline-side {
+        width: 100%;
+        flex: none;
+        padding: 20px;
+         line-height: 1.3;
+       
+    }
+    .hero-profilo-card {
+         padding: 120px 60px;
+    }
+.hero-single-video {
+        width: 100% !important;
+        height: 350px !important;
+        min-height: 350px !important; /* Impedisce che il flex-box lo schiacci */
+        flex-shrink: 0 !important;   /* Impedisce la riduzione dell'altezza */
+    }
+
+    .bg-video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+
+    /* Su mobile riportiamo la linea e i testi tutti allineati in modo coerente se preferisci, oppure mantengono l'alternanza */
+}
+
