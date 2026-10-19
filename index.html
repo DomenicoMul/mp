@@ -15,15 +15,15 @@
 </head>
 <body>
 
-    <!-- Header / Barra di Navigazione -->
+<!-- Header / Barra di Navigazione -->
     <header id="navbar">
         <div class="nav-container">
             <!-- Logo a sinistra -->
             <div class="nav-logo">
-                <a href="#">Michele Petrocelli</a>
+               <a href="index.html">Michele Petrocelli</a>
             </div>
 
-            <!-- Menu di navigazione a 7 voci (centrale) -->
+<!-- Menu di navigazione a 7 voci (centrale) -->
             <nav class="nav-menu" id="navMenu">
                 <ul>
                    <li><a href="index.html">Home</a></li>
@@ -37,7 +37,7 @@
                 </ul>
             </nav>
 
-            <!-- Sezione destra: Lente di ricerca e Hamburger toggle -->
+<!-- Sezione destra: Lente di ricerca e Hamburger toggle -->
             <div class="nav-right">
                 <div class="nav-search">
                     <button aria-label="Cerca"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -49,23 +49,23 @@
         </div>
     </header>
 
-    <!-- SEZIONE HERO (50% Corallo, 50% Immagine Unica al 100%) -->
+<!-- SEZIONE HERO (50% Corallo, 50% Immagine Unica al 100%) -->
     <section id="home" class="hero-section">
         <div class="hero-container">
-            <!-- Lato Sinistro: Blocco Corallo con Testo -->
+<!-- Lato Sinistro: Blocco Corallo con Testo -->
             <div class="hero-coral-card">
-                <h1> Persone, Intelligenza Artificiale e Strategic Foresight per governare il</h1>
+                <h1> Persone, AI e Strategic Foresight per governare il</h1>
                 <div class="hero-signature">futuro</div>
             </div>
 
-            <!-- Lato Destro: Immagine Unica al 100% -->
+<!-- Lato Destro: Immagine Unica al 100% -->
             <div class="hero-single-image">
                 <img src="assets/images/Banner-hp.jpg" alt="Hero Immagine">
             </div>
         </div>
     </section>
 
-    <!-- Sezione Card / Temi (Carosello con frecce e swipe) -->
+<!-- Sezione Card / Temi (con frecce e swipe) -->
     <section id="servizi" class="cards-section">
         <div class="temi-container">
             <div class="section-header">
@@ -75,38 +75,35 @@
                <br>
             </div>
         </div>
-
         <div class="cards-wrapper">
-
             <!-- Freccia Sinistra -->
             <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Scorri a sinistra">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
 
-            <!-- Contenitore delle Card -->
+<!-- Contenitore delle Card -->
             <div class="cards-container" id="cardsContainer">
-                <div class="card card-1">
+                <div class="card card-1"  onclick="window.location.href='tema-ai.html';">
                     <div class="card-icon"><img src="assets/images/icon/AI.png" alt="AI" class="temi-icon">   <!--<i class="fa-solid fa-laptop-code"></i>--></div>
                     <h3>AI</h3>
                     <p>Impatti su economia, democrazia e societ&agrave;.</p>
                 </div>
-                <div class="card card-2">
-                    <div class="card-icon"><img src="assets/images/icon/Valore-pubblico.png" alt="Valore pubblico" class="temi-icon"></div>
-                    <h3>Valore pubblico</h3>
-                    <p>Valore pubblico, PA empatica e governo post-digitale.</p>
+                <div class="card card-2"  onclick="window.location.href='tema-sistema-pubblico.html';">
+                    <div class="card-icon"><img src="assets/images/icon/Valore-pubblico.png" alt="Sistema pubblico" class="temi-icon"></div>
+                    <h3>Sistema pubblico</h3>
+                    <p>Sistema pubblico, PA empatica e governo post-digitale.</p>
                 </div>
-                <div class="card card-4">
+                <div class="card card-4"  onclick="window.location.href='tema-persone.html';">
                     <div class="card-icon"><img src="assets/images/icon/Persone.png" alt="Persone" class="temi-icon"></div>
                     <h3>Persone</h3>
                     <p>Persone come elemento di trasformazione e innovazione.</p>
                 </div>
-                <div class="card card-3">
+                <div class="card card-3" onclick="window.location.href='tema-futuro.html';">
                     <div class="card-icon"><img src="assets/images/icon/Futuro.png" alt="Futuro" class="temi-icon"></div>
                     <h3>Futuro</h3>
                     <p>Strategic Foresight e Governance anticipatoria.</p>
-                </div>
-                
-                <div class="card card-5">
+                </div>                
+                <div class="card card-5" onclick="window.location.href='tema-formazione.html';">
                     <div class="card-icon"><img src="assets/images/icon/Formazione.png" alt="Formazione" class="temi-icon"></div>
                     <h3>Formazione</h3>
                     <p>Ruolo della scuola e della formazione.</p>
@@ -120,38 +117,51 @@
         </div>
     </section>
 
-    <!-- Sezione Corallo con Libri in Evidenza -->
+    <!-- Sezione Libri in Evidenza -->
     <section class="coral-books-section">
         <div class="coral-container">
-            <div class="coral-half">
-                <span class="book-tag">P U B B L I C A Z I O N E &nbsp; I N &nbsp; E V I D E N Z A</span>
-                <h2>Il paradosso digitale</h2>
+            <div class="coral-half" style="background-color: #eae9e9; border-radius: 20px; position: relative; overflow: hidden;">
+                <div id="ribbon" style="position: absolute; top: 15px; right: -35px; width: 120px; height: 25px; background-color: red; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                    NOVIT&Agrave;
+                </div>
+                <DIV class="book-tag">2026 GAMBINI EDITORE </DIV>
+                <h2>Governare i futuri</h2>
                 <div class="book-inner">
                     <div class="book-image">
-                        <img src="assets/images/book-1.png" alt="Il paradosso digitale">
+                        <img src="assets/images/book-2.png" alt="Governare i futuri ">
                     </div>
                     <div class="book-content">
-                        <p>Esplora una domanda cruciale: come siamo passati dalla promessa emancipatrice del digitale a un contesto segnato da nuove forme di dipendenza, concentrazione del potere e disuguaglianze? Un'analisi critica dell'Intelligenza Artificiale e delle sfide che pone a democrazia, lavoro, educazione e libert&agrave;.</p>
-                        <a href="#" class="book-btn">LEGGI SCHEDA</a>
+                        <p>
+                            Ogni organizzazione ha un futuro, anche quando non lo nomina. Lo si vede nei piani, nei bilanci, nelle riforme, nelle tecnologie che scegliamo e nelle ipotesi che diamo per scontate. In un mondo attraversato da crisi climatiche, trasformazioni digitali, cambiamenti demografici e tensioni geopolitiche, basare le decisioni su un unico futuro atteso rende più vulnerabili piani e strategie. 
+                        </p>
+                        <a href="#" class="book-btn" title="Leggi scheda">LEGGI SCHEDA</a>
                     </div>
                 </div>
             </div>
 
-            <div class="coral-half">
-                <span class="book-tag">P U B B L I C A Z I O N E &nbsp; I N &nbsp; E V I D E N Z A</span>
-                <h2>Governare i futuri</h2>
-                
-                
+            <div class="coral-half"  style="background-color: #eae9e9; border-radius: 20px; position: relative; overflow: hidden;">
+                <div id="ribbon" style="position: absolute; top: 15px; right: -35px; width: 120px; height: 25px; background-color: red; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                    NOVIT&Agrave;
+                </div>
+                <DIV class="book-tag">2026 GAMBINI EDITORE </DIV>
+                <h2>Il paradosso digitale</h2>                
                 <div class="book-inner">
                     <div class="book-image">
-                        <img src="assets/images/book-2.png" alt="Governare i futuri">
+                        <img src="assets/images/book-1.png" alt="Il paradosso digitale">
                     </div>
                     <div class="book-content">                       
-                        <p>Il futuro non &egrave; qualcosa da prevedere, ma da costruire. Attraverso lo Strategic Foresight, casi internazionali e strumenti operativi, il libro offre un metodo per persone, organizzazioni e istituzioni che vogliono rafforzare la propria capacit&agrave; di anticipare le sfide, agire con maggiore consapevolezza e costruire futuri pi&ugrave; resilienti e responsabili.</p>
-                       
-                        <a href="#" class="book-btn">LEGGI SCHEDA</a>
+                        <p>
+                            Un tempo pensata e progettata come strumento di emancipazione e libertà, la rivoluzione digitale ha finito per generare un mondo in cui le opportunità si concentrano nelle mani di pochi, mentre sorveglianza e manipolazione si diffondono ovunque. 
+                            Cos’è andato storto? E, soprattutto, è ancora possibile invertire la rotta?
+                        </p>
+                        <a href="#" class="book-btn" title="Leggi scheda">LEGGI SCHEDA</a>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="coral-container" style="margin-top: 80px;">  
+            <div class="archive-btn-container">
+                <a href="pubblicazioni.html" title="Vai all'elenco delle pubblicazioni" class="archive-btn">Elenco Pubblicazioni <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -238,8 +248,7 @@
                <div class="section-header">
                     <span class="section-subtitle">E V E N T I</span>
                     <h2 class="section-title">Prossime tappe</h2>
-                    <div class="tratto"></div>
-                   
+                    <div class="tratto"></div>                   
                 </div>
                 <div class="timeline-nav-buttons">
                     <button class="timeline-btn timeline-prev" id="timelinePrevBtn" aria-label="Precedente">
@@ -312,10 +321,13 @@
         <div class="pillole-container">
             <div class="pillole-panel">
                 <div class="pillole-left">
-                    <span class="pillole-tag">P I L L O ( W ) L E</span>
-                    <h2>La comfort zone dedicata all’innovazione</h2>
+                    <h2>
+                        Pillo(w)le: la comfort zone dedicata all’innovazione
+                    </h2>
                     <div class="tratto"></div>
-                    <p>Un format a fumetti per raccontare, in modo semplice e diretto, idee, sfide e opportunità del nostro tempo.</p>
+                     <h3>
+                         Un progetto editoriale per raccontare, in modo semplice e diretto, idee, sfide e opportunità del nostro tempo
+                    </h3>
                 </div>
 
                 <div class="pillole-right">
@@ -329,7 +341,7 @@
                             <span>c o n c e t t i</span>
                         </div>
                         <div class="p-icon-item">
-                            <div class="p-icon-circle"><i class="fa-regular fa-clock"></i></div>
+                            <div class="p-icon-circle"><i class="fa-solid fa-clock"></i></div>
                             <span>p o c h i <BR> m i n u t i</span>
                         </div>
                         <div class="p-icon-item">
@@ -338,25 +350,23 @@
                         </div>
                     </div>
                     <div class="pillole-btn-wrapper">
-                        <a href="#" class="pillole-action-btn">Scopri le Pillo(w)le </a>
+                        <a href="#" class="pillole-action-btn">Scopri di pi&ugrave; </a>
                     </div>
                 </div>
             </div>
 
-            <div class="pillowle-signature">Il futuro non si aspetta,<br> si costruisce!</div>
+            <div class="pillowle-signature">Il futuro non si aspetta,<br> si costruisce.</div>
         </div>
     </section>
 
-    <!-- Sezione: Contatti -->
+  
+<!-- Sezione: Contatti -->
     <section id="contatti" class="contact-section">
         <div class="contact-card">
-            <div class="contact-info">
-                <span class="section-subtitle">C O L L A B O R A Z I O N I</span>
+            <div class="contact-info">                
                  <h2 class="section-title">Restiamo in contatto</h2>
-                 <div class="tratto"></div>
-                <p>Per eventi, interviste, collaborazioni editoriali, attività formative e progetti di innovazione.</p>
-            </div>
-             
+                 <div class="tratto"></div>               
+            </div>             
             <div class="contact-buttons">
                 <a href="mailto:m.petrocelli@unimarconi.it" target="_blank" class="contact-btn" aria-label="Invia un'email">
                     <i class="fa-solid fa-envelope"></i>
@@ -371,21 +381,21 @@
         </div>
     </section>
 
-    <!-- Sezione: Footer -->
+<!-- Sezione: Footer -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-copyright">
                 &copy; 2026 Michele Petrocelli. Tutti i diritti riservati.
             </div>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookie Policy</a>
-                <a href="#">Termini di Servizio</a>
+                <a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookie-policy.html" title="Cookie Policy">Cookie Policy</a>
+                <a href="termini.html" title="Termini di Servizio">Termini di Servizio</a>
             </div>
         </div>
     </footer>
 
-    <!-- Script JavaScript -->
+<!-- Script JavaScript -->
     <script>
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', function() {
