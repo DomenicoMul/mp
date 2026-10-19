@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Allura&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Montserrat:300,400,500,600,700,800|Open+Sans:400,600,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900header_title&amp;display=swap");
+@import url("https://fonts.googleapis.com/css?family=Allura&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Montserrat:300,400,500,600,700,800|Open+Sans:400,600,700&family=Playfair+Display:ital,wght@0,300,400..900;1,400..900&display=swap");
 
 @font-face {
   font-family: 'Hattinand';
@@ -21,7 +21,7 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: #39001d;
     line-height: 1.6;
     background-color: #f4f7fb;
 }
@@ -149,6 +149,15 @@ ul {
     overflow: hidden;
 }
 
+
+.hero-cv {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    padding-top: 0;
+    overflow: hidden;
+}
+
 .hero-container {
     width: 100%;
     max-width: 100%;
@@ -157,10 +166,39 @@ ul {
     padding: 0;
 }
 
+
+.hero-profilo-card {
+    flex: 0 0 50%;
+    background-color: #fff;
+    color: #39001d;
+    padding: 100px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.hero-profilo-card h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(34px, 4.8cqw, 74px);
+    line-height: 1.04;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #39001d;
+    max-width: 600px;
+    font-optical-sizing: auto; 
+    letter-spacing: -0.02em;  
+     text-wrap: pretty;
+     
+ 
+}
+
+
+
 /* Lato Sinistro: Blocco Corallo (50%) */
 .hero-coral-card {
     flex: 0 0 50%;
-    background-color: #ed5342;
+    background-color: #df998d;
     color: #ffffff;
     padding: 100px 100px;
     display: flex;
@@ -171,7 +209,7 @@ ul {
 
 .hero-coral-card h1 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(34px, 4.8cqw, 64px);
+    font-size: 4rem;
     line-height: 1.04;
     font-weight: 400;
     margin-bottom: 15px;
@@ -179,11 +217,8 @@ ul {
     max-width: 600px;
     font-optical-sizing: auto; 
     letter-spacing: -0.02em;  
-     text-wrap: pretty;
-     padding-left: 50px;
-     
-
-
+    text-wrap: pretty;
+    padding-left: 50px;
 }
 
 .hero-signature {
@@ -232,8 +267,9 @@ ul {
 /* --- PAGINA  TEMI --- */
 
 .temi-section {
-    margin-top: 80px;
-    padding: 80px 20px;
+   
+    
+    padding: 150px 20px 30px 20px;
     background-color: #fff;
 }
 .temi-container {
@@ -241,41 +277,246 @@ ul {
     margin: 0 auto;
 }
 
-.tema-ai-panel {
-    background-color:#7030a0;    
-    padding: 30px ;
+.tema-panel {
+   cursor: pointer;
+    padding: 20px ;
+    flex: 1; 
+    margin-bottom: 20px;
     border-radius: 20px;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
     transition: border-radius 0.3s ease;
+    display: flex;
 }
-.tema-ai-panel:hover {
+.tema-panel:hover {
     border-radius: 0px;
 }
 
 .tema-left {
-    flex: 1;
+    margin-right: 30px;
     z-index: 2;
 }
 .tema-right {
-    flex: 1;    
+    flex: 1; /* Fissa la larghezza esattamente al 10% */   
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     z-index: 2;
     color: #fff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    line-height: 1.04;
+    font-weight: 300!important;
+    font-optical-sizing: auto; 
+    letter-spacing: -0.02em;  
+    text-wrap: pretty;
 }
 
 .tema-card-icon {
     font-size: 2.2rem;
+   
+}
+
+.tema-arrow {
+    z-index: 2;
+    color: #fff;
+    font-size: 1.3rem;
+    margin-left: 20px;
+    transition: transform 0.3s ease; /* Effetto movimento opzionale al passaggio del mouse */
+    font-weight: 100 !important;
+}
+
+/* Effetto visivo opzionale: fa spostare leggermente la freccia in hover */
+.tema-panel:hover .tema-arrow {
+    transform: translateX(5px);
+}
+
+.tema-testo{
+    color: #39001d;
+    letter-spacing: 0.30px;
+    padding: 20px 20px 20px 0px;
+    font-size: 1.2rem;
+
+}
+
+.tema-testo-cit{
+    color: #39001d;
+    letter-spacing: 0.30px;
+    padding: 20px 20px 20px 0px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(34px, 4.8cqw, 44px);
+    line-height: 1.24;
+    font-weight: 300!important;
+    font-optical-sizing: auto; 
+    font-style: italic;
+    letter-spacing: -0.02em;  
+    text-wrap: pretty;
+
+}
+
+.post-id{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+       display: block;
+
+}
+
+.post-id:hover{
+    background-color: #d1d0d0;
+    border-radius: 20px;
+    
+}
+
+.post-video{
+    
+    transition: background-color 0.3 ease;
+
 }
 
 
+
+
+
+
+.temi-news-left {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    color: #39001d;
+    font-weight: 600;
+}
+
+.temi-news-right {
+    padding: 5px;
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    color: #39001d;
+    font-weight: 600;
+}
+
+
+
+.temi-video {
+    justify-content: center;
+    color: #39001d;
+    font-weight: 600;
+    background-color: #fff!important;
+    height: 350px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    
+}
+
+.temi-video-title {
+    justify-content: left;
+    color: #39001d;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+    transition: color 0.3s ease; 
+    font-style: italic;
+    
+}
+.temi-video-title:hover {    
+    text-decoration:underline;
+ 
+    
+}
+
+.tema-link {
+    font-size: 0.85rem;
+    font-weight: 600px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+    background-color: #4c1933;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.tema-link:hover {
+    
+    background-color: #7a7979;
+}
+
+
+
+.pubblicazioni-link {
+    font-size: 0.85rem;
+    font-weight: 600; /* Corretto: rimosso 'px' */
+    color: #fff;
+    display: inline-flex;
+    align-items: center;        /* Centra verticalmente */
+    justify-content: center;    /* Centra orizzontalmente (AGGIUNTO) */
+    background-color: #d3d2d2;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;  /* Sostituisce la transizione duplicata di 'color' */
+    width: 130px;
+    margin: 3px;                /* Semplificato */
+    text-align: center;         /* Funziona meglio se il testo va a capo */
+    box-sizing: border-box;     /* Evita che il padding sballi la larghezza */
+    cursor: pointer;
+    letter-spacing: -0.25px;
+    border: none;
+}
+
+.pubblicazioni-link:hover {
+    translate: 0px -3px;
+}
+
+
+
+.filter-btn {
+    font-size: 0.85rem;
+    font-weight: 600; /* Corretto: rimosso 'px' */
+    color: #fff;
+    display: inline-flex;
+    align-items: center;        /* Centra verticalmente */
+    justify-content: center;    /* Centra orizzontalmente (AGGIUNTO) */
+    background-color: #d3d2d2;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;  /* Sostituisce la transizione duplicata di 'color' */
+    width: 130px;
+    margin: 3px;                /* Semplificato */
+    text-align: center;         /* Funziona meglio se il testo va a capo */
+    box-sizing: border-box;     /* Evita che il padding sballi la larghezza */
+    cursor: pointer;
+    letter-spacing: -0.25px;
+    border: none;
+}
+
+.filter-btn:hover {
+    translate: 0px -3px;
+}
+
+.filter-btn.active {
+    border-color: #39001d;
+    outline: 2px solid #fff;
+    outline-offset: -4px;
+}
+
+
+
+
+.pubblicazioni-libri-title{
+    font-size: 1.5rem;
+    color: #39001d;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    line-height: 1.5rem;
+    text-transform: none!important;
+    margin-bottom: 15px;
+}
 
 /* --- SEZIONE 5 CARD / TEMI --- */
 
@@ -288,9 +529,6 @@ ul {
     padding: 80px 20px;
     background-color: #fff;
 }
-
-
-
 
 
 .cards-wrapper {
@@ -308,17 +546,23 @@ ul {
     gap: 20px;
 }
 
+
 .card {
+    width: 100%;                  /* Occupa tutta la larghezza disponibile */
+    max-width: 100%;              /* Impedisce sforamenti */
+    box-sizing: border-box;       /* Include il padding nel calcolo della larghezza */
     padding: 35px 25px;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s;
-     border-radius: 20px;
-     transition: border-radius 0.4s;
+    border-radius: 20px;
+    transition: transform 0.3s, border-radius 0.4s; /* Unificate le transizioni */
+    overflow-wrap: break-word;    /* Forza il testo a capo correttamente */
+    word-break: break-word;       /* Gestione compatibile per parole lunghe o link */
 }
+
 
 .card:hover {
     /*transform: translateY(-5px);*/
@@ -341,11 +585,11 @@ ul {
     opacity: 0.9;
 }
 
-.card-1 { background-color: #7030a0; }
-.card-2 { background-color: #dd5e4b; }
-.card-3 { background-color: #5b9de9; }
-.card-4 { background-color: #df998d; }
-.card-5 { background-color: #162584; }
+.card-1 { background-color: #7030a0; cursor: pointer; }
+.card-2 { background-color: #dd5e4b; cursor: pointer; }
+.card-3 { background-color: #5b9de9; cursor: pointer; }
+.card-4 { background-color: #df998d; cursor: pointer; }
+.card-5 { background-color: #162584; cursor: pointer; }
 
 
 .temi-icon{
@@ -412,6 +656,15 @@ ul {
     font-weight: 400;
     letter-spacing: 1px;
     color: #39001d;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.pubblicazioni-book-tag {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #39001d;
     margin-bottom: 10px;
 }
 
@@ -421,19 +674,19 @@ ul {
     margin-bottom: 15px;
     line-height: 1.2;
     color: #ffffff;
+    
 }
 
 .coral-container h2 {
-    font-size: 2rem;
-   
-    margin-bottom: 15px;
+    font-size: 2rem;   
+    margin-bottom: 0px;
     text-transform: uppercase;
      line-height: 1.04;
     color: #39001d;    
      font-weight: 500;
      font-optical-sizing: auto; 
      text-wrap: pretty;
-
+padding-left: 30px;
 
 
 
@@ -509,9 +762,21 @@ ul {
 }
 
 .section-title {
-    font-size: clamp(34px, 4.8cqw, 50px);
+    font-size: 3.5rem;
     font-family: 'Playfair Display', Georgia, serif;
     color: #39001d;
+    font-weight: 400;    
+    letter-spacing: -0.02em;  
+     text-wrap: pretty;
+     line-height: 1.04;
+    font-optical-sizing: auto;
+    margin-bottom: 20px;    
+}
+
+.section-title-big {
+    font-size: clamp(34px, 4.8cqw, 80px);
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #fff;
     font-weight: 400;    
     letter-spacing: -0.02em;  
      text-wrap: pretty;
@@ -520,6 +785,35 @@ ul {
     margin-bottom: 20px;
     
 }
+
+
+.testo-profilo-big{
+    color: #39001d;
+    letter-spacing: 0.30px;
+    padding: 20px 20px 20px 0px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(34px, 4.8cqw, 84px);
+    line-height: 1.04;
+    font-weight: 300!important;
+    font-optical-sizing: auto; 
+   letter-spacing: -0.02em;  
+    text-wrap: pretty;
+
+}
+
+.testo-profilo-sub{
+    color: #39001d;
+    letter-spacing: 0.30px;
+    padding: 20px 20px 20px 0px;
+    font-size: 22px;
+    line-height: 1.44;
+    font-weight: 400!important;
+    font-optical-sizing: auto; 
+   letter-spacing: -0.02em;  
+    text-wrap: pretty;
+
+}
+
 
 .tratto{
    height: 2px;
@@ -548,17 +842,22 @@ ul {
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     padding: 10px 0;
+    
 }
+
+
+
 
 .posts-grid::-webkit-scrollbar {
     display: none;
 }
 
 .post-card {
-    min-width: 340px;
+    min-width: 0;
+    width: 100%;
     flex: 0 0 calc(33.333% - 20px);
     background-color: #ffffff;
-    
+      box-sizing: border-box;
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(11, 31, 54, 0.06);
     border: 1px solid rgba(11, 31, 54, 0.04);
@@ -566,12 +865,18 @@ ul {
     flex-direction: column;
     scroll-snap-align: start;
     transition: transform 0.3s, box-shadow 0.3s;
+   
 }
 
 .post-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(11, 31, 54, 0.1);
 }
+
+
+
+
+
 
 .post-image {
     width: 100%;
@@ -609,7 +914,7 @@ ul {
 }
 
 .post-category-tema-1 { 
-    background-color: #33061b!important;
+    background-color: #7030a0!important;
      font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -631,7 +936,7 @@ ul {
     margin-bottom: 15px;
 }
 .post-category-tema-3 { 
-    background-color: #5b9de9!important; 
+    background-color: #df998d!important; 
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -642,7 +947,7 @@ ul {
     margin-bottom: 15px;
 }
 .post-category-tema-4 { 
-    background-color: #df998d!important;
+    background-color: #5b9de9!important;
   font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -725,9 +1030,12 @@ ul {
 .post-prev-btn { top: -30px; margin-left: 88%;  }
 .post-next-btn { top: -30px; margin-left: 92.5%; }
 
-.archive-btn-container {
-    margin-top: 40px;
+post-prev-btn { 
+    top: -40px; 
+    left: 20px; /* Ancorato a sinistra del wrapper */
 }
+
+
 
 .archive-btn {
     display: inline-flex;
@@ -818,12 +1126,14 @@ ul {
 }
 
 .timeline-track-wrapper {
+    min-width: 0; /* Sblocca il limite minimo di Flexbox */
     width: 100%;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .timeline-track-wrapper::-webkit-scrollbar {
@@ -919,7 +1229,68 @@ ul {
 .tag-formazione { background-color: #162584; }
 
 
-/* --- SEZIONE: PILLO(W)LE BANNER --- */
+/* --- SEZIONE: VIDEO BANNER --- */
+
+.video-banner-section {
+    width: 100%;
+    padding: 80px 20px;
+}
+
+.video-panel {
+    background-color: #3e3e3c;
+    
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+.video-left {
+    flex: 1;
+    z-index: 2;
+}
+
+.video-left h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #fff;
+    line-height: 1.04;
+    margin-bottom: 20px;
+    font-weight: 400!important;
+     font-optical-sizing: auto;  
+    letter-spacing: -0.02em;  
+     text-wrap: pretty;
+}
+
+.video-right {
+    flex: 1;
+    background-color: trasparent!important;
+    border-radius: 16px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .video-panel {
+        flex-direction: column; /* Sposta il video sotto il blocco di sinistra */
+        padding: 40px 20px;     /* Riduce leggermente il padding interno su mobile */
+        gap: 30px;              /* Riduce lo spazio tra testo e video */
+    }
+
+    .video-left h2 {
+        font-size: 1.8rem;      /* Riduce la dimensione del titolo per evitare che sia troppo grande su mobile */
+    }
+}
+
+/* --- SEZIONE: VIDEO BANNER --- */
+
 .pillole-banner-section {
     width: 100%;
     padding: 80px 20px;
@@ -971,7 +1342,6 @@ ul {
 }
 
 .pillole-left h2 span {
-    color: #39001d;
     font-style: italic;
     font-weight: 400;
     font-size: 2.5rem;
@@ -1223,9 +1593,9 @@ ul {
     }
 
     .hero-coral-card h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin: 0 auto 20px auto;
-        padding-top: 30px;
+        padding-top: 40px;
     }
 
     .hero-signature {
@@ -1344,6 +1714,14 @@ ul {
         padding: 20px;
     }
 
+.pillole-right {
+    
+    padding: 20px 0px;
+    margin-top: -20px;
+   
+}
+
+
     .book-btn {
         align-self: center;
     }
@@ -1352,8 +1730,12 @@ ul {
         padding: 50px 20px;
     }
 
-    .section-title, .timeline-title {
-        font-size: 2rem;
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+   .timeline-title {
+       font-size: 2rem;
     }
 
     .posts-carousel-wrapper {
@@ -1362,4 +1744,154 @@ ul {
 
     .post-prev-btn { top: -30px; margin-left: 68%;  }
     .post-next-btn { top: -30px; margin-left: 80%; }
+}
+
+
+/* Contenitore principale affiancato (Testo a sinistra, Timeline a destra) */
+.about-timeline-container {
+    width: 100%;
+    margin: 0 auto;    
+    display: flex;
+    align-items: flex-start;
+  
+}
+
+/* Colonna di sinistra (Testo descrittivo) */
+.about-text-side {
+    flex: 1;
+    font-size: 22px;
+    line-height: 1.7;
+    color: #39001d;
+    font-weight: 400!important;
+    padding: 80px 80px;
+
+}
+
+/* Colonna di destra (Timeline) */
+.timeline-side {
+    flex: 1;
+    position: relative;
+    padding: 80px 80px;
+    background-color: white;
+}
+
+/* Linea verticale centrale della timeline */
+.timeline-side::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 2px;
+    background-color: #39001d;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Riga della timeline (3 colonne: testo sinistro, pallino centrale, testo destro) */
+.timeline-side .timeline-row {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    z-index: 2;
+    width: 100%;
+}
+
+/* Colonne di testo laterali (occupano circa il 45% ciascuna) */
+.timeline-side .timeline-content-col {
+    width: 45%;
+}
+
+/* Colonna fissa al centro per il pallino (10%) */
+.timeline-side .timeline-node-col {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    padding-top: 2px;
+}
+
+/* Stile del pallino */
+.timeline-side .t-node {
+    width: 22px;
+    height: 22px;
+    background-color: #ffffff;
+    border: 2px solid #39001d;
+    border-radius: 50%;
+}
+
+/* Pallino attivo (OGGI) */
+.timeline-side .t-node.active {
+    background-color: #ed5342;
+    border-color: #ed5342;
+}
+
+/* --- ALTERNANZA DESTRA / SINISTRA --- */
+
+/* Elemento con testo a sinistra della linea */
+.timeline-side .timeline-row.left-text .timeline-content-col {
+    text-align: right;
+    order: 1;
+}
+.timeline-side .timeline-row.left-text .timeline-node-col {
+    order: 2;
+}
+.timeline-side .timeline-row.left-text .timeline-empty-col {
+    order: 3;
+    width: 45%;
+}
+
+/* Elemento con testo a destra della linea */
+.timeline-side .timeline-row.right-text .timeline-empty-col {
+    order: 1;
+    width: 45%;
+}
+.timeline-side .timeline-row.right-text .timeline-node-col {
+    order: 2;
+}
+.timeline-side .timeline-row.right-text .timeline-content-col {
+    text-align: left;
+    order: 3;
+}
+
+/* Tipografia */
+.t-year {
+   font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #11258b;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+       font-optical-sizing: auto; 
+    letter-spacing: -0.02em;  
+     text-wrap: pretty;
+}
+
+.t-desc {
+    font-size: 1rem;
+    color: #39001d;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.02em; 
+}
+
+/* Responsive Mobile: i blocchi si dispongono in colonna verticale */
+@media (max-width: 992px) {
+    .about-timeline-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .about-text-side, 
+    .timeline-side {
+        width: 100%;
+        flex: none;
+    }
+
+    /* Su mobile riportiamo la linea e i testi tutti allineati in modo coerente se preferisci, oppure mantengono l'alternanza */
 }
