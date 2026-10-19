@@ -1297,6 +1297,13 @@ post-prev-btn {
     background: url('../images/pillow-banner.jpg') no-repeat center center/cover;
 }
 
+.tiffany-banner-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: url('../images/tiffany.jpg') no-repeat center center/cover;
+}
+
+
 .pillole-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1765,6 +1772,47 @@ post-prev-btn {
     font-weight: 400!important;
     padding: 80px 80px;
 
+}
+
+/* Contenitore del video che occupa tutto lo spazio disponibile */
+.hero-single-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px; /* Opzionale: arrotonda i bordi se lo desideri */
+}
+
+/* Il video riempie interamente il box */
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita la distorsione riempiendo l'area */
+    display: block;
+}
+
+/* Pulsante "Apri" sovrapposto al centro del video */
+.btn-apri-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent-color, #e50914);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-apri-video:hover {
+    background-color: #ff1e2a;
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 /* Colonna di destra (Timeline) */
