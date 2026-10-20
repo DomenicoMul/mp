@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi | Michele Petrocelli</title>
+    <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/style-eventi.css">
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Google Cursive per la scritta Post Digitale -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header / Barra di Navigazione -->
+    <header id="navbar">
+        <div class="nav-container">
+            <!-- Logo a sinistra -->
+            <div class="nav-logo">
+               <a href="index.html">Michele Petrocelli</a>
+            </div>
+
+<!-- Menu di navigazione a 7 voci (centrale) -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                   <li><a href="index.html">Home</a></li>
+                    <li><a href="profilo.html">Profilo</a></li>
+                    <li><a href="temi.html">Temi</a></li>
+                    <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+                    <li><a href="eventi.html" class="active">Eventi</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="pillowle.html">Pillo(w)le</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+
+<!-- Sezione destra: Lente di ricerca e Hamburger toggle -->
+            <div class="nav-right">
+                <div class="nav-search">
+                    <button aria-label="Cerca" onclick="window.location.href='ricerca.html';" title="Ricerca"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="nav-toggle" id="mobileMenuToggle" aria-label="Apri menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+        <!-- Sezione: Pillo(w)le Banner -->
+    <section  class="temi-section" >
+        <div class="temi-container">
+            <div class="section-header">
+                <span class="section-subtitle">E V E N T I </span>
+                <h2 class="section-title">Ultimi appuntamenti.</h2>
+                <div class="tratto"></div>
+               <br>
+            </div>
+        </div>
+
+       
+    </section>
+
+    <!-- Sezione: Prossime tappe (Timeline) -->
+    <section class="timeline-section" >
+        <div class="timeline-container">
+            <div class="timeline-header-flex">
+               
+                <div class="timeline-nav-buttons">
+                    <button class="timeline-btn timeline-prev" id="timelinePrevBtn" aria-label="Precedente">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="timeline-btn timeline-next" id="timelineNextBtn" aria-label="Successivo">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="timeline-track-wrapper" id="timelineWrapper">
+                <div class="timeline-track">
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>08</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">NOV 2023 &bull; ROMA</span>
+                            <h3><a href="">La comunicazione pubblica tra normativa, dovere istituzionale ed empatia</a></h3>
+                            <div class="t-tag tag-valore"><a href="tema-sistema-pubblico.html">SISTEMA PUBBLICO</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>09</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">NOV 2023 &bull; CAGLIARI</span>
+                            <h3><a href="">(In)Coscienza Digitale | Presentazione libro a cura di Michele Petrocelli</a></h3>
+                            <div class="t-tag tag-ai"><a href="tema-ai.html">AI</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>20</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">FEB 2024 &bull; STREAMING</span>
+                            <h3><a href="">Value@Work Talk - IA e impatto sul mondo del lavoro</a></h3>
+                            <div class="t-tag tag-ai"><a href="tema-ai.html">AI</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>11</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">MAG 2024  &bull; VENEZIA</span>
+                            <h3><a href="">Convegno “L’Intelligenza Artificiale Applicata alla Pubblica Amministrazione”</a></h3>
+                            <div class="t-tag tag-valore"><a href="tema-sistema-pubblico.html">SISTEMA PUBBLICO</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>21</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">MAG 2024 &bull; ROMA</span>
+                            <h3><a href="">Spazio MEF. AI e visione di lungo periodo nel Governo post-Digitale. Gli esercizi di futuro messi in campo dal Dipartimento del Tesoro</a></h3>
+                            <div class="t-tag tag-valore"><a href="tema-sistema-pubblico.html">SISTEMA PUBBLICO</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sezione: Ultimi Contenuti -->
+    <section class="latest-posts-section" style="background-color: #f5eaea;">
+        <div class="latest-container">
+            <div class="section-header">
+                <span class="section-subtitle">CRONOLOGIA EVENTI</span>
+                <h2 class="section-title">Ultimi contenuti</h2>
+                <div class="tratto"></div>
+            </div>
+
+            <div class="posts-carousel-wrapper">
+                <button class="post-carousel-btn post-prev-btn" id="postPrevBtn" aria-label="Post precedente">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="posts-grid" id="postsContainer">
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="assets/images/post/project-5.jpg" alt="Pillo(w)la n. 25">
+                        </div>
+                        <div class="post-body">
+                            <span class="post-category-tema-2"><a href="">SISTEMA PUBBLICO</a></span>
+                            <h3>Spazio MEF. AI e visione di lungo periodo nel Governo post-Digitale. Gli esercizi di futuro messi in campo dal Dipartimento del Tesoro</h3>
+                            
+                            <a href="#" class="post-link">Scopri di più <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-image">
+                           <img src="assets/images/post/project-6.jpg" alt="Metaverso">
+                        </div>
+                        <div class="post-body">
+                           <span class="post-category-tema-2"><a href="">SISTEMA PUBBLICO</a></span>
+                            <h3>Convegno “L’Intelligenza Artificiale Applicata alla Pubblica Amministrazione”</h3>
+                            
+                            <a href="#" class="post-link">Scopri di più <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="assets/images/post/project-3.jpg" alt="Apprendimento">
+                        </div>
+                        <div class="post-body">
+                            <span class="post-category-tema-1"><a href="">AI</a></span>
+                            <h3>Value@Work Talk del 20 febbraio “IA e impatto sul mondo del lavoro”</h3>
+                            <a href="#" class="post-link">Scopri di più <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="assets/images/post/project-4.jpg" alt="Intelligenza Artificiale">
+                        </div>
+                        <div class="post-body">
+                            <span class="post-category-tema-1"><a href="">AI</a></span>
+                            <h3>(In)Coscienza Digitale | Presentazione libro a cura di Michele Petrocelli</h3>
+                            
+                            <a href="#" class="post-link">Scopri di più <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="post-carousel-btn post-next-btn" id="postNextBtn" aria-label="Post successivo">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+           
+        </div>
+    </section>
+
+
+    <!-- Sezione Corallo con Libri in Evidenza -->
+    <section class="coral-books-section" style="background: #fff!important;">
+        <div class="coral-container">
+
+<!--**** inizio pubblicazioni-->  
+            <div class="coral-half">
+                <span class="section-subtitle"> EVENTI</span>
+                 <div class="section-title" style="text-transform: capitalize!important;">Elenco per Tema</div>
+               
+               <!-- Barra di ricerca in tempo reale -->
+    <div style="margin: 15px 10px;">
+        <input type="text" id="searchInput" placeholder="Cerca tra gli eventi..." style="width: 100%; padding: 12px 20px; border-radius: 20px; border: 1px solid #d1d0d0; outline: none; font-size: 0.9rem; box-sizing: border-box; margin-bottom: 20px;">
+    </div>
+               
+                 <DIV style="margin: 10px 10px;">
+                    <button data-filter="all" class="filter-btn active" style="background-color: #12021f;" title="Tutti gli eventi">Tutti</button>
+                    <button data-filter="AI" class="filter-btn" style="background-color: #7030a0;" title="AI">AI</button>
+                    <button data-filter="Pubblico" class="filter-btn" style="background-color: #dd5e4b;" title="Sistema pubblico">Sistema pubblico</button>
+                    <button data-filter="Persone" class="filter-btn" style="background-color: #df998d;" title="Persone">Persone</button>
+                    <button data-filter="Futuro" class="filter-btn" style="background-color: #5b9de9;" title="Futuro">Futuro</button>
+                    <button data-filter="Formazione" class="filter-btn" style="background-color: #162584;" title="Formazione">Formazione</button>
+                </DIV> 
+                 <hr style="border: none; height: 2px; background-color: #39001d;">
+ 
+                
+                <div class="post-id" data-category="AI Pubblico Futuro Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2024 
+                        </div>
+                        <div class="temi-news-right">                       
+                            Spazio MEF. AI e visione di lungo periodo nel Governo post-Digitale. Gli esercizi di futuro messi in campo dal Dipartimento del Tesoro
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div>
+               
+                <div class="post-id" data-category="AI Persone Pubblico ">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2024 
+                        </div>
+                        <div class="temi-news-right">                       
+                            Convegno “L’Intelligenza Artificiale Applicata alla Pubblica Amministrazione”
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div>
+                
+                <div class="post-id" data-category="Persone AI Formazione">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2025 
+                        </div>
+                        <div class="temi-news-right">                       
+                            Value@Work Talk - IA e impatto sul mondo del lavoro
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                <div class="post-id" data-category="AI Futuro Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2023 
+                        </div>
+                        <div class="temi-news-right">                       
+                           (In)Coscienza Digitale | Presentazione libro a cura di Michele Petrocelli
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                <div class="post-id" data-category="Pubblico Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2023 
+                        </div>
+                        <div class="temi-news-right">                       
+                           La comunicazione pubblica tra normativa, dovere istituzionale ed empatia
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+                
+                <div class="post-id" data-category="AI Formazione Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2023 
+                        </div>
+                        <div class="temi-news-right">                       
+                            Il rapporto tra innovazione ed etica nel sistema socio-economico
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                 <div class="post-id" data-category="AI Futuro Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2023 
+                        </div>
+                        <div class="temi-news-right">                       
+                           Un anno di (In)Coscienza Digitale. Cosa resta del futuro di ieri per le persone e le organizzazioni
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                 <div class="post-id" data-category="Formazione AI Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2023 
+                        </div>
+                        <div class="temi-news-right">                       
+                         Il rapporto tra innovazione ed etica nel sistema socio-economico
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                 <div class="post-id" data-category="AI Futuro Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2023
+                        </div>
+                        <div class="temi-news-right">                       
+                          Il futuro della crescita della società, delle organizzazioni e delle persone con la tecnologia - Presentazione del libro (In)Coscienza digitale
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                 <div class="post-id" data-category="AI Futuro Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2023
+                        </div>
+                        <div class="temi-news-right">                       
+                         Diritti, etica e governance dell’intelligenza artificiale: scenari e proposte per un futuro sostenibile
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                <div class="post-id" data-category="Formazione AI Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2023
+                        </div>
+                        <div class="temi-news-right">                       
+                         Come cambia l’organizzazione del lavoro e la relazione con il sistema di istruzione/formazione
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div>
+               
+            </div>
+ <!--**** fine pubblicazioni--> 
+ 
+        </div>
+    </section>
+
+
+
+  
+<!-- Sezione: Contatti -->
+    <section id="contatti" class="contact-section">
+        <div class="contact-card">
+            <div class="contact-info">                
+                 <h2 class="section-title">Restiamo in contatto</h2>
+                 <div class="tratto"></div>               
+            </div>             
+            <div class="contact-buttons">
+                <a href="mailto:m.petrocelli@unimarconi.it" target="_blank" class="contact-btn" aria-label="Invia un'email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo LinkedIn">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Sezione: Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                &copy; 2026 Michele Petrocelli. Tutti i diritti riservati.
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookie-policy.html" title="Cookie Policy">Cookie Policy</a>
+                <a href="termini.html" title="Termini di Servizio">Termini di Servizio</a>
+            </div>
+        </div>
+    </footer>
+<!-- Script JavaScript -->
+    <script>
+        // 1. Gestione Navbar trasparente/scrolled
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 2. Gestione Menu Mobile Hamburger
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const toggleIcon = mobileMenuToggle.querySelector('i');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                toggleIcon.classList.remove('fa-bars');
+                toggleIcon.classList.add('fa-xmark');
+            } else {
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            });
+        });
+
+        // 3. Carosello "Ultimi Contenuti"
+        const postsContainer = document.getElementById('postsContainer');
+        const postPrevBtn = document.getElementById('postPrevBtn');
+        const postNextBtn = document.getElementById('postNextBtn');
+
+        if (postsContainer && postPrevBtn && postNextBtn) {
+            function getPostScrollAmount() {
+                const postCard = postsContainer.querySelector('.post-card');
+                return postCard ? postCard.offsetWidth + 30 : 330;
+            }
+
+            postNextBtn.addEventListener('click', () => {
+                postsContainer.scrollBy({ left: getPostScrollAmount(), behavior: 'smooth' });
+            });
+
+            postPrevBtn.addEventListener('click', () => {
+                postsContainer.scrollBy({ left: -getPostScrollAmount(), behavior: 'smooth' });
+            });
+        }
+
+        // 4. Carosello "Timeline / Prossime tappe"
+        const timelineWrapper = document.getElementById('timelineWrapper');
+        const timelinePrevBtn = document.getElementById('timelinePrevBtn');
+        const timelineNextBtn = document.getElementById('timelineNextBtn');
+
+        if (timelineWrapper && timelinePrevBtn && timelineNextBtn) {
+            function getTimelineScrollAmount() {
+                const item = timelineWrapper.querySelector('.timeline-item');
+                return item ? item.offsetWidth + 40 : 300;
+            }
+
+            timelineNextBtn.addEventListener('click', () => {
+                timelineWrapper.scrollBy({ left: getTimelineScrollAmount(), behavior: 'smooth' });
+            });
+
+            timelinePrevBtn.addEventListener('click', () => {
+                timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
+            });
+        }
+
+        // 5. Funzione di Filtraggio Combinato (Categorie multiple + Barra di Ricerca)
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const postCards = document.querySelectorAll('.post-id');
+            const searchInput = document.getElementById('searchInput');
+
+            function filterPosts() {
+                const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+                const activeButton = document.querySelector('.filter-btn.active');
+                const filterValue = activeButton ? activeButton.getAttribute('data-filter').toLowerCase() : 'all';
+
+                postCards.forEach(card => {
+                    const cardCategories = card.getAttribute('data-category') ? card.getAttribute('data-category').toLowerCase() : '';
+                    
+                    const textElement = card.querySelector('.temi-news-right');
+                    const cardText = textElement ? textElement.textContent.toLowerCase() : '';
+
+                    const matchesCategory = (filterValue === 'all' || cardCategories.includes(filterValue));
+                    const matchesSearch = cardText.includes(searchTerm);
+
+                    if (matchesCategory && matchesSearch) {
+                        card.style.setProperty('display', 'block', 'important');
+                    } else {
+                        card.style.setProperty('display', 'none', 'important');
+                    }
+                });
+            }
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    filterPosts();
+                });
+            });
+
+            if (searchInput) {
+                searchInput.addEventListener('input', filterPosts);
+            }
+        });
+    </script>
+</body>
+</html>

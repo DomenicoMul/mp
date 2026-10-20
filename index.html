@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michele Petrocelli | Website</title>
+    <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/style-home.css">
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Google Cursive per la scritta Post Digitale -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header / Barra di Navigazione -->
+    <header id="navbar">
+        <div class="nav-container">
+            <!-- Logo a sinistra -->
+            <div class="nav-logo">
+               <a href="index.html">Michele Petrocelli</a>
+            </div>
+
+<!-- Menu di navigazione a 7 voci (centrale) -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                   <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="profilo.html">Profilo</a></li>
+                    <li><a href="temi.html">Temi</a></li>
+                    <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+                    <li><a href="eventi.html">Eventi</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="pillowle.html">Pillo(w)le</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+
+<!-- Sezione destra: Lente di ricerca e Hamburger toggle -->
+            <div class="nav-right">
+                <div class="nav-search">
+                    <button aria-label="Cerca" onclick="window.location.href='ricerca.html';" title="Ricerca"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="nav-toggle" id="mobileMenuToggle" aria-label="Apri menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- SEZIONE HERO (50% Corallo, 50% Immagine Unica al 100%) -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+<!-- Lato Sinistro: Blocco Corallo con Testo -->
+            <div class="hero-coral-card">
+                <h1> Persone, AI e Strategic Foresight per governare il</h1>
+                <div class="hero-signature">futuro</div>
+            </div>
+
+<!-- Lato Destro: Immagine Unica al 100% -->
+            <div class="hero-single-image">
+                <img src="assets/images/Banner-hp.jpg" alt="Hero Immagine">
+            </div>
+        </div>
+    </section>
+
+<!-- Sezione Card / Temi (con frecce e swipe) -->
+    <section id="servizi" class="cards-section">
+        <div class="temi-container">
+            <div class="section-header">
+                <span class="section-subtitle">Dati → Persone → Futuro</span>
+                <h2 class="section-title">I temi</h2>
+                <div class="tratto"></div>
+               <br>
+            </div>
+        </div>
+        <div class="cards-wrapper">
+            <!-- Freccia Sinistra -->
+            <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Scorri a sinistra">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+<!-- Contenitore delle Card -->
+            <div class="cards-container" id="cardsContainer">
+                <div class="card card-1"  onclick="window.location.href='tema-ai.html';">
+                    <div class="card-icon"><img src="assets/images/icon/AI.png" alt="AI" class="temi-icon">   <!--<i class="fa-solid fa-laptop-code"></i>--></div>
+                    <h3>AI</h3>
+                    <p>Governare l’intelligenza artificiale per generare valore e innovazione.</p>
+                </div>
+                <div class="card card-2"  onclick="window.location.href='tema-sistema-pubblico.html';">
+                    <div class="card-icon"><img src="assets/images/icon/Valore-pubblico.png" alt="Sistema pubblico" class="temi-icon"></div>
+                    <h3>Sistema pubblico</h3>
+                    <p>Innovare le istituzioni per affrontare le sfide del presente e del futuro.</p>
+                </div>
+                <div class="card card-4"  onclick="window.location.href='tema-persone.html';">
+                    <div class="card-icon"><img src="assets/images/icon/Persone.png" alt="Persone" class="temi-icon"></div>
+                    <h3>Persone</h3>
+                    <p>Competenze, leadership e cambiamento al centro delle organizzazioni.</p>
+                </div>
+                <div class="card card-3" onclick="window.location.href='tema-futuro.html';">
+                    <div class="card-icon"><img src="assets/images/icon/Futuro.png" alt="Futuro" class="temi-icon"></div>
+                    <h3>Futuro</h3>
+                    <p>Esplorare i futuri per orientare le decisioni di oggi.</p>
+                </div>                
+                <div class="card card-5" onclick="window.location.href='tema-formazione.html';">
+                    <div class="card-icon"><img src="assets/images/icon/Formazione.png" alt="Formazione" class="temi-icon"></div>
+                    <h3>Formazione</h3>
+                    <p>Sviluppare conoscenze e capacità per il mondo che cambia.</p>
+                </div>
+            </div>
+
+            <!-- Freccia Destra -->
+            <button class="carousel-btn next-btn" id="nextBtn" aria-label="Scorri a destra">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sezione Libri in Evidenza -->
+    <section class="coral-books-section">
+        <div class="coral-container">
+            <div class="coral-half" style="background-color: #eae9e9; border-radius: 20px; position: relative; overflow: hidden;">
+                <div id="ribbon" style="position: absolute; top: 15px; right: -35px; width: 120px; height: 25px; background-color: red; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                    NOVIT&Agrave;
+                </div>
+                <DIV class="book-tag">2026 GAMBINI EDITORE </DIV>
+                <h2>Governare i futuri</h2>
+                <div class="book-inner">
+                    <div class="book-image">
+                        <img src="assets/images/book-2.png" alt="Governare i futuri ">
+                    </div>
+                    <div class="book-content">
+                        <p>
+                            Ogni organizzazione ha un futuro, anche quando non lo nomina. Lo si vede nei piani, nei bilanci, nelle riforme, nelle tecnologie che scegliamo e nelle ipotesi che diamo per scontate. In un mondo attraversato da crisi climatiche, trasformazioni digitali, cambiamenti demografici e tensioni geopolitiche, basare le decisioni su un unico futuro atteso rende più vulnerabili piani e strategie. 
+                        </p>
+                        <a href="#" class="book-btn" title="Leggi scheda">LEGGI SCHEDA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coral-half"  style="background-color: #eae9e9; border-radius: 20px; position: relative; overflow: hidden;">
+                <div id="ribbon" style="position: absolute; top: 15px; right: -35px; width: 120px; height: 25px; background-color: red; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                    NOVIT&Agrave;
+                </div>
+                <DIV class="book-tag">2026 GAMBINI EDITORE </DIV>
+                <h2>Il paradosso digitale</h2>                
+                <div class="book-inner">
+                    <div class="book-image">
+                        <img src="assets/images/book-1.png" alt="Il paradosso digitale">
+                    </div>
+                    <div class="book-content">                       
+                        <p>
+                            Un tempo pensata e progettata come strumento di emancipazione e libertà, la rivoluzione digitale ha finito per generare un mondo in cui le opportunità si concentrano nelle mani di pochi, mentre sorveglianza e manipolazione si diffondono ovunque. 
+                            Cos’è andato storto? E, soprattutto, è ancora possibile invertire la rotta?
+                        </p>
+                        <a href="#" class="book-btn" title="Leggi scheda">LEGGI SCHEDA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coral-container" style="margin-top: 80px;">  
+            <div class="archive-btn-container">
+                <a href="pubblicazioni.html" title="Vai all'elenco delle pubblicazioni" class="archive-btn">Elenco Pubblicazioni <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione: Ultimi Contenuti -->
+    <section class="latest-posts-section">
+        <div class="latest-container">
+            <div class="section-header">
+                <span class="section-subtitle">CRONOLOGIA AGGIORNAMENTI</span>
+                <h2 class="section-title">Ultimi contenuti</h2>
+                <div class="tratto"></div>
+            </div>
+
+            <div class="posts-carousel-wrapper">
+                <button class="post-carousel-btn post-prev-btn" id="postPrevBtn" aria-label="Post precedente">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="posts-grid" id="postsContainer">
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="assets/images/post/project-1.jpg" alt="Pillo(w)la n. 25">
+                        </div>
+                        <div class="post-body">
+                            <span class="post-category-tema-1"><a href="">AI</a></span>
+                            <h3>Pillo(w)la n. 25 - Governance Anticipatoria e Strategic Foresight</h3>
+                            <p>Siti web moderni, veloci e completamente responsive costruiti con le migliori tecnologie attuali.</p>
+                           <div style="display: flex; gap: 10px;">
+                               <a href="pubblicazioni.html" class="post-link" style="background-color: #ddd; padding-left: 10px; padding-right: 10px; border:1px solid #ddd; border-radius: 5px;">
+                                    Archivio pubblicazioni
+                                </a>
+                                 <a href="#" class="post-link"  style="padding-left: 10px; padding-right: 10px; border:1px solid #39001d; border-radius: 5px;">Scopri di più <i class="fa-solid fa-arrow-right"></i></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-image">
+                           <img src="assets/images/post/project-2.jpg" alt="Metaverso">
+                        </div>
+                        <div class="post-body">
+                           <span class="post-category-tema-3"><a href="">PERSONE</a></span>
+                            <h3>Metaverso: potenzialità, implicazioni e regole</h3>
+                            <p>Interfacce intuitive e accattivanti progettate per offrire l'esperienza utente ideale su ogni schermo.</p>                           
+                            <div style="display: flex; gap: 10px;">
+                                <a href="eventi.html" class="post-link" style="background-color: #ddd; padding-left: 10px; padding-right: 10px; border:1px solid #ddd; border-radius: 5px;">
+                                    Archivio eventi
+                                </a>
+                                 <a href="#" class="post-link"  style="padding-left: 10px; padding-right: 10px; border:1px solid #39001d; border-radius: 5px;">Scopri di più <i class="fa-solid fa-arrow-right"></i></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="assets/images/post/project-3.jpg" alt="Apprendimento">
+                        </div>
+                        <div class="post-body">
+                            <span class="post-category-tema-5"><a href="">FORMAZIONE</a></span>
+                            <h3>L 'Apprendimento è la grande opportunità della scuola senza certezze</h3>
+                            <p>Negozi online sicuri, scalabili e facili da gestire per incrementare le tue vendite ovunque.</p>
+                            <div style="display: flex; gap: 10px;">
+                               <a href="media.html" class="post-link" style="background-color: #ddd; padding-left: 10px; padding-right: 10px; border:1px solid #ddd; border-radius: 5px;">
+                                    Archivio  media
+                                </a>
+                                 <a href="#" class="post-link"  style="padding-left: 10px; padding-right: 10px; border:1px solid #39001d; border-radius: 5px;">Scopri di più <i class="fa-solid fa-arrow-right"></i></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="assets/images/post/project-4.jpg" alt="Intelligenza Artificiale">
+                        </div>
+                        <div class="post-body">
+                            <span class="post-category-tema-2"><a href="">SISTEMA PUBBLICO</a></span>
+                            <h3>Intelligenza Artificiale Generativa e nuovi scenari lavorativi</h3>
+                            <p>Analisi approfondita sulle ripercussioni dell'IA nel mercato del lavoro globale.</p>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="pillowle.html" class="post-link" style="background-color: #ddd; padding-left: 10px; padding-right: 10px; border:1px solid #ddd; border-radius: 5px;">
+                                    Archivio pillo(w)le
+                                </a>
+                                <a href="#" class="post-link"  style="padding-left: 10px; padding-right: 10px; border:1px solid #39001d; border-radius: 5px;">Scopri di più <i class="fa-solid fa-arrow-right"></i></a> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="post-carousel-btn post-next-btn" id="postNextBtn" aria-label="Post successivo">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+                
+        </div>
+    </section>
+
+    <!-- Sezione: Prossime tappe (Timeline) -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <div class="timeline-header-flex">
+               <div class="section-header">
+                    <span class="section-subtitle">EVENTI</span>
+                    <h2 class="section-title">Prossime tappe</h2>
+                    <div class="tratto"></div>                   
+                </div>
+                <div class="timeline-nav-buttons">
+                    <button class="timeline-btn timeline-prev" id="timelinePrevBtn" aria-label="Precedente">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="timeline-btn timeline-next" id="timelineNextBtn" aria-label="Successivo">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="timeline-track-wrapper" id="timelineWrapper">
+                <div class="timeline-track">
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>10</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">OTT 2024 &bull; NAPOLI</span>
+                            <h3><a href="">Persone e innovazione nelle organizzazioni</a></h3>
+                            <div class="t-tag tag-ai"><a href="">AI</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>21</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">MAG 2025  &bull; ROMA</span>
+                            <h3><a href="">Forum PA 2025: Strategie e Traguardi</a></h3>
+                            <div class="t-tag tag-valore"><a href="">SISTEMA PUBBLICO</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>06</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">NOV 2025  &bull; MILANO</span>
+                            <h3><a href="">Valore pubblico e servizi empatici</a></h3>
+                            <div class="t-tag tag-valore"><a href="">SISTEMA PUBBLICO</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>12</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">MAR 2026  &bull; BOLOGNA</span>
+                            <h3><a href="">Strategic foresight e governance anticipatoria</a></h3>
+                            <div class="t-tag tag-futuro"><a href="">FUTURO</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"><span>28</span></div>
+                        <div class="timeline-content">
+                            <span class="t-date">SET 2026  &bull; TORINO</span>
+                            <h3><a href="">Digital Transformation & Smart Working</a></h3>
+                            <div class="t-tag tag-persone"><a href="">PERSONE</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione: Pillo(w)le Banner -->
+    <section class="pillole-banner-section">
+        <div class="pillole-container">
+            <div class="pillole-panel">
+                <div class="pillole-left">
+                    <h2>
+                        Pillo(w)le: la comfort zone dedicata all’innovazione
+                    </h2>
+                    <div class="tratto"></div>
+                     <h3>
+                         Un progetto editoriale per raccontare, in modo semplice e diretto, idee, sfide e opportunità del nostro tempo
+                    </h3>
+                </div>
+
+                <div class="pillole-right">
+                    <div class="pillole-icons-grid">
+                        <div class="p-icon-item">
+                            <div class="p-icon-circle"><i class="fa-solid fa-lightbulb"></i></div>
+                            <span>I D E E</span>
+                        </div>
+                        <div class="p-icon-item">
+                            <div class="p-icon-circle"><i class="fa-solid fa-puzzle-piece"></i></div>
+                            <span>c o n c e t t i</span>
+                        </div>
+                        <div class="p-icon-item">
+                            <div class="p-icon-circle"><i class="fa-solid fa-clock"></i></div>
+                            <span>p o c h i <BR> m i n u t i</span>
+                        </div>
+                        <div class="p-icon-item">
+                            <div class="p-icon-circle"><i class="fa-solid fa-bolt"></i></div>
+                            <span>g r a n d e <Br>i m p a t t o</span>
+                        </div>
+                    </div>
+                    <div class="pillole-btn-wrapper">
+                        <a href="#" class="pillole-action-btn">Scopri di pi&ugrave; </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pillowle-signature">Il futuro non si aspetta,<br> si costruisce.</div>
+        </div>
+    </section>
+
+  
+<!-- Sezione: Contatti -->
+    <section id="contatti" class="contact-section">
+        <div class="contact-card">
+            <div class="contact-info">                
+                 <h2 class="section-title">Restiamo in contatto</h2>
+                 <div class="tratto"></div>               
+            </div>             
+            <div class="contact-buttons">
+                <a href="mailto:m.petrocelli@unimarconi.it" target="_blank" class="contact-btn" aria-label="Invia un'email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo LinkedIn">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Sezione: Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                &copy; 2026 Michele Petrocelli. Tutti i diritti riservati.
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookie-policy.html" title="Cookie Policy">Cookie Policy</a>
+                <a href="termini.html" title="Termini di Servizio">Termini di Servizio</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Script JavaScript -->
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const toggleIcon = mobileMenuToggle.querySelector('i');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                toggleIcon.classList.remove('fa-bars');
+                toggleIcon.classList.add('fa-xmark');
+            } else {
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            });
+        });
+
+        const cardsContainer = document.getElementById('cardsContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function getScrollAmount() {
+            const card = cardsContainer.querySelector('.card');
+            return card ? card.offsetWidth + 20 : 300; 
+        }
+
+        nextBtn.addEventListener('click', () => {
+            cardsContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            cardsContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        });
+
+        const postsContainer = document.getElementById('postsContainer');
+        const postPrevBtn = document.getElementById('postPrevBtn');
+        const postNextBtn = document.getElementById('postNextBtn');
+
+        function getPostScrollAmount() {
+            const postCard = postsContainer.querySelector('.post-card');
+            return postCard ? postCard.offsetWidth + 30 : 330;
+        }
+
+        postNextBtn.addEventListener('click', () => {
+            postsContainer.scrollBy({ left: getPostScrollAmount(), behavior: 'smooth' });
+        });
+
+        postPrevBtn.addEventListener('click', () => {
+            postsContainer.scrollBy({ left: -getPostScrollAmount(), behavior: 'smooth' });
+        });
+
+        const timelineWrapper = document.getElementById('timelineWrapper');
+        const timelinePrevBtn = document.getElementById('timelinePrevBtn');
+        const timelineNextBtn = document.getElementById('timelineNextBtn');
+
+        function getTimelineScrollAmount() {
+            const item = timelineWrapper.querySelector('.timeline-item');
+            return item ? item.offsetWidth + 40 : 300;
+        }
+
+        timelineNextBtn.addEventListener('click', () => {
+            timelineWrapper.scrollBy({ left: getTimelineScrollAmount(), behavior: 'smooth' });
+        });
+
+        timelinePrevBtn.addEventListener('click', () => {
+            timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
