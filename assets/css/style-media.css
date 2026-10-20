@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css?family=Allura&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Montserrat:300,400,500,600,700,800|Open+Sans:400,600,700&family=Playfair+Display:ital,wght@0,300,400..900;1,400..900&display=swap");
+
+/* --- RESET E STILI GENERALI --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #39001d;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- BARRA DI NAVIGAZIONE TRASPARENTE E FISSA --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(57, 0, 29, 0.95) !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#navbar.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo a {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-menu a {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.3px;
+    padding-bottom: 3px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    border-bottom: 2px solid #ed5342;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-search button:hover {
+    color: #ed5342;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+/* --- SEZIONE INTESTAZIONE MEDIA --- */
+.temi-section {
+    padding: 130px 20px 20px 20px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.temi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    color: #39001d;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: clamp(36px, 4.5cqw, 64px);
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #39001d;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    margin-bottom: 15px;
+}
+
+.tratto {
+    height: 2px;
+    background-color: #39001d;
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+/* --- SEZIONE VIDEO BANNER (IN EVIDENZA) --- */
+.video-banner-section {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.pillole-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-panel {
+    background-color: #3e3e3c;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.video-left {
+    flex: 1;
+}
+
+.video-left h2 {
+    font-size: 2.2rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.video-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-right video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* --- SEZIONE CONTENUTI MULTIMEDIALI (GRIGLIA VIDEO) --- */
+.coral-books-section {
+    width: 100%;
+    background-color: #dadada;
+    color: #39001d;
+    padding: 60px 40px;
+}
+
+.coral-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.coral-half {
+    flex: 1;
+    min-width: 300px;
+}
+
+.post-video {
+    
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.post-video:hover {
+    transform: translateY(-3px);
+}
+
+.book-inner {
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.temi-video {
+    width: 100%;
+    background-color: #fff !important;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.temi-video video {
+    width: 100%!important;
+    height: 350px!important;
+    object-fit: cover!important;
+    display: block;
+}
+
+.temi-video-title {
+    padding: 15px 10px;
+    color: #39001d;
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+
+.temi-video-title a:hover {
+    text-decoration: underline;
+    color: #ed5342;
+}
+
+/* --- RASSEGNA STAMPA & FILTRI --- */
+.filter-btn {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d3d2d2;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin: 4px;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    outline: 2px solid #39001d;
+    outline-offset: -2px;
+}
+
+.post-id {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: block;
+}
+
+.post-id:hover {
+    background-color: rgba(209, 208, 208, 0.3);
+    border-radius: 12px;
+}
+
+.temi-news-left {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7030a0;
+    font-weight: 700;
+    font-size: 0.95rem;
+    min-width: 70px;
+}
+
+.temi-news-right {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: #39001d;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* --- SEZIONE CONTATTI --- */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #dadada;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    background-color: #d1d0d0;
+    padding: 60px 80px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    border-radius: 12px;
+}
+
+.contact-info h2 {
+    font-size: clamp(32px, 4.5cqw, 45px);
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #39001d;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.contact-btn {
+    width: 65px;
+    height: 65px;
+    background-color: #33061b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-btn:hover {
+    background-color: #ed5342;
+    transform: translateY(-3px);
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #39001d;
+    color: #dadada;
+    padding: 35px 20px;
+    font-size: 0.85rem;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ed5342;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (TABLET & MOBILE)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 15px 25px;
+    }
+
+    .video-panel {
+        flex-direction: column;
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .video-panel .tratto {
+        margin: 0 auto 20px auto;
+    }
+
+    .coral-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Menu Mobile */
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #39001d;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-in-out;
+    }
+
+    .nav-menu.active {
+        max-height: 450px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0;
+        gap: 16px;
+    }
+
+    .nav-menu a {
+        color: #fff !important;
+        font-size: 1.1rem;
+    }
+
+    /* Sezioni Media Mobile */
+    .temi-section {
+        padding: 100px 15px 20px 15px;
+    }
+
+    .video-banner-section {
+        padding: 20px 15px;
+    }
+
+    .video-panel {
+        padding: 30px 20px;
+    }
+
+    .video-left h2 {
+        font-size: 1.6rem;
+    }
+
+    .coral-books-section {
+        padding: 40px 15px;
+    }
+
+    /* Adattamento filtri di ricerca su dispositivi mobili */
+    div[style*="margin: 10px 10px;"] {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        margin: 10px 0 !important;
+    }
+
+    .filter-btn {
+        flex: 1 1 30%;
+        min-width: 95px;
+        margin: 0 !important;
+    }
+
+    /* Rassegna stampa mobile */
+    .temi-news-left {
+        min-width: 50px;
+        font-size: 0.85rem;
+    }
+
+    .temi-news-right {
+        font-size: 0.85rem;
+    }
+
+    /* Contatti e Footer Mobile */
+    .contact-card {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .contact-buttons {
+        justify-content: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css?family=Allura&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Montserrat:300,400,500,600,700,800|Open+Sans:400,600,700&family=Playfair+Display:ital,wght@0,300,400..900;1,400..900&display=swap");
+
+/* --- RESET E STILI GENERALI --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #39001d;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- BARRA DI NAVIGAZIONE TRASPARENTE E FISSA --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(57, 0, 29, 0.95) !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#navbar.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo a {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-menu a {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.3px;
+    padding-bottom: 3px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    border-bottom: 2px solid #ed5342;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-search button:hover {
+    color: #ed5342;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+/* --- SEZIONE HERO (LAYOUT 50% - 50%) --- */
+.hero-section {
+    width: 100%;
+    max-height: 80vh;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: stretch;
+    padding-top: 70px; /* Spazio per la navbar fissa */
+    overflow: hidden;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-profilo-card {
+    flex: 0 0 50%;
+    background-color: #fff;
+    color: #39001d;
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-profilo-card h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(38px, 4.2cqw, 64px);
+    line-height: 1.08;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #39001d;
+    letter-spacing: -0.02em;
+    text-wrap: pretty;
+}
+
+.section-subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.testo-profilo-sub {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.archive-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.archive-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Immagine Hero */
+.hero-single-image {
+    flex: 0 0 50%;
+    height: calc(80vh - 70px);
+    overflow: hidden;
+}
+
+.hero-single-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Video Hero con Pulsante Audio */
+.hero-single-video {
+    position: relative;
+    flex: 0 0 50%;
+    height: calc(80vh - 70px);
+    overflow: hidden;
+    background-color: #000;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.btn-apri-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent !important;
+    border: 2px solid #fff;
+    color: #ede9cf;
+    padding: 15px 35px;
+    font-size: 1.8rem;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-apri-video:hover {
+    background-color: #ed5342 !important;
+    color: #fff;
+    border-color: #ed5342;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* --- SEZIONE INNOVAZIONE DA TIFFANY --- */
+.tiffany-banner-section {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.tiffany-title {
+    text-align: center;
+    margin: 0 auto 15px auto;
+    padding: 10px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 4cqw, 42px);
+    line-height: 1.1;
+    font-weight: 400;
+    color: #39001d;
+    max-width: 800px;
+    letter-spacing: -0.02em;
+}
+
+.tiffany-sub-title {
+    text-align: center;
+    margin: 0 auto 50px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #39001d;
+    max-width: 900px;
+    padding: 0 15px;
+}
+
+.pillole-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tiffany-panel {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    padding: 10px 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    height: 650px;
+}
+
+.pillole-left {
+    flex: 1;
+    z-index: 2;
+}
+
+.lavagna {
+
+    max-width: 47%;
+    font-weight: 500; 
+    color: #39001d;    
+    padding: 30px;
+    padding-top: 60px;  
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(18px, 4cqw, 24px);
+    line-height: 1.3;
+    letter-spacing: -0.02em; 
+}
+
+/* --- SEZIONE CONTATTI --- */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #dadada;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    background-color: #d1d0d0;
+    padding: 60px 80px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    border-radius: 12px;
+}
+
+.contact-info h2 {
+    font-size: clamp(32px, 4.5cqw, 45px);
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #39001d;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.tratto {
+    height: 2px;
+    background-color: #39001d;
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.contact-btn {
+    width: 65px;
+    height: 65px;
+    background-color: #33061b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-btn:hover {
+    background-color: #ed5342;
+    transform: translateY(-3px);
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #39001d;
+    color: #dadada;
+    padding: 35px 20px;
+    font-size: 0.85rem;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ed5342;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (TABLET & MOBILE)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 15px 25px;
+    }
+
+    .hero-profilo-card {
+        padding: 60px 40px;
+    }
+
+    .lavagna {
+        max-width: 80%;
+        
+    }
+
+    .contact-card {
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Menu Mobile */
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #39001d;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-in-out;
+    }
+
+    .nav-menu.active {
+        max-height: 450px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0;
+        gap: 16px;
+    }
+
+    .nav-menu a {
+        color: #fff !important;
+        font-size: 1.1rem;
+    }
+
+    /* Hero Sezioni Stacked in Colonna su Mobile */
+    .hero-section {
+        max-height: none;
+        height: auto;
+    }
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-profilo-card {
+        flex: 1 0 auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .hero-profilo-card h1 {
+        font-size: 2.2rem;
+    }
+
+    .archive-btn {
+        margin: 0 auto;
+    }
+
+    .hero-single-image,
+    .hero-single-video {
+        flex: 1 0 auto;
+        height: 350px;
+        min-height: 350px;
+    }
+
+    /* Tiffany Banner Mobile */
+    .tiffany-banner-section {
+        padding: 50px 15px;
+    }
+
+    .tiffany-panel {
+        padding: 30px 20px;
+        min-height: 350px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lavagna {
+        max-width: 100%;
+        padding: 30px;
+        padding-top: 40px!important;
+        font-size: 1.1rem;
+    }
+
+    /* Contatti e Footer Mobile */
+    .contact-card {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .contact-buttons {
+        justify-content: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    
+.lavagna {
+
+    max-width: 50%;
+    font-weight: 500; 
+    color: #39001d;    
+    padding: 10px;  
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: -0.02em; 
+}
+}

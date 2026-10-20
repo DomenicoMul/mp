@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css?family=Allura&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Montserrat:300,400,500,600,700,800|Open+Sans:400,600,700&family=Playfair+Display:ital,wght@0,300,400..900;1,400..900&display=swap");
+
+/* --- RESET E BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #39001d;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- HEADER / BARRA DI NAVIGAZIONE --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(57, 0, 29, 0.95) !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#navbar.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo a {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-menu a {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.3px;
+    padding-bottom: 4px;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    border-bottom: 2px solid #ed5342;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-search button:hover {
+    color: #ed5342;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+/* --- SEZIONE HERO --- */
+.hero-section {
+    width: 100%;
+    min-height: 80vh;
+    background-color: #fff;
+    display: flex;
+    align-items: stretch;
+    padding-top: 65px; /* Offset per la navbar fissa */
+    overflow: hidden;
+}
+
+.hero-container {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-profilo-card {
+    flex: 0 0 50%;
+    background-color: #fff;
+    color: #39001d;
+    padding: 80px 60px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    color: #39001d;
+    display: block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.hero-profilo-card h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(38px, 4cqw, 64px);
+    line-height: 1.08;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #39001d;
+    max-width: 650px;
+    letter-spacing: -0.02em;
+    text-wrap: pretty;
+}
+
+.testo-profilo-sub {
+    color: #39001d;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+.hero-single-image {
+    flex: 0 0 50%;
+    min-height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-single-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* --- SEZIONE TESTO / ABOUT --- */
+.about-timeline-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.about-text-side {
+    flex: 1;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #39001d;
+    font-weight: 400;
+    text-align: justify;
+}
+
+/* --- SEZIONE CONTATTI --- */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #dadada;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    background-color: #d1d0d0;
+    padding: 60px 80px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    border-radius: 8px;
+}
+
+.section-title {
+    font-size: clamp(32px, 4cqw, 52px);
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #39001d;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    margin-bottom: 15px;
+}
+
+.tratto {
+    height: 2px;
+    background-color: #39001d;
+    width: 120px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.contact-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #33061b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-btn:hover {
+    background-color: #ed5342;
+    transform: translateY(-3px);
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #39001d;
+    color: #dadada;
+    padding: 30px 20px;
+    font-size: 0.85rem;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ed5342;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (TABLET & MOBILE OPTIMIZATION)
+   ========================================================================== */
+
+/* --- TABLET (992px - 1024px) --- */
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 15px 25px;
+    }
+
+    .hero-profilo-card {
+        padding: 60px 40px;
+    }
+
+    .about-timeline-container {
+        padding: 60px 30px;
+        gap: 40px;
+    }
+
+    .about-text-side {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+    .contact-card {
+        padding: 50px 40px;
+    }
+}
+
+/* --- MOBILE & SMALL TABLETS (fino a 768px) --- */
+@media (max-width: 768px) {
+    /* Navigazione Hamburger Mobile */
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #39001d;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-in-out;
+    }
+
+    .nav-menu.active {
+        max-height: 400px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 16px;
+    }
+
+    .nav-menu a {
+        font-size: 1.05rem;
+        color: #fff !important;
+    }
+
+    /* Hero Responsive Mobile */
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-profilo-card {
+        flex: 1 0 auto;
+        padding: 50px 25px 40px 25px;
+        text-align: left;
+    }
+
+    .hero-single-image {
+        flex: 1 0 auto;
+        width: 100% !important;
+        height: 350px !important;
+        min-height: 350px !important;
+    }
+
+    .hero-single-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: top center !important;
+    }
+
+    /* Sezione Testo Mobile */
+    .about-timeline-container {
+        flex-direction: column;
+        padding: 40px 25px;
+        gap: 25px;
+    }
+
+    .about-text-side {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    /* Contatti Mobile */
+    .contact-card {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .tratto {
+        margin: 0 auto;
+    }
+
+    .contact-buttons {
+        justify-content: center;
+    }
+
+    /* Footer Mobile */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
