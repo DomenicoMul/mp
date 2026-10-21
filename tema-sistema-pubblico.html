@@ -58,9 +58,9 @@
                 <span class="section-subtitle" style="color: #FFF;">
                     <img src="assets/images/icon/Valore-pubblico.png" alt="Valore pubblico" class="temi-icon" style="margin-top: 20px; margin-bottom: 30px;" >
                     
-                    <DIV>T E M I &nbsp; &rarr; &nbsp; V A L O R E &nbsp; P U B B L I C O  </DIV>
+                    <DIV>T E M I &nbsp; &rarr; &nbsp; P A &nbsp; P O S T - D I G I T A L E  </DIV>
                 </span>
-                <h2 class="section-title-big">Innovare le istituzioni per affrontare le sfide del presente e del futuro.</h2>
+                <h2 class="section-title-big">Innovare le istituzioni per affrontare le sfide del presente e del futuro</h2>
             </div>
         </div>
     </section>
@@ -71,6 +71,7 @@
             <div class="coral-half">
                  <span class="section-subtitle" style="color: #39001d;">il tema  </span>  
                 <p class="tema-testo">La pubblica amministrazione è il luogo in cui la trasformazione digitale incontra la vita delle persone. Il tema riguarda la misura del valore pubblico e la progettazione di servizi empatici, e si chiede come si governa dopo la digitalizzazione, quando la tecnologia è data per scontata.</p>
+             <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;">Continua a leggere &rarr;</button>
             </div>
 
             <div class="coral-half">
@@ -424,5 +425,44 @@
             timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
         });
     </script>
+
+     <script>
+  // Selezioniamo gli elementi
+  const paragrafo = document.querySelector(".tema-testo");
+  const btnContinua = document.getElementById("btn-continua");
+
+  // Salviamo il testo completo originale
+  const testoCompleto = paragrafo.textContent;
+  
+  // Imposta quanti caratteri mostrare nell'anteprima (es. 90 caratteri)
+  const limiteCaratteri = 260;
+
+  // Controlliamo se il testo è abbastanza lungo da dover essere troncato
+  if (testoCompleto.length > limiteCaratteri) {
+    // 1. Crea la versione ridotta con i puntini di sospensione
+    const testoRidotto = testoCompleto.substring(0, limiteCaratteri) + "...";
+    paragrafo.textContent = testoRidotto;
+
+    let eEspanso = false;
+
+    // 2. Gestisce il click sul pulsante
+    btnContinua.addEventListener("click", () => {
+      if (!eEspanso) {
+        // Mostra tutto il testo
+        paragrafo.textContent = testoCompleto;
+        btnContinua.textContent = "Mostra meno";
+        eEspanso = true;
+      } else {
+        // Torna alla versione ridotta
+        paragrafo.textContent = testoRidotto;
+        btnContinua.textContent = "Continua a leggere →";
+        eEspanso = false;
+      }
+    });
+  } else {
+    // Se il testo è già corto, nasconde il pulsante "Continua"
+    btnContinua.style.display = "none";
+  }
+   </script>
 </body>
 </html>

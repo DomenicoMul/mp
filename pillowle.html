@@ -60,7 +60,7 @@
             <!-- Lato Sinistro: Blocco Corallo con Testo -->
             <div class="hero-profilo-card" style="background-color: #70309f!important;">
                 <span class="section-subtitle" style="color: #fff;">PILLO(W)LE  </span>  
-                <h1  style="color: #fff;"> Un’idea. Un concetto. Pochi minuti per capire il cambiamento.</h1>
+                <h1  style="color: #fff;"> Un’idea. Un concetto. Pochi minuti per capire il cambiamento</h1>
                 <P class="testo-profilo-sub"  style="color: #fff;">Le Pillo(w)le nascono dall'incontro tra una pillola e un cuscino: contenuti brevi, ma pensati per lasciare spazio alla riflessione. Un modo semplice e diretto per esplorare le sfide e le opportunità del nostro tempo.
                         <bR><br>
                     <div class="archive-btn-container">
@@ -93,7 +93,7 @@
         
         <div class="hero-profilo-card" style="background-color: #ede9cf;">
             <span class="section-subtitle" style="color: #39001d;">FUMETTO  </span>  
-            <h1>Pharmakon, le Cronache del Pianeta Innovazione.</h1>
+            <h1>Pharmakon, le Cronache del Pianeta Innovazione</h1>
             <P class="testo-profilo-sub">L'innovazione è un pharmakon: apre possibilità, ma porta con sé nuove responsabilità. Se le Pillo(w)le raccontano le idee, le Cronache raccontano le loro origini.
              <bR><br>
                 <div class="archive-btn-container">
@@ -118,9 +118,7 @@
         <div class="pillole-container">
             <div class="tiffany-panel" style="background-image: url('assets/images/tiffany.png'); display: flex;  align-items: flex-start;">
                 <div class="pillole-left">
-                    <div class="lavagna">
-                         "La velocit&agrave; con cui avviene il cambiamento richiede alle persone un apprendimento continuo e costante. Non sar&agrave; pi&ugrave; sufficente aggiornare il proprio profilo professionale, ma bisofner&agrave; intraprendere percorsi di reskilling e upskilling  per rimanere competitivi."
-                    </div>
+                    <div class="lavagna" id="box-testo"></div>
                 </div>
 
               
@@ -248,6 +246,41 @@
         timelinePrevBtn.addEventListener('click', () => {
             timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
         });
+  </script>
+  <script>  
+        const frasi = [
+            "La velocità con cui avviene il cambiamento richiede alle persone un apprendimento continuo e costante. Non sarà più sufficente aggiornare il proprio profilo professionale ma, bisognerà intraprendere percorsi di reskilling e upskilling  per rimanere competitivi.",
+            "Le macchine sono bravissime a fornire risposte, le persone devono essere brave a porre le domande giuste.",
+            "La creatività, l’etica, la morale, l’identità, la filosofia sono prerogativa delle persone e non potranno mai essere generate direttamente dall’Intelligenza Artificiale, senza l’elemento umano.",
+            "La Pubblica Amministrazione Empatica rappresenta un’ottima soluzione per venire incontro alle esigenze dei cittadini, allo stesso tempo, la digitalizzazione di questo settore cela alcuni rischi che non possono essere sottovalutati.",
+            "La vera sfida per la Pubblica Amministrazione, nell’era post-digitale, sta nel cominciare a controllare ciò che viene prodotto dall’ IA verificando che non ci siano bias nei dati, gli algoritmi risultino corretti e i risultati siano quelli attesi.",
+            "Le competenze resteranno umane, ma sarà fondamentale rimanere al passo con la velocità dell’innovazione, affinché queste non diventino obsolescenti.",
+            "La risposta alla disoccupazione tecnologica sarà l’adozione di una visione umanocentrica del lavoro.",
+            "Per affrontare le sfide globali che richiedono tempestività, proattività, efficienza e lungimiranza strategica, la PA del futuro avrà bisogno dello Strategic Foresight.",
+            "La strategia migliore che il sistema scolastico dovrebbe seguire è lo sviluppo della motivazione intrinseca: la propensione ad agire per curiosità o per passione.",
+            "La scuola dovrebbe sfruttare le potenzialità dell’IA per favorire l’apprendimento autonomo, lo sviluppo del pensiero critico e la personalizzazione dell’apprendimento.” “La sfida che il mondo scolastico ha davanti a sé è la ridefinizione di strategie didattiche e la riprogettazione dell’esperienza formativa in un mondo in continua evoluzione.",
+            "Per costruire un’organizzazione orientata e incentrata sulle persone, è fondamentale trovare uno spazio per scoprire e studiare, per leggere e comprendere il futuro, per sviluppare la propria visione e partecipare, così, a quella dell’intera organizzazione.",
+            "I luoghi del lavoro dovranno essere costruiti intorno ai task: a seconda del compito assegnato, le persone devono avere la possibilità di scegliere dove poter portare a termine la propria attività.” “Far parte di un’organizzazione vuol dire saper realizzare e condividere valore: affinché ciò avvenga, è fondamentale costruire luoghi fisici, virtuali e culturali in cui agire.",
+            "La sfida per le organizzazioni sarà scegliere strategicamente la tecnologia più adatta a garantire efficienza, performance e produttività, tenendo sempre a mente che il focus intorno al quale ogni business deve ruotare è la centralità delle persone e della cultura organizzativa.",
+            "L’impatto dell’IA sulla produttività dipenderà da come questa tecnologia verrà applicata a livello aziendale per modificare l’esperienza dei singoli lavoratori, tenendo conto delle loro competenze specifiche, dell’esperienza, delle mansioni svolte e dei contesti organizzativi in cui operano.",
+            "Le scelte politiche devono seguire un approccio anticipatorio e una visione strategica a lungo termine del futuro, che ponga le persone al centro, affinché imprese e cittadini possano beneficiare a pieno di tutti i vantaggi offerti dall’IA.",
+            "L’innovazione non è qualcosa di complicato, è uno strumento e noi dobbiamo imparare a comprenderla per saperla utilizzare al meglio. L'innovazione viene dal capitale umano: siamo noi a generare innovazione.",
+            "Il fulcro delle capacità trasformative dell’IA risiede nell’uso sistematico e massiccio dei dati, che rappresentano l’elemento fondativo dei processi di apprendimento automatico e profondo. L’utilizzo dei dati da parte dell’IA è fondamentale per trasformare la Pubblica Amministrazione in una PA Empatica, capace di creare servizi personalizzati per le persone.",
+            "L’intervento pubblico, la ricerca, le imprese e l’innovazione possono creare valore per il cittadino, a patto che ci sia condivisione tra i diversi attori.",
+            "I dati rappresentano un vero asset pubblico: attraverso il Webfare, possono essere capitalizzati in modo etico e redistribuiti per generare valore sociale, equità e resilienza. Un’organizzazione guidata dall’intuizione non si limita a descrivere il presente: trasforma i dati in conoscenza, evolvendo verso modelli capaci di rivelare connessioni e dinamiche nascoste."
+            ""
+        
+        ];
+
+        const contenitore = document.getElementById("box-testo");
+
+        function mostraTestoCasuale() {
+            const indiceCasuale = Math.floor(Math.random() * frasi.length);
+            contenitore.textContent = frasi[indiceCasuale];
+        }
+
+        // Esegue la funzione subito al caricamento
+        mostraTestoCasuale();
     </script>
 </body>
 </html>

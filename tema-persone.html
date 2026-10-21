@@ -60,7 +60,7 @@
                     
                     <DIV>T E M I &nbsp; &rarr; &nbsp; P E R S O N E </DIV>
                 </span>
-                <h2 class="section-title-big">Competenze, leadership e cambiamento al centro delle organizzazioni.</h2>
+                <h2 class="section-title-big">Competenze, leadership e cambiamento al centro delle organizzazioni</h2>
             </div>
         </div>
     </section>
@@ -71,6 +71,7 @@
             <div class="coral-half">
                 <span class="section-subtitle" style="color: #39001d;">il tema  </span>  
                 <p class="tema-testo">Una trasformazione riesce quando le persone che la abitano la fanno propria. Il tema riguarda competenze, motivazione e leadership, e la capacità delle organizzazioni di trasformare l’innovazione in valore condiviso.</p>
+             <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;">Continua a leggere &rarr;</button>
             </div>
 
             <div class="coral-half">
@@ -420,5 +421,43 @@
             timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
         });
     </script>
+     <script>
+  // Selezioniamo gli elementi
+  const paragrafo = document.querySelector(".tema-testo");
+  const btnContinua = document.getElementById("btn-continua");
+
+  // Salviamo il testo completo originale
+  const testoCompleto = paragrafo.textContent;
+  
+  // Imposta quanti caratteri mostrare nell'anteprima (es. 90 caratteri)
+  const limiteCaratteri = 260;
+
+  // Controlliamo se il testo è abbastanza lungo da dover essere troncato
+  if (testoCompleto.length > limiteCaratteri) {
+    // 1. Crea la versione ridotta con i puntini di sospensione
+    const testoRidotto = testoCompleto.substring(0, limiteCaratteri) + "...";
+    paragrafo.textContent = testoRidotto;
+
+    let eEspanso = false;
+
+    // 2. Gestisce il click sul pulsante
+    btnContinua.addEventListener("click", () => {
+      if (!eEspanso) {
+        // Mostra tutto il testo
+        paragrafo.textContent = testoCompleto;
+        btnContinua.textContent = "Mostra meno";
+        eEspanso = true;
+      } else {
+        // Torna alla versione ridotta
+        paragrafo.textContent = testoRidotto;
+        btnContinua.textContent = "Continua a leggere →";
+        eEspanso = false;
+      }
+    });
+  } else {
+    // Se il testo è già corto, nasconde il pulsante "Continua"
+    btnContinua.style.display = "none";
+  }
+   </script>
 </body>
 </html>

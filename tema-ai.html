@@ -59,7 +59,7 @@
                     <img src="assets/images/icon/AI.png" alt="AI" class="temi-icon" style="margin-top: 20px; margin-bottom: 30px;" >                    
                     <DIV>T E M I &nbsp; &rarr; &nbsp; A I </DIV>
                 </span>
-                <h2 class="section-title-big">Governare l’intelligenza artificiale per generare valore e innovazione.</h2>
+                <h2 class="section-title-big">Governare l’intelligenza artificiale per generare valore e innovazione</h2>
             </div>
         </div>
     </section>
@@ -67,9 +67,11 @@
    <!-- Sezione Corallo con Libri in Evidenza -->
     <section class="coral-books-section" style="background: #FFF!important;">
         <div class="coral-container">
+           
             <div class="coral-half">
-               <span class="section-subtitle" style="color: #39001d;">IL TEMA </span>   
+                <span class="section-subtitle" style="color: #39001d;">IL TEMA</span> 
                 <p class="tema-testo">L’intelligenza artificiale ridisegna i mercati del lavoro, la formazione del consenso e il rapporto tra cittadini e istituzioni. Il tema raccoglie analisi sugli effetti economici e sui rischi per la democrazia, e indaga le condizioni perché l’innovazione produca benessere diffuso.</p>
+                <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;">Continua a leggere &rarr;</button>
             </div>
 
             <div class="coral-half">
@@ -374,5 +376,44 @@
             });
         });
     </script>
+
+    <script>
+  // Selezioniamo gli elementi
+  const paragrafo = document.querySelector(".tema-testo");
+  const btnContinua = document.getElementById("btn-continua");
+
+  // Salviamo il testo completo originale
+  const testoCompleto = paragrafo.textContent;
+  
+  // Imposta quanti caratteri mostrare nell'anteprima (es. 90 caratteri)
+  const limiteCaratteri = 260;
+
+  // Controlliamo se il testo è abbastanza lungo da dover essere troncato
+  if (testoCompleto.length > limiteCaratteri) {
+    // 1. Crea la versione ridotta con i puntini di sospensione
+    const testoRidotto = testoCompleto.substring(0, limiteCaratteri) + "...";
+    paragrafo.textContent = testoRidotto;
+
+    let eEspanso = false;
+
+    // 2. Gestisce il click sul pulsante
+    btnContinua.addEventListener("click", () => {
+      if (!eEspanso) {
+        // Mostra tutto il testo
+        paragrafo.textContent = testoCompleto;
+        btnContinua.textContent = "Mostra meno";
+        eEspanso = true;
+      } else {
+        // Torna alla versione ridotta
+        paragrafo.textContent = testoRidotto;
+        btnContinua.textContent = "Continua a leggere →";
+        eEspanso = false;
+      }
+    });
+  } else {
+    // Se il testo è già corto, nasconde il pulsante "Continua"
+    btnContinua.style.display = "none";
+  }
+</script>
 </body>
 </html>
