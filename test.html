@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Test CMS</title>
-    <!-- Libreria Marked per convertire il Markdown in HTML -->
+    <!-- Libreria Marked.js per convertire il Markdown in HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
@@ -26,22 +26,24 @@
 
         async function caricaPaginaMarkdown() {
             try {
-                // PERCORSO CORRETTO: 'posts' al plurale!
-                const response = await fetch('/mp/content/posts/2026-10-05-test2.md');
+                // Usiamo l'URL RAW completo che hai trovato
+                const urlFile = 'https://raw.githubusercontent.com/DomenicoMul/mp/refs/heads/main/content/posts/2026-10-05-test2.md';
+                
+                const response = await fetch(urlFile);
                 
                 if (!response.ok) {
-                    throw new Error(`Errore HTTP ${response.status}: Impossibile trovare il file`);
+                    throw new Error(`Errore HTTP ${response.status}: Impossibile scaricare il file`);
                 }
 
                 const markdownText = await response.text();
                 const markdownPulito = rimuoviFrontmatter(markdownText);
 
-                // Converte in HTML e inserisce nella pagina
+                // Converte il Markdown in HTML e lo inserisce nella pagina
                 document.getElementById('MioContenutoDinamico').innerHTML = marked.parse(markdownPulito);
 
             } catch (error) {
                 console.error('Dettaglio errore:', error);
-                document.getElementById('MioContenutoDinamico').innerHTML = `<p style="color: red;">${error.message}</p>`;
+                document.getElementById('MioContenutoDinamico')->innerHTML = `<p style="color: red;">${error.message}</p>`;
             }
         }
 
