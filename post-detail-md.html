@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Profilo | Michele Petrocelli</title>
+    <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/style-post.css">
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Google Cursive -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Libreria Marked per interpretare il Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <!-- Header / Barra di Navigazione -->
+    <header id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+               <a href="index.html">Michele Petrocelli</a>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                   <li><a href="index.html">Home</a></li>
+                    <li><a href="profilo.html">Profilo</a></li>
+                    <li><a href="temi.html">Temi</a></li>
+                    <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+                    <li><a href="eventi.html">Eventi</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="pillowle.html">Pillo(w)le</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="nav-search">
+                    <button aria-label="Cerca" onclick="window.location.href='ricerca.html';" title="Ricerca"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="nav-toggle" id="mobileMenuToggle" aria-label="Apri menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-single-image">
+                <img id="immagine-articolo" src="assets/images/post/Copertina-AI-e-Didattica.png" alt="Hero Immagine">
+            </div>
+           
+            <div class="hero-profilo-card">
+                <!-- Data pubblicazione -->
+                <span class="section-subtitle" id="data-articolo">Novembre 15, 2023</span>
+                
+                <!-- Titolo -->
+                <h1 id="titolo-articolo"></h1>
+
+                <!-- Sottotitolo -->
+                <p class="testo-profilo-sub" id="sottotitolo-articolo"></p>
+
+                <!-- Categorie --> 
+                <p class="testo-profilo-sub" style="margin-top: 20px; background-color: #ede9cf; padding: 10px; border-radius: 10px; font-size: 1.1rem;">
+                    <b>Categoria:</b> 
+                    <span id="categoria-articolo"></span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-timeline-container">
+        <div class="about-text-side">
+            <!-- Descrizione breve -->
+             <p id="descrizione-articolo"></p> 
+
+             <p class="testo-profilo-sub" style="margin-top: 20px; background-color: #ede9cf; padding: 10px; border-radius: 10px; font-size: 1.1rem;">
+                <b>Informazioni:</b> 
+                <span id="categoria-articolo2"></span> | <span id="data-articolo-bis"></span>
+            </p>
+
+            <!-- CORPO DELL'ARTICOLO CONVERTITO DA MARKDOWN -->
+            <div id="corpo-articolo" style="margin-top: 30px;"></div>
+        </div>
+    </section>
+
+    <!-- Sezione: Contatti -->
+    <section id="contatti" class="contact-section">
+        <div class="contact-card">
+            <div class="contact-info">                
+                 <h2 class="section-title">Restiamo in contatto</h2>
+                 <div class="tratto"></div>               
+            </div>             
+            <div class="contact-buttons">
+                <a href="mailto:m.petrocelli@unimarconi.it" target="_blank" class="contact-btn" aria-label="Invia un'email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione: Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                &copy; 2026 Michele Petrocelli. Tutti i diritti riservati.
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookie-policy.html" title="Cookie Policy">Cookie Policy</a>
+                <a href="termini.html" title="Termini di Servizio">Termini di Servizio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script>
+        // 1. Gestione Navbar trasparente/scrolled
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 2. Gestione Menu Mobile Hamburger
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const toggleIcon = mobileMenuToggle.querySelector('i');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                toggleIcon.classList.remove('fa-bars');
+                toggleIcon.classList.add('fa-xmark');
+            } else {
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Funzione per estrarre proprietà dal Frontmatter YAML
+        function estraiValoreFrontmatter(testo, chiave) {
+            const regex = new RegExp(`^${chiave}:\\s*["']?([^"'\n]+)["']?`, 'm');
+            const match = testo.match(regex);
+            return match ? match[1].trim() : '';
+        }
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const nomeFile = urlParams.get('filename'); 
+
+            if (!nomeFile) {
+                const corpoEl = document.getElementById('corpo-articolo');
+                if(corpoEl) corpoEl.innerHTML = `<p style="color: red;">Nessun file specificato nell'URL.</p>`;
+                return;
+            }
+
+            await caricaSingoloArticolo(nomeFile);
+        });
+
+        async function caricaSingoloArticolo(nomeFile) {
+            try {
+                const urlFile = `https://raw.githubusercontent.com/DomenicoMul/mp/refs/heads/main/content/posts/${nomeFile}`;
+                
+                const response = await fetch(urlFile);
+                if (!response.ok) throw new Error('Impossibile trovare il file dell\'articolo su GitHub');
+
+                const fileText = await response.text();
+
+                // Estrazione metadati
+                const linkImg = estraiValoreFrontmatter(fileText, 'img-link');
+                const titolo = estraiValoreFrontmatter(fileText, 'title');
+                const sottotitolo = estraiValoreFrontmatter(fileText, 'sub-title');            
+                const categoria = estraiValoreFrontmatter(fileText, 'category');
+                const data = estraiValoreFrontmatter(fileText, 'date');
+                const descrizione = estraiValoreFrontmatter(fileText, 'description');
+
+                // Popolamento elementi HTML
+                if (linkImg) {
+                    const imgEl = document.getElementById('immagine-articolo');
+                    if(imgEl) { imgEl.src = linkImg; imgEl.style.display = 'block'; }
+                }
+                if (titolo) {
+                    const titoloEl = document.getElementById('titolo-articolo');
+                    if(titoloEl) titoloEl.innerText = titolo;
+                    const pageTitle = document.getElementById('page-title');
+                    if(pageTitle) pageTitle.innerText = titolo;
+                }
+                if (sottotitolo) {
+                    const subEl = document.getElementById('sottotitolo-articolo');
+                    if(subEl) subEl.innerText = sottotitolo;
+                }
+                if (categoria) {
+                    const catEl1 = document.getElementById('categoria-articolo');
+                    if(catEl1) catEl1.innerText = categoria;
+                    const catEl2 = document.getElementById('categoria-articolo2');
+                    if(catEl2) catEl2.innerText = categoria;
+                }
+                if (data) {
+                    const dataEl1 = document.getElementById('data-articolo');
+                    if(dataEl1) dataEl1.innerText = data;
+                    const dataEl2 = document.getElementById('data-articolo-bis');
+                    if(dataEl2) dataEl2.innerText = data;
+                }
+                if (descrizione) {
+                    const descEl = document.getElementById('descrizione-articolo');
+                    if(descEl) { descEl.innerText = descrizione; descEl.style.display = 'block'; }
+                }
+
+                // Pulizia Frontmatter YAML e conversione Markdown
+                let corpoMarkdown = fileText;
+                if (fileText.startsWith('---')) {
+                    const parti = fileText.split('---');
+                    if (parti.length >= 3) {
+                        corpoMarkdown = parti.slice(2).join('---').trim();
+                    }
+                }
+
+                const corpoEl = document.getElementById('corpo-articolo');
+                if(corpoEl) {
+                    corpoEl.innerHTML = marked.parse(corpoMarkdown);
+                }
+
+            } catch (error) {
+                console.error('Errore:', error);
+                const corpoEl = document.getElementById('corpo-articolo');
+                if(corpoEl) {
+                    corpoEl.innerHTML = `<h2 style="color: red;">Impossibile caricare l'articolo.</h2><p>${error.message}</p>`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
