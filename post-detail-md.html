@@ -81,19 +81,14 @@
             <!-- Titolo -->
             <h1 id="titolo-articolo"></h1>
                 <p class="testo-profilo-sub" id="sottotitolo-articolo"></p>
-
-                <!-- Categorie --> 
-                <p class="testo-profilo-sub" style="margin-top: 20px; background-color: #ede9cf; padding: 10px; border-radius: 10px; font-size: 1.1rem;">
-                    <b>Categoria:</b> 
-                    <span id="categoria-articolo"></span>
-                </p>
             
             <!-- Descrizione breve -->
              <p id="descrizione-articolo"></p> 
 
+                <!-- Categorie --> 
              <p class="testo-profilo-sub" style="margin-top: 20px; background-color: #ede9cf; padding: 10px; border-radius: 10px; font-size: 1.1rem;">
-                <b>Informazioni:</b> 
-                <span id="categoria-articolo2"></span> | <span id="data-articolo-bis"> </span>
+                <b>Categoria:</b> 
+                <span id="categoria-articolo"></span>
             </p>
 
             <!-- CORPO DELL'ARTICOLO CONVERTITO DA MARKDOWN -->
@@ -229,8 +224,6 @@
                 if (categoria) {
                     const catEl1 = document.getElementById('categoria-articolo');
                     if(catEl1) catEl1.innerText = categoria;
-                    const catEl2 = document.getElementById('categoria-articolo2');
-                    if(catEl2) catEl2.innerText = categoria;
                 }
                 if (data) {
                     const dataEl1 = document.getElementById('data-articolo');
