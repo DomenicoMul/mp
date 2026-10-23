@@ -49,7 +49,7 @@
     <section id="home" class="hero-section">
         <div class="hero-container">
             <div class="hero-single-image">
-                <img id="immagine-articolo" src="assets/images/post/Copertina-AI-e-Didattica.png" alt="Hero Immagine">
+                <img id="immagine-articolo" alt="Hero Immagine">
             </div>
            
             <div class="hero-profilo-card">
@@ -191,7 +191,7 @@
 
                 // Popolamento elementi HTML
                 if (linkImg) {
-                    const imgEl = document.getElementById('immagine-articolo');
+                    const imgEl = document.getElementById('immagine-articolo').src;
                     if(imgEl) { imgEl.src = linkImg; imgEl.style.display = 'block'; }
                 }
                 if (titolo) {
