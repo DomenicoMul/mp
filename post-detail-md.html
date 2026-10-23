@@ -49,7 +49,7 @@
     <section id="home" class="hero-section">
         <div class="hero-container">
             <div class="hero-single-image">
-                <img id="immagine-articolo" alt="Hero Immagine">
+                <img id="immagine-articolo" alt="Hero Immagine" style="display: none;">
             </div>
            
             <div class="hero-profilo-card">
@@ -151,9 +151,9 @@
             });
         });
 
-        // Funzione per estrarre proprietà dal Frontmatter YAML
+        // Funzione corretta per estrarre proprietà YAML (supporta anche chiavi con trattini es. img-link)
         function estraiValoreFrontmatter(testo, chiave) {
-            const regex = new RegExp(`^${chiave}:\\s*["']?([^"'\n]+)["']?`, 'm');
+            const regex = new RegExp(`^\\s*${chiave}:\\s*["']?([^"'\n]+)["']?`, 'm');
             const match = testo.match(regex);
             return match ? match[1].trim() : '';
         }
@@ -190,13 +190,14 @@
                 const descrizione = estraiValoreFrontmatter(fileText, 'description');
 
                 // Popolamento elementi HTML
-               if (linkImg) {
+                if (linkImg) {
                     const imgEl = document.getElementById('immagine-articolo');
                     if (imgEl) { 
                         imgEl.src = linkImg; 
                         imgEl.style.display = 'block'; 
                     }
                 }
+
                 if (titolo) {
                     const titoloEl = document.getElementById('titolo-articolo');
                     if(titoloEl) titoloEl.innerText = titolo;
