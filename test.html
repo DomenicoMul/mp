@@ -2,52 +2,53 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Test CMS</title>
-    <!-- Libreria Marked.js per convertire il Markdown in HTML -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <title>Elenco Articoli da Git</title>
 </head>
 <body>
 
-    <div id="MioContenutoDinamico">
-        Caricamento in corso...
-    </div>
+    <h1>I miei articoli</h1>
+    <ul id="lista-articoli">
+        <li>Caricamento elenco in corso...</li>
+    </ul>
 
     <script>
-        // Funzione per rimuovere il Frontmatter YAML di Pages CMS
-        function rimuoviFrontmatter(markdown) {
-            if (markdown.startsWith('---')) {
-                const parti = markdown.split('---');
-                if (parti.length >= 3) {
-                    return parti.slice(2).join('---').trim();
-                }
-            }
-            return markdown;
-        }
-
-        async function caricaPaginaMarkdown() {
+        async function caricaElencoArticoli() {
+            const ul = document.getElementById('lista-articoli');
+            
             try {
-                // Usiamo l'URL RAW completo che hai trovato
-                const urlFile = 'https://raw.githubusercontent.com/DomenicoMul/mp/refs/heads/main/content/posts/2026-10-05-test2.md';
+                // Endpoint delle API di GitHub per la cartella posts
+                const apiUrl = 'https://api.github.com/repos/DomenicoMul/mp/contents/content/posts';
                 
-                const response = await fetch(urlFile);
+                const response = await fetch(apiUrl);
                 
                 if (!response.ok) {
-                    throw new Error(`Errore HTTP ${response.status}: Impossibile scaricare il file`);
+                    throw new Error(`Errore HTTP: ${response.status}`);
                 }
-
-                const markdownText = await response.text();
-                const markdownPulito = rimuoviFrontmatter(markdownText);
-
-                // Converte il Markdown in HTML e lo inserisce nella pagina
-                document.getElementById('MioContenutoDinamico').innerHTML = marked.parse(markdownPulito);
+                
+                const files = await response.json();
+                
+                // Pulisce il messaggio di caricamento
+                ul.innerHTML = '';
+                
+                // Filtra solo i file .md e crea la lista
+                files.forEach(file => {
+                    if (file.name.endsWith('.md')) {
+                        const li = document.createElement('li');
+                        
+                        // Creiamo un link per ogni articolo
+                        li.innerHTML = `<strong>${file.name}</strong> - <a href="${file.download_url}" target="_blank">Apri file Raw</a>`;
+                        
+                        ul.appendChild(li);
+                    }
+                });
 
             } catch (error) {
-                console.error('Dettaglio errore:', error);
-                document.getElementById('MioContenutoDinamico')->innerHTML = `<p style="color: red;">${error.message}</p>`;
+                console.error('Errore nel recupero della lista:', error);
+                ul.innerHTML = `<li style="color: red;">Impossibile caricare l'elenco dei file.</li>`;
             }
         }
 
-        caricaPaginaMarkdown();
-    </script> 
+        caricaElencoArticoli();
+    </script>
 </body>
 </html>
