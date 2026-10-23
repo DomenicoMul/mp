@@ -27,7 +27,7 @@
 
         async function caricaPaginaMarkdown() {
             try {
-                const response = await fetch('content/posts/2026-10-05-test2.md');
+                const response = await fetch('/content/posts/2026-10-05-test2.md');
                 
                 if (!response.ok) {
                     throw new Error(`File non trovato o errore HTTP: ${response.status}`);
