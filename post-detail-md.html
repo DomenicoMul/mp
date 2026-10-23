@@ -78,7 +78,7 @@
 
              <p class="testo-profilo-sub" style="margin-top: 20px; background-color: #ede9cf; padding: 10px; border-radius: 10px; font-size: 1.1rem;">
                 <b>Informazioni:</b> 
-                <span id="categoria-articolo2"></span> | <span id="data-articolo-bis"></span>
+                <span id="categoria-articolo2"></span> | <span id="data-articolo-bis"> </span>
             </p>
 
             <!-- CORPO DELL'ARTICOLO CONVERTITO DA MARKDOWN -->
@@ -190,9 +190,12 @@
                 const descrizione = estraiValoreFrontmatter(fileText, 'description');
 
                 // Popolamento elementi HTML
-                if (linkImg) {
-                    const imgEl = document.getElementById('immagine-articolo').src;
-                    if(imgEl) { imgEl.src = linkImg; imgEl.style.display = 'block'; }
+               if (linkImg) {
+                    const imgEl = document.getElementById('immagine-articolo');
+                    if (imgEl) { 
+                        imgEl.src = linkImg; 
+                        imgEl.style.display = 'block'; 
+                    }
                 }
                 if (titolo) {
                     const titoloEl = document.getElementById('titolo-articolo');
