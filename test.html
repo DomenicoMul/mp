@@ -1,0 +1,28 @@
+<html>
+    <header>
+        <title>test</title>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </header>
+     <body>
+
+     </body>
+     <script>
+        async function caricaPaginaMarkdown() {
+            try {
+                // Supponiamo che il CMS salvi i file in una cartella /content/pagina.md
+                const response = await fetch('./content/post/2026-10-05-test2.md');
+                const markdownText = await response.text();
+
+                // Converte il Markdown in HTML grazie a Marked.js
+                const htmlContent = marked.parse(markdownText);
+
+                // Inserisce l'HTML pulito nel DOM
+                document.getElementById('MioContenutoDinamico').innerHTML = htmlContent;
+
+            } catch (error) {
+                console.error('Errore nel recupero del file markdown:', error);
+            }
+        }
+        caricaPaginaMarkdown();
+     </script>   
+</html>
