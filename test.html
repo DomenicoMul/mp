@@ -44,13 +44,14 @@
 
                         // Estrae la categoria dal frontmatter (assicurati che nel CMS il campo si chiami 'category' o 'categoria')
                         const categoriaFile = estraiValoreFrontmatter(testoMarkdown, 'category') || estraiValoreFrontmatter(testoMarkdown, 'categoria');
+                        const linkImage = estraiValoreFrontmatter(testoMarkdown, 'img-link');
                         const titoloFile = estraiValoreFrontmatter(testoMarkdown, 'title') || estraiValoreFrontmatter(testoMarkdown, 'titolo') || file.name;
 
                         // 3. Filtra confrontando la categoria (ignorando maiuscole/minuscole)
                         if (categoriaFile && categoriaFile.toLowerCase() === categoriaDesiderata.toLowerCase()) {
                             trovati++;
                             const li = document.createElement('li');
-                            li.innerHTML = `<strong>${titoloFile}</strong> <a href="${file.download_url}" target="_blank">(Leggi)</a>`;
+                            li.innerHTML = `<strong>${titoloFile}</strong> <a href="${file.download_url}" target="_blank">(Leggi)</a><br><br><img src="${linkImage}">`;
                             ul.appendChild(li);
                         }
                     }
