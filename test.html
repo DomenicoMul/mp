@@ -27,7 +27,7 @@
         async function caricaPaginaMarkdown() {
             try {
                 // PERCORSO CORRETTO: 'posts' al plurale!
-                const response = await fetch('/content/posts/2026-10-05-test2.md');
+                const response = await fetch('./content/posts/2026-10-05-test2.md');
                 
                 if (!response.ok) {
                     throw new Error(`Errore HTTP ${response.status}: Impossibile trovare il file`);
