@@ -76,11 +76,11 @@
         <div class="about-text-side">            
             <img id="immagine-articolo" alt="Hero Immagine" style="display: none; border-radius: 20px;">
             <div style=" width: 120px; text-align: center; margin: 20px; padding:10px; background-color:#eee; border-radius:10px; color:#000; cursor: pointer; font-size: 10px; font-weight: 400;" onclick="window.history.back(1);">&#8592; PAGINA PRECEDENTE</div>
-            Data pubblicazione: <span class="section-subtitle" id="data-articolo"></span>
+             <span class="section-subtitle" id="data-articolo"></span>
             
             <!-- Titolo -->
             <h1 id="titolo-articolo"></h1>
-<p class="testo-profilo-sub" id="sottotitolo-articolo"></p>
+                <p class="testo-profilo-sub" id="sottotitolo-articolo"></p>
 
                 <!-- Categorie --> 
                 <p class="testo-profilo-sub" style="margin-top: 20px; background-color: #ede9cf; padding: 10px; border-radius: 10px; font-size: 1.1rem;">
@@ -234,7 +234,7 @@
                 }
                 if (data) {
                     const dataEl1 = document.getElementById('data-articolo');
-                    if(dataEl1) dataEl1.innerText = data;
+                    if(dataEl1) dataEl1.innerText ="data pubblicazione: "+ data;
                     const dataEl2 = document.getElementById('data-articolo-bis');
                     if(dataEl2) dataEl2.innerText = data;
                 }
