@@ -100,33 +100,15 @@
 
                         // Controlla se la categoria corrisponde
                         if (categoriaFile.toLowerCase() === categoriaDesiderata.toLowerCase()) {
-                            /*
+                           
                             trovati++;
                             const li = document.createElement('li');
                             // Il link ricarica la pagina passando il nome del file nei parametri URL
                             li.innerHTML = `<a href="?file=${file.name}"><strong>${titoloFile}</strong></a>`;
                             ul.appendChild(li);
-                            */
+                           
 
-                            const postDiv = document.createElement('div');
-                            postDiv.className = 'post-id';
-                            postDiv.setAttribute('data-category', categoria);
-                            
-                            postDiv.innerHTML = `
-                                <div class="book-inner" style="align-items: stretch;">
-                                    <div class="temi-news-left" id="anno">
-                                        <span>${categoriaFile}</span>
-                                    </div>
-                                    <div class="temi-news-right" id="titolo">                       
-                                        <a href="?file=${file.name}" style="text-decoration: none; color: inherit;">
-                                            <h3 style="margin: 0; font-size: 1.1rem;">${titolo}</h3>
-                                        </a>
-                                    </div>
-                                </div>
-                                <hr style="border: none; height: 1px; background-color: #d1d0d0;">
-                            `;
-                            
-                            contenitore.appendChild(postDiv);
+                          
 
 
 
