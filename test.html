@@ -2,53 +2,72 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Elenco Articoli da Git</title>
+    <title>Filtra Articoli per Categoria</title>
+    <!-- Libreria per leggere il Markdown/Frontmatter -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
-    <h1>I miei articoli</h1>
-    <ul id="lista-articoli">
-        <li>Caricamento elenco in corso...</li>
+    <h1>Articoli della categoria: <span id="categoria-corrente" style="color: blue;">tecnologia</span></h1>
+    <ul id="lista-filtrata">
+        <li>Caricamento e filtraggio in corso...</li>
     </ul>
 
     <script>
-        async function caricaElencoArticoli() {
-            const ul = document.getElementById('lista-articoli');
+        // Funzione di supporto per leggere una proprietà specifica dal Frontmatter YAML
+        function estraiValoreFrontmatter(markdown, chiave) {
+            const regex = new RegExp(`^${chiave}:\\s*["']?([^"'\n]+)["']?`, 'm');
+            const match = markdown.match(regex);
+            return match ? match[1].trim() : null;
+        }
+
+        async function caricaArticoliPerCategoria(categoriaDesiderata) {
+            const ul = document.getElementById('lista-filtrata');
             
             try {
-                // Endpoint delle API di GitHub per la cartella posts
+                // 1. Ottiene la lista dei file dalla cartella posts di GitHub
                 const apiUrl = 'https://api.github.com/repos/DomenicoMul/mp/contents/content/posts';
-                
                 const response = await fetch(apiUrl);
-                
-                if (!response.ok) {
-                    throw new Error(`Errore HTTP: ${response.status}`);
-                }
+                if (!response.ok) throw new Error('Errore nel recupero della lista file');
                 
                 const files = await response.json();
+                ul.innerHTML = ''; // Pulisce il caricamento
                 
-                // Pulisce il messaggio di caricamento
-                ul.innerHTML = '';
-                
-                // Filtra solo i file .md e crea la lista
-                files.forEach(file => {
+                let trovati = 0;
+
+                // 2. Scorre tutti i file e controlla il loro contenuto
+                for (const file of files) {
                     if (file.name.endsWith('.md')) {
-                        const li = document.createElement('li');
-                        
-                        // Creiamo un link per ogni articolo
-                        li.innerHTML = `<strong>${file.name}</strong> - <a href="${file.download_url}" target="_blank">Apri file Raw</a>`;
-                        
-                        ul.appendChild(li);
+                        // Scarica il contenuto del singolo file .md
+                        const resFile = await fetch(file.download_url);
+                        const testoMarkdown = await resFile.text();
+
+                        // Estrae la categoria dal frontmatter (assicurati che nel CMS il campo si chiami 'category' o 'categoria')
+                        const categoriaFile = estraiValoreFrontmatter(testoMarkdown, 'category') || estraiValoreFrontmatter(testoMarkdown, 'categoria');
+                        const titoloFile = estraiValoreFrontmatter(testoMarkdown, 'title') || estraiValoreFrontmatter(testoMarkdown, 'titolo') || file.name;
+
+                        // 3. Filtra confrontando la categoria (ignorando maiuscole/minuscole)
+                        if (categoriaFile && categoriaFile.toLowerCase() === categoriaDesiderata.toLowerCase()) {
+                            trovati++;
+                            const li = document.createElement('li');
+                            li.innerHTML = `<strong>${titoloFile}</strong> <a href="${file.download_url}" target="_blank">(Leggi)</a>`;
+                            ul.appendChild(li);
+                        }
                     }
-                });
+                }
+
+                if (trovati === 0) {
+                    ul.innerHTML = `<li>Nessun articolo trovato per questa categoria.</li>`;
+                }
 
             } catch (error) {
-                console.error('Errore nel recupero della lista:', error);
-                ul.innerHTML = `<li style="color: red;">Impossibile caricare l'elenco dei file.</li>`;
+                console.error('Errore:', error);
+                ul.innerHTML = `<li style="color: red;">Errore durante il filtraggio dei contenuti.</li>`;
             }
         }
 
-        caricaElencoArticoli();
+        // Esempio: cerca tutti gli articoli con categoria "tecnologia"
+        caricaArticoliPerCategoria('tecnologia');
     </script>
 </body>
 </html>
