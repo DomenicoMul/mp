@@ -2,73 +2,77 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Visualizza Articolo</title>
-    <!-- Libreria Marked.js per convertire il corpo del Markdown in HTML -->
+    <title>Filtra Articoli per Categoria</title>
+    <!-- Libreria per leggere il Markdown/Frontmatter -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
-    <header>
-        <h1 id="titolo-articolo">Caricamento titolo...</h1>
-        <p><strong>Categoria:</strong> <span id="categoria-articolo"></span> | <strong>Data:</strong> <span id="data-articolo"></span></p>
-        <p id="descrizione-articolo" style="font-style: italic; color: #555;"></p>
-        <hr>
-    </header>
-
-    <!-- Contenuto principale dell'articolo convertito in HTML -->
-    <main id="corpo-articolo">
-        <p>Caricamento contenuto in corso...</p>
-    </main>
+    <h1>Articoli della categoria: <span id="categoria-corrente" style="color: blue;">tecnologia</span></h1>
+    <ul id="lista-filtrata">
+        <li>Caricamento e filtraggio in corso...</li>
+    </ul>
 
     <script>
-        // Funzione per estrarre una proprietà specifica dal Frontmatter YAML
-        function estraiValoreFrontmatter(testo, chiave) {
+        // Funzione di supporto per leggere una proprietà specifica dal Frontmatter YAML
+        function estraiValoreFrontmatter(markdown, chiave) {
             const regex = new RegExp(`^${chiave}:\\s*["']?([^"'\n]+)["']?`, 'm');
-            const match = testo.match(regex);
-            return match ? match[1].trim() : '';
+            const match = markdown.match(regex);
+            return match ? match[1].trim() : null;
         }
 
-        async function caricaArticoloCompleto() {
+        async function caricaArticoliPerCategoria(categoriaDesiderata) {
+            const ul = document.getElementById('lista-filtrata');
+            
             try {
-                // Sostituisci questo URL con il download_url dinamico del file scelto
-                const urlFile = 'https://raw.githubusercontent.com/DomenicoMul/mp/refs/heads/main/content/posts/2026-10-05-test2.md';
+                // 1. Ottiene la lista dei file dalla cartella posts di GitHub
+                const apiUrl = 'https://api.github.com/repos/DomenicoMul/mp/contents/content/posts';
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error('Errore nel recupero della lista file');
                 
-                const response = await fetch(urlFile);
-                if (!response.ok) throw new Error('Errore nel caricamento del file');
+                const files = await response.json();
+                ul.innerHTML = ''; // Pulisce il caricamento
+                
+                let trovati = 0;
 
-                const fileText = await response.text();
+                // 2. Scorre tutti i file e controlla il loro contenuto
+                for (const file of files) {
+                    if (file.name.endsWith('.md')) {
+                        // Scarica il contenuto del singolo file .md
+                        const resFile = await fetch(file.download_url);
+                        const testoMarkdown = await resFile.text();
 
-                // 1. Estraiamo i metadati dal Frontmatter
-                const titolo = estraiValoreFrontmatter(fileText, 'title');
-                const categoria = estraiValoreFrontmatter(fileText, 'category');
-                const data = estraiValoreFrontmatter(fileText, 'date');
-                const descrizione = estraiValoreFrontmatter(fileText, 'description');
+                        // Estrae la categoria dal frontmatter (assicurati che nel CMS il campo si chiami 'category' o 'categoria')
+                        const categoriaFile = estraiValoreFrontmatter(testoMarkdown, 'category') || estraiValoreFrontmatter(testoMarkdown, 'categoria');
+                        const linkImage = estraiValoreFrontmatter(testoMarkdown, 'img-link');
+                        const titoloFile = estraiValoreFrontmatter(testoMarkdown, 'title') || estraiValoreFrontmatter(testoMarkdown, 'titolo') || file.name;
 
-                // Inseriamo i metadati negli elementi HTML dedicati
-                document.getElementById('titolo-articolo').innerText = titolo;
-                document.getElementById('categoria-articolo').innerText = categoria;
-                document.getElementById('data-articolo').innerText = data;
-                document.getElementById('descrizione-articolo').innerText = descrizione;
+               
 
-                // 2. Isoliamo il corpo del testo (tutto ciò che sta dopo il secondo blocco "---")
-                let corpoMarkdown = fileText;
-                if (fileText.startsWith('---')) {
-                    const parti = fileText.split('---');
-                    if (parti.length >= 3) {
-                        corpoMarkdown = parti.slice(2).join('---').trim();
+
+
+                        // 3. Filtra confrontando la categoria (ignorando maiuscole/minuscole)
+                        if (categoriaFile && categoriaFile.toLowerCase() === categoriaDesiderata.toLowerCase()) {
+                            trovati++;
+                            const li = document.createElement('li');
+                            li.innerHTML = `<strong>${titoloFile}</strong> <a href="${file.download_url}" target="_blank">(Leggi)</a><br><br><img src="${file.download_url}">`;
+                            ul.appendChild(li);
+                        }
                     }
                 }
 
-                // 3. Convertiamo il corpo in HTML pulito tramite Marked.js e lo iniettiamo nella pagina
-                document.getElementById('corpo-articolo').innerHTML = marked.parse(corpoMarkdown);
+                if (trovati === 0) {
+                    ul.innerHTML = `<li>Nessun articolo trovato per questa categoria.</li>`;
+                }
 
             } catch (error) {
                 console.error('Errore:', error);
-                document.body.innerHTML = '<h2 style="color: red;">Impossibile caricare l\'articolo.</h2>';
+                ul.innerHTML = `<li style="color: red;">Errore durante il filtraggio dei contenuti.</li>`;
             }
         }
 
-        caricaArticoloCompleto();
+        // Esempio: cerca tutti gli articoli con categoria "tecnologia"
+        caricaArticoliPerCategoria('epoidaltronde');
     </script>
 </body>
 </html>
