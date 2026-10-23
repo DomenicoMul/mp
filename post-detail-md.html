@@ -75,7 +75,7 @@
     <section class="about-timeline-container">
         <div class="about-text-side">            
             <img id="immagine-articolo" alt="Hero Immagine" style="display: none; border-radius: 20px;">
-            <span style="padding:10px; background-color:#eee; border-radius:10px; color:#000; cursor: pointer; font-size: 10px; font-weight: 400;" onclick="window.history.back(1);">&#8592; PAGINA PRECEDENTE</span>
+            <div style="padding:10px; background-color:#eee; border-radius:10px; color:#000; cursor: pointer; margin-bottom: 20px; font-size: 10px; font-weight: 400;" onclick="window.history.back(1);">&#8592; PAGINA PRECEDENTE</div>
             <span class="section-subtitle" id="data-articolo"></span>
             
             <!-- Titolo -->
@@ -168,9 +168,12 @@
 
         // Funzione corretta per estrarre proprietà YAML (supporta anche chiavi con trattini es. img-link)
         function estraiValoreFrontmatter(testo, chiave) {
-            const regex = new RegExp(`^\\s*${chiave}:\\s*["']?([^"'\n]+)["']?`, 'm');
+            // Questa regex cerca il campo e gestisce correttamente stringhe racchiuse tra doppi apici, apici singoli o senza apici
+            const regex = new RegExp(`^\\s*${chiave}:\\s*(?:"([^"]*)"|'([^']*)'|([^\\n]+))`, 'm');
             const match = testo.match(regex);
-            return match ? match[1].trim() : '';
+            if (!match) return '';
+            // Restituisce il primo gruppo valido trovato (tra doppi apici, apici singoli o testo libero)
+            return (match[1] !== undefined ? match[1] : (match[2] !== undefined ? match[2] : match[3])).trim();
         }
 
         document.addEventListener("DOMContentLoaded", async () => {
