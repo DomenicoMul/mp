@@ -74,12 +74,12 @@
 
     <section class="about-timeline-container">
         <div class="about-text-side">            
-            <img id="immagine-articolo" alt="Hero Immagine" style="display: none; border-radius: 20px;">
-         
+            <img id="immagine-articolo" alt="Hero Immagine" style="display: none; border-radius: 20px; margin-bottom: 20px;">
+            
             <span class="section-subtitle" id="data-articolo" style="letter-spacing: 1px!important;"></span>
             
             <!-- Titolo -->
-                <h1 id="titolo-articolo" ></h1>
+                <h1 id="titolo-articolo" style="line-height: 1.030rem;"></h1>
                 <p class="testo-profilo-sub" id="sottotitolo-articolo"></p>
             
             <!-- Descrizione breve -->
@@ -227,7 +227,7 @@
                 }
                 if (data) {
                     const dataEl1 = document.getElementById('data-articolo');
-                    if(dataEl1) dataEl1.innerHTML ='<i class="fa-solid fa-calendar-days"></i> ' + data + '&nbsp; <i class="fa-solid fa-user"></i> Michele Petrocelli &nbsp; <i class="fa-solid fa-chevron-left" onclick="window.history.back(1);" style="cursor:pointer;"></i> Pagina Precedente';
+                    if(dataEl1) dataEl1.innerHTML =' <i class="fa-solid fa-chevron-left" onclick="window.history.back(1);" style="cursor:pointer;"></i> Pagina Precedente | <i class="fa-solid fa-calendar-days"></i> ' + data + '&nbsp;| <i class="fa-solid fa-user"></i> Michele Petrocelli &nbsp';
                     const dataEl2 = document.getElementById('data-articolo-bis');
                     if(dataEl2) dataEl2.innerText = data;
                 }
