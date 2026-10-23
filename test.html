@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Test CMS</title>
-    <!-- Libreria Marked.js per convertire il Markdown -->
+    <!-- Libreria Marked per convertire il Markdown in HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
@@ -13,12 +13,11 @@
     </div>
 
     <script>
-        // Funzione per rimuovere il Frontmatter YAML (se presente nei file del CMS)
+        // Funzione per rimuovere il Frontmatter YAML di Pages CMS
         function rimuoviFrontmatter(markdown) {
             if (markdown.startsWith('---')) {
                 const parti = markdown.split('---');
                 if (parti.length >= 3) {
-                    // Restituisce tutto ciò che viene dopo il secondo blocco "---"
                     return parti.slice(2).join('---').trim();
                 }
             }
@@ -27,26 +26,22 @@
 
         async function caricaPaginaMarkdown() {
             try {
-                const response = await fetch('/content/posts/2026-10-05-test2.md');
+                // PERCORSO CORRETTO: 'posts' al plurale!
+                const response = await fetch('content/posts/2026-10-05-test2.md');
                 
                 if (!response.ok) {
-                    throw new Error(`File non trovato o errore HTTP: ${response.status}`);
+                    throw new Error(`Errore HTTP ${response.status}: Impossibile trovare il file`);
                 }
 
                 const markdownText = await response.text();
-
-                // Pulisce il testo rimuovendo il frontmatter del CMS
                 const markdownPulito = rimuoviFrontmatter(markdownText);
 
-                // Converte il Markdown pulito in HTML
-                const htmlContent = marked.parse(markdownPulito);
-
-                // Inserisce l'HTML nel DOM
-                document.getElementById('MioContenutoDinamico').innerHTML = htmlContent;
+                // Converte in HTML e inserisce nella pagina
+                document.getElementById('MioContenutoDinamico').innerHTML = marked.parse(markdownPulito);
 
             } catch (error) {
-                console.error('Errore nel recupero del file markdown:', error);
-                document.getElementById('MioContenutoDinamico').innerHTML = '<p style="color: red;">Impossibile caricare il contenuto.</p>';
+                console.error('Dettaglio errore:', error);
+                document.getElementById('MioContenutoDinamico').innerHTML = `<p style="color: red;">${error.message}</p>`;
             }
         }
 
