@@ -55,7 +55,7 @@
                         if (categoriaFile && categoriaFile.toLowerCase() === categoriaDesiderata.toLowerCase()) {
                             trovati++;
                             const li = document.createElement('li');
-                            li.innerHTML = `<strong>${titoloFile}</strong> <a href="${file.download_url}" target="_blank">(Leggi)</a><br><br><img src="${file.download_url}">`;
+                            li.innerHTML = `<strong>${titoloFile}</strong> <a href="${file.download_url}" target="_blank">(Leggi)</a><br><br><img src="${linkImage}">`;
                             ul.appendChild(li);
                         }
                     }
