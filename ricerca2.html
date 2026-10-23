@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricerca | Michele Petrocelli</title>
+    <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/style-pubblicazioni.css">
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Google Cursive per la scritta Post Digitale -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Barra di Navigazione -->
+    <header id="navbar">
+        <div class="nav-container">
+            <!-- Logo a sinistra -->
+            <div class="nav-logo">
+                <a href="index.html">Michele Petrocelli</a>
+            </div>
+
+            <!-- Menu di navigazione a 7 voci (centrale) -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                   <li><a href="index.html">Home</a></li>
+                    <li><a href="profilo.html">Profilo</a></li>
+                    <li><a href="temi.html">Temi</a></li>
+                    <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+                    <li><a href="eventi.html">Eventi</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="pillowle.html">Pillo(w)le</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+
+            <!-- Sezione destra: Lente di ricerca e Hamburger toggle -->
+            <div class="nav-right">
+                <div class="nav-search">
+                    <button aria-label="Cerca" onclick="window.location.href='ricerca.html';" title="Ricerca"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="nav-toggle" id="mobileMenuToggle" aria-label="Apri menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Sezione: Pillo(w)le Banner -->
+    <section  class="temi-section" >
+        <div class="temi-container">
+                <div class="section-header"> 
+                <span class="section-subtitle">RICERCA </span>
+                <h2 class="section-title">Esplora i contenuti, le idee e gli approfondimenti per conoscere e comprendere l’innovazione</h2>
+                <div class="tratto"></div>
+                <p>Pubblicazioni, comunicati stampa, video, eventi e pillole di conoscenza: tutti i contenuti, le idee e gli aggiornamenti in un unico spazio da consultare e condividere.</p>
+               <br>
+                <input type="text" id="searchInput" placeholder="Ricerca..." style="width: 100%; padding: 12px 20px; border-radius: 20px; border: 1px solid #d1d0d0; outline: none; font-size: 0.9rem; box-sizing: border-box; margin-bottom: 20px;">
+                </div>
+        </div>
+
+         <div class="temi-container">
+
+            <DIV style="margin: 10px 10px;">
+                    <button data-filter="all" class="filter-btn active" style="background-color: #12021f;" title="Tutte le pubblicazioni">Tutte</button>
+                    <button data-filter="AI" class="filter-btn" style="background-color: #7030a0;" title="AI">AI</button>
+                    <button data-filter="Pubblico" class="filter-btn" style="background-color: #dd5e4b;" title="PA Post-Digitale">PA Post-Digitale</button>
+                    <button data-filter="Persone" class="filter-btn" style="background-color: #df998d;" title="Persone">Persone</button>
+                    <button data-filter="Futuro" class="filter-btn" style="background-color: #5b9de9;" title="Futuro">Futuro</button>
+                    <button data-filter="Formazione" class="filter-btn" style="background-color: #162584;" title="Formazione">Formazione</button>
+                </DIV> 
+                 <hr style="border: none; height: 2px; background-color: #39001d;">
+ 
+
+                 
+                <div class="post-id" data-category="AI">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2026 
+                        </div>
+                        <div class="temi-news-right">                       
+                            Il paradosso digitale. La tecnologia, le persone, la società
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div>
+               
+                <div class="post-id" data-category="AI Futuro Persone Formazione Pubblico ">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2026 
+                        </div>
+                        <div class="temi-news-right">                       
+                            From Human to Scalable Annotation: Teaching LLMs to mimic experts labeling on Economic News Sentiment
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div>
+                
+                <div class="post-id" data-category="Pubblico AI">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2025 
+                        </div>
+                        <div class="temi-news-right">                       
+                            Il Webfare: un modello di valorizzazione sociale della ricchezza digitale
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                <div class="post-id" data-category="Pubblico Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2025 
+                        </div>
+                        <div class="temi-news-right">                       
+                           Connettere per innovare per una PA aperta, collaborativa e digitale
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                <div class="post-id" data-category="Pubblico Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2025 
+                        </div>
+                        <div class="temi-news-right">                       
+                           Is Productivity the Whole Story? Future-looking Policy-making and “Empathetic” Administration
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+                
+                <div class="post-id" data-category="AI Pubblico">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2024 
+                        </div>
+                        <div class="temi-news-right">                       
+                            AI in Public Settings: Status and Next Steps
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                 <div class="post-id" data-category="AI Pubblico">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2024 
+                        </div>
+                        <div class="temi-news-right">                       
+                           Rischi e opportunità per la PA nell’era dell’intelligenza artificiale
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                 <div class="post-id" data-category="Formazione AI">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2024 
+                        </div>
+                        <div class="temi-news-right">                       
+                          Insegnare nel futuro. Come l’AI può aiutarci a cambiare la scuola
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                 <div class="post-id" data-category="Formazione AI Pubblico Futuro Persone">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2022
+                        </div>
+                        <div class="temi-news-right">                       
+                          (In)Coscienza Digitale. La risposta alla rivoluzione digitale, tra innovazione, sorveglianza e postdemocrazia
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                 <div class="post-id" data-category="AI">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2011
+                        </div>
+                        <div class="temi-news-right">                       
+                         Coesione sociale, etica e competitività
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                <div class="post-id" data-category="Pubblico">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2008
+                        </div>
+                        <div class="temi-news-right">                       
+                         Il labirinto clientelare. La crisi di sistema dell’economia italiana
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div>
+
+                <div class="post-id" data-category="Persona Formazione">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2005
+                        </div>
+                        <div class="temi-news-right">                       
+                        L’apprendimento organizzativo e la sua misurazione nella strategia d’impresa
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div> 
+
+                 <div class="post-id" data-category="Pubblico">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2004
+                        </div>
+                        <div class="temi-news-right">                       
+                            La modernizzazione del settore pubblico nei paesi sviluppati
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div>
+
+                <div class="post-id" data-category="Persone Pubblico">
+                    <div class="book-inner" style="align-items: stretch;">
+                        <div class="temi-news-left">
+                            2003
+                        </div>
+                        <div class="temi-news-right">                       
+                            L’analisi organizzativa tra privato e pubblico. Il caso della Pubblica Amministrazione
+                        </div>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #d1d0d0;">
+                </div>
+
+         </div>
+    </section>
+
+
+
+
+
+<!-- Sezione: Contatti -->
+    <section id="contatti" class="contact-section">
+        <div class="contact-card">
+            <div class="contact-info">                
+                 <h2 class="section-title">Restiamo in contatto</h2>
+                 <div class="tratto"></div>               
+            </div>             
+            <div class="contact-buttons">
+                <a href="mailto:m.petrocelli@unimarconi.it" target="_blank" class="contact-btn" aria-label="Invia un'email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo LinkedIn">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Sezione: Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                &copy; 2026 Michele Petrocelli. Tutti i diritti riservati.
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookie-policy.html" title="Cookie Policy">Cookie Policy</a>
+                <a href="termini.html" title="Termini di Servizio">Termini di Servizio</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Script JavaScript -->
+
+    <script>
+        // 1. Gestione Navbar trasparente/scrolled
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 2. Gestione Menu Mobile Hamburger
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const toggleIcon = mobileMenuToggle.querySelector('i');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                toggleIcon.classList.remove('fa-bars');
+                toggleIcon.classList.add('fa-xmark');
+            } else {
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            });
+        });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const postCards = document.querySelectorAll('.post-id');
+    const searchInput = document.getElementById('searchInput');
+
+    function filterPosts() {
+        // Legge il testo cercato e lo mette in minuscolo
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        
+        // Trova quale pulsante dei temi è attualmente attivo
+        const activeButton = document.querySelector('.filter-btn.active');
+        const filterValue = activeButton ? activeButton.getAttribute('data-filter').toLowerCase() : 'all';
+
+        postCards.forEach(card => {
+            const cardCategories = card.getAttribute('data-category').toLowerCase();
+            
+            // Estrae il testo specifico dall'elemento .temi-news-right
+            const textElement = card.querySelector('.temi-news-right');
+            const cardText = textElement ? textElement.textContent.toLowerCase() : '';
+
+            // Verifica se rispetta il filtro della categoria
+            const matchesCategory = (filterValue === 'all' || cardCategories.includes(filterValue));
+            
+            // Verifica se rispetta la ricerca testuale
+            const matchesSearch = cardText.includes(searchTerm);
+
+            // Se entrambe le condizioni sono vere, mostra la card, altrimenti la nasconde
+            if (matchesCategory && matchesSearch) {
+                card.style.setProperty('display', 'block', 'important');
+            } else {
+                card.style.setProperty('display', 'none', 'important');
+            }
+        });
+    }
+
+    // Ascolta il click sui bottoni dei temi
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            filterPosts(); // Esegue il filtro combinato
+        });
+    });
+
+    // Ascolta la digitazione dell'utente nella barra di ricerca in tempo reale
+    if (searchInput) {
+        searchInput.addEventListener('input', filterPosts);
+    }
+});
+    
+    </script>
+
+
+
+    <script>
+        // CONFIGURAZIONE CATEGORIA DESIDERATA
+        const CATEGORIA_TARGET = "epoidaltronde"; // Cambia qui la categoria che vuoi filtrare
+
+        // Funzione di supporto per estrarre una proprietà specifica dal Frontmatter YAML
+        function estraiValoreFrontmatter(testo, chiave) {
+            const regex = new RegExp(`^${chiave}:\\s*["']?([^"'\n]+)["']?`, 'm');
+            const match = testo.match(regex);
+            return match ? match[1].trim() : '';
+        }
+
+        async function init() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nomeFileSelezionato = urlParams.get('file');
+
+            if (nomeFileSelezionato) {
+                // SE C'È UN FILE NELL'URL: Mostra il dettaglio dell'articolo
+                document.getElementById('vista-articolo').style.display = 'block';
+                document.getElementById('vista-lista').style.display = 'none';
+                await caricaSingoloArticolo(nomeFileSelezionato);
+            } else {
+                // SE NON C'È UN FILE: Mostra la lista filtrata per categoria
+                document.getElementById('vista-lista').style.display = 'block';
+                document.getElementById('vista-articolo').style.display = 'none';
+                document.getElementById('nome-categoria').innerText = CATEGORIA_TARGET;
+                await caricaElencoFiltrato(CATEGORIA_TARGET);
+            }
+        }
+
+        // Funzione 1: Legge la directory da GitHub, scarica i file e filtra per categoria
+        async function caricaElencoFiltrato(categoriaDesiderata) {
+            const ul = document.getElementById('lista-articoli');
+            
+            try {
+                const apiUrl = 'https://api.github.com/repos/DomenicoMul/mp/contents/content/posts';
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error('Errore nel recupero della lista file da GitHub');
+                
+                const files = await response.json();
+                ul.innerHTML = '';
+                let trovati = 0;
+
+                for (const file of files) {
+                    if (file.name.endsWith('.md')) {
+                        // Scarica il file per leggere il Frontmatter
+                        const resFile = await fetch(file.download_url);
+                        const testoMarkdown = await resFile.text();
+
+                        const categoriaFile = estraiValoreFrontmatter(testoMarkdown, 'category');
+                        const titoloFile = estraiValoreFrontmatter(testoMarkdown, 'title') || file.name;
+
+                        // Controlla se la categoria corrisponde
+                        if (categoriaFile.toLowerCase() === categoriaDesiderata.toLowerCase()) {
+                            trovati++;
+                            const li = document.createElement('li');
+                            // Il link ricarica la pagina passando il nome del file nei parametri URL
+                            li.innerHTML = `<a href="?file=${file.name}"><strong>${titoloFile}</strong></a>`;
+                            ul.appendChild(li);
+                        }
+                    }
+                }
+
+                if (trovati === 0) {
+                    ul.innerHTML = `<li>Nessun articolo trovato per la categoria "${categoriaDesiderata}".</li>`;
+                }
+
+            } catch (error) {
+                console.error('Errore:', error);
+                ul.innerHTML = `<li style="color: red;">Impossibile caricare l'elenco degli articoli.</li>`;
+            }
+        }
+
+        // Funzione 2: Carica e mostra il singolo articolo selezionato
+        async function caricaSingoloArticolo(nomeFile) {
+            try {
+                const urlFile = `https://raw.githubusercontent.com/DomenicoMul/mp/refs/heads/main/content/posts/${nomeFile}`;
+                
+                const response = await fetch(urlFile);
+                if (!response.ok) throw new Error('Impossibile trovare il file dell\'articolo');
+
+                const fileText = await response.text();
+
+                // Estrae i metadati correggendo i nomi dei campi coerentemente col tuo Markdown
+                const linkImg = estraiValoreFrontmatter(fileText, 'img-link');
+                const titolo = estraiValoreFrontmatter(fileText, 'title');
+                const sottotitolo = estraiValoreFrontmatter(fileText, 'sub-title');            
+                const categoria = estraiValoreFrontmatter(fileText, 'category');
+                const data = estraiValoreFrontmatter(fileText, 'date');
+                const descrizione = estraiValoreFrontmatter(fileText, 'description');
+
+                // Inserisce i metadati negli elementi HTML corretti
+                if (linkImg) {
+                    const imgEl = document.getElementById('immagine-articolo');
+                    imgEl.src = linkImg;
+                    imgEl.style.display = 'block';
+                }
+                if (titolo) {
+                    document.getElementById('titolo-articolo').innerText = titolo;
+                    document.getElementById('page-title').innerText = titolo;
+                }
+                if (sottotitolo) document.getElementById('sottotitolo-articolo').innerText = sottotitolo;
+                if (categoria) document.getElementById('categoria-articolo').innerText = categoria;
+                if (data) document.getElementById('data-articolo').innerText = data;
+                
+                if (descrizione) {
+                    const descEl = document.getElementById('descrizione-articolo');
+                    descEl.innerText = descrizione;
+                    descEl.style.display = 'block';
+                }
+
+                // Isola il corpo del testo rimuovendo il Frontmatter YAML
+                let corpoMarkdown = fileText;
+                if (fileText.startsWith('---')) {
+                    const parti = fileText.split('---');
+                    if (parti.length >= 3) {
+                        corpoMarkdown = parti.slice(2).join('---').trim();
+                    }
+                }
+
+                // Converte il Markdown in HTML e lo inserisce nella pagina
+                document.getElementById('corpo-articolo').innerHTML = marked.parse(corpoMarkdown);
+
+            } catch (error) {
+                console.error('Errore:', error);
+                document.getElementById('vista-articolo').innerHTML = `<h2 style="color: red;">Impossibile caricare l'articolo.</h2><p>${error.message}</p>`;
+            }
+        }
+
+        // Avvia l'applicazione al caricamento
+        init();
+    </script>
+
+
+
+
+</body>
+</html>
