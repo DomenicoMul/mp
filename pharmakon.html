@@ -674,7 +674,10 @@
     </footer>
 
     <script>
-        // Dati Personaggi per le Figurine
+      
+      
+      
+      // Dati Personaggi per le Figurine
         const charactersData = [
             {
                 name: "Alephos",
@@ -784,6 +787,10 @@
         const modalRole = document.getElementById('modal-role');
         const modalDesc = document.getElementById('modal-desc');
 
+       
+       
+       
+       
         // Inizializza Figurine Personaggi
         function initCharacters() {
             cardsContainer.innerHTML = '';
@@ -958,5 +965,20 @@ function openModal(char) {
         initCharacters();
         buildBook();
     </script>
+<script>
+
+        // Inizializzazione
+        initCharacters();
+        buildBook();
+
+        // Controlla se nell'URL è presente il parametro ?panel=open
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('panel') === 'open') {
+            charactersPanel.classList.add('open');
+        }
+      </script>
+
+      
+    
 </body>
 </html>
