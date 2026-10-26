@@ -1,118 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Allura&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Montserrat:300,400,500,600,700,800|Open+Sans:400,600,700&family=Playfair+Display:ital,wght@0,300,400..900;1,400..900&display=swap");
-
-/* --- RESET E STILI GENERALI --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #39001d;
-    line-height: 1.6;
-    background-color: #f4f7fb;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* --- BARRA DI NAVIGAZIONE TRASPARENTE E FISSA --- */
-#navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(57, 0, 29, 0.95) !important;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#navbar.scrolled {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.nav-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 18px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-logo a {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.nav-menu ul {
-    display: flex;
-    gap: 22px;
-}
-
-.nav-menu a {
-    font-size: 0.95rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: 0.3px;
-    padding-bottom: 3px;
-    transition: color 0.3s, border-color 0.3s;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-    border-bottom: 2px solid #ed5342;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.nav-search button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.nav-search button:hover {
-    color: #ed5342;
-}
-
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.4rem;
-    color: #fff;
-    transition: color 0.3s;
-}
-
 /* --- SEZIONE INTESTAZIONE EVENTI --- */
 .temi-section {
     padding: 130px 20px 20px 20px;
@@ -128,33 +13,6 @@ img {
 }
 
 .section-header {
-    margin-bottom: 20px;
-}
-
-.section-subtitle {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.4em;
-    color: #39001d;
-    display: block;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.section-title {
-    font-size: clamp(36px, 4.5cqw, 64px);
-    font-family: 'Playfair Display', Georgia, serif;
-    color: #39001d;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1.08;
-    margin-bottom: 15px;
-}
-
-.tratto {
-    height: 2px;
-    background-color: #39001d;
-    max-width: 120px;
     margin-bottom: 20px;
 }
 
@@ -191,14 +49,11 @@ img {
     color: #fff;
     border: 1px solid #39001d;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
     z-index: 10;
     font-size: 0.9rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
-
 }
-
 
 .timeline-btn:hover {
     background-color: #340521;
@@ -418,7 +273,7 @@ img {
 }
 
 .post-link:hover {
-       color: #5127ec;
+    color: #5127ec;
 }
 
 .post-carousel-btn {
@@ -440,12 +295,11 @@ img {
     transition: all 0.3s ease;
 }
 
-.post-prev-btn { top: -30px; margin-left: 93%;  }
+.post-prev-btn { top: -30px; margin-left: 93%; }
 .post-next-btn { top: -30px; margin-left: 97%; }
 
-.post-prev-btn:hover { background-color: #310250;  }
+.post-prev-btn:hover { background-color: #310250; }
 .post-next-btn:hover { background-color: #310250; }
-
 
 /* --- SEZIONE ELENCO EVENTI PER TEMA & FILTRI --- */
 .coral-books-section {
@@ -531,154 +385,26 @@ img {
     font-size: 0.95rem;
 }
 
-/* --- SEZIONE CONTATTI --- */
-.contact-section {
-    padding: 80px 20px;
-    background-color: #dadada;
-    display: flex;
-    justify-content: center;
-}
-
-.contact-card {
-    background-color: #d1d0d0;
-    padding: 60px 80px;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    border-radius: 12px;
-}
-
-.contact-info h2 {
-    font-size: clamp(32px, 4.5cqw, 45px);
-    font-family: 'Playfair Display', Georgia, serif;
-    color: #39001d;
-    font-weight: 400;
-    margin-bottom: 15px;
-    line-height: 1.1;
-}
-
-.contact-buttons {
-    display: flex;
-    gap: 18px;
-}
-
-.contact-btn {
-    width: 65px;
-    height: 65px;
-    background-color: #33061b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 1.8rem;
-    border-radius: 50%;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.contact-btn:hover {
-    background-color: #ed5342;
-    transform: translateY(-3px);
-}
-
-/* --- FOOTER --- */
-.site-footer {
-    background-color: #39001d;
-    color: #dadada;
-    padding: 35px 20px;
-    font-size: 0.85rem;
-}
-
-.footer-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 25px;
-}
-
-.footer-links a {
-    color: #ffffff;
-    transition: color 0.2s;
-}
-
-.footer-links a:hover {
-    color: #ed5342;
-}
-
 /* ==========================================================================
-   MEDIA QUERIES (TABLET & MOBILE)
+   MEDIA QUERIES (SPECIFICHE)
    ========================================================================== */
 
 @media (max-width: 1024px) {
-    .nav-container {
-        padding: 15px 25px;
-    }
-
-    /* Carosello Ultimi Contenuti su Tablet */
     .posts-carousel-wrapper {
         padding: 10px 45px;
         position: relative;
     }
 
-  
-      .post-prev-btn { top: -30px; margin-left: 82.5%;  }
+    .post-prev-btn { top: -30px; margin-left: 82.5%; }
     .post-next-btn { top: -30px; margin-left: 88%; }
 
     .post-card {
         min-width: 280px;
         flex: 0 0 auto;
     }
-
-    .contact-card {
-        padding: 50px 40px;
-    }
 }
 
 @media (max-width: 768px) {
-    /* Menu Mobile */
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #39001d;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease-in-out;
-    }
-
-    .nav-menu.active {
-        max-height: 450px;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 25px 0;
-        gap: 16px;
-    }
-
-    .nav-menu a {
-        color: #fff !important;
-        font-size: 1.1rem;
-    }
-
-    /* Sezioni Eventi Mobile */
     .temi-section {
         padding: 100px 15px 20px 15px;
     }
@@ -687,7 +413,6 @@ img {
         padding: 40px 15px;
     }
 
-    /* Adattamento filtri di ricerca su dispositivi mobili */
     div[style*="margin: 10px 10px;"] {
         display: flex;
         flex-wrap: wrap;
@@ -702,7 +427,6 @@ img {
         margin: 0 !important;
     }
 
-    /* Lista eventi mobile */
     .temi-news-left {
         min-width: 50px;
         font-size: 0.85rem;
@@ -712,41 +436,16 @@ img {
         font-size: 0.85rem;
     }
 
-    /* Ultimi Contenuti Mobile - Frecce visibili */
     .posts-carousel-wrapper {
         padding: 10px 35px;
     }
 
-
-
-    .post-prev-btn { top: -30px; margin-left: 75%;  }
+    .post-prev-btn { top: -30px; margin-left: 75%; }
     .post-next-btn { top: -30px; margin-left: 85%; }
 
-    /* Contatti e Footer Mobile */
-    .contact-card {
-        flex-direction: column;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .contact-buttons {
-        justify-content: center;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
     .timeline-nav-buttons {
-    margin-left: 80%;
-    top: -40px!important;
-    position: relative;
-}
+        margin-left: 80%;
+        top: -40px !important;
+        position: relative;
+    }
 }
