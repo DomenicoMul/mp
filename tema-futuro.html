@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futuro | Michele Petrocelli</title>
-    <!-- Collegamento al file CSS esterno -->
+   <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style-temi_page.css">
     <!-- Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -70,7 +71,15 @@
         <div class="coral-container">
             <div class="coral-half">
                <span class="section-subtitle" style="color: #39001d;">il TEMA </span>  
-                <p class="tema-testo">Anticipare è diverso da prevedere. Lo strategic foresight offre metodi per costruire scenari alternativi e riconoscere i segnali deboli, così da decidere con più solidità in condizioni di incertezza. La governance anticipatoria porta questi strumenti dentro le istituzioni.</p>
+                <p class="tema-testo">
+                    Il futuro non può essere previsto con certezza. In un contesto caratterizzato da innovazioni continue, cambiamenti sociali, trasformazioni economiche e nuove tecnologie, l'incertezza rappresenta una condizione permanente. Per questo motivo, la vera sfida non è indovinare ciò che accadrà, ma sviluppare la capacità di immaginare i possibili cambiamenti e prepararsi ad affrontarli.
+                    <br><br>
+                    In questa prospettiva, lo Strategic Foresight rappresenta uno strumento essenziale per orientarsi nell'incertezza e provare a comprendere le evoluzioni future. Attraverso l'analisi delle tendenze emergenti, l'individuazione dei segnali deboli e la costruzione di scenari alternativi, consente di ampliare lo sguardo oltre il breve periodo e di supportare decisioni più consapevoli e resilienti. L'obiettivo non è quindi predire il futuro, ma migliorare la qualità delle scelte da prendere nel presente. Esplorare scenari differenti aiuta infatti a mettere in discussione assunzioni consolidate, riconoscere rischi e opportunità emergenti e prepararsi a cambiamenti che potrebbero modificare profondamente il contesto in cui operano persone, organizzazioni e istituzioni.
+                    <br><br>
+                    Questo approccio assume un valore particolare per il settore pubblico. Le istituzioni sono chiamate a prendere decisioni che producono effetti nel lungo periodo, incidendo sulla vita delle persone, oggi e nelle generazioni future. Per questo motivo, accanto alla capacità di gestire il presente, è essenziale sviluppare una visione strategica di lungo termine.
+                    <br><br>
+                    È in questo contesto che si inserisce il concetto di governance anticipatoria: la capacità delle organizzazioni e delle istituzioni di incorporare l'analisi del futuro nei processi decisionali, utilizzando dati, conoscenza e strumenti di foresight per individuare in anticipo sfide e opportunità. Non si tratta di immaginare il futuro come un esercizio teorico, ma di utilizzarlo come elemento cardine per guidare l'azione nel presente.
+                </p>
              <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;">Continua a leggere &rarr;</button>
             </div>
 
@@ -335,127 +344,7 @@
     </footer>
 
 <!-- Script JavaScript -->
-    <script>
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+ <script src="assets/js/utility.js"></script>
 
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const toggleIcon = mobileMenuToggle.querySelector('i');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            if (navMenu.classList.contains('active')) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-xmark');
-            } else {
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            }
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            });
-        });
-
-        const cardsContainer = document.getElementById('cardsContainer');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        function getScrollAmount() {
-            const card = cardsContainer.querySelector('.card');
-            return card ? card.offsetWidth + 20 : 300; 
-        }
-
-        nextBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-        });
-
-        prevBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-        });
-
-        const postsContainer = document.getElementById('postsContainer');
-        const postPrevBtn = document.getElementById('postPrevBtn');
-        const postNextBtn = document.getElementById('postNextBtn');
-
-        function getPostScrollAmount() {
-            const postCard = postsContainer.querySelector('.post-card');
-            return postCard ? postCard.offsetWidth + 30 : 330;
-        }
-
-        postNextBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        postPrevBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: -getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        const timelineWrapper = document.getElementById('timelineWrapper');
-        const timelinePrevBtn = document.getElementById('timelinePrevBtn');
-        const timelineNextBtn = document.getElementById('timelineNextBtn');
-
-        function getTimelineScrollAmount() {
-            const item = timelineWrapper.querySelector('.timeline-item');
-            return item ? item.offsetWidth + 40 : 300;
-        }
-
-        timelineNextBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-
-        timelinePrevBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-    </script>
-     <script>
-  // Selezioniamo gli elementi
-  const paragrafo = document.querySelector(".tema-testo");
-  const btnContinua = document.getElementById("btn-continua");
-
-  // Salviamo il testo completo originale
-  const testoCompleto = paragrafo.textContent;
-  
-  // Imposta quanti caratteri mostrare nell'anteprima (es. 90 caratteri)
-  const limiteCaratteri = 260;
-
-  // Controlliamo se il testo è abbastanza lungo da dover essere troncato
-  if (testoCompleto.length > limiteCaratteri) {
-    // 1. Crea la versione ridotta con i puntini di sospensione
-    const testoRidotto = testoCompleto.substring(0, limiteCaratteri) + "...";
-    paragrafo.textContent = testoRidotto;
-
-    let eEspanso = false;
-
-    // 2. Gestisce il click sul pulsante
-    btnContinua.addEventListener("click", () => {
-      if (!eEspanso) {
-        // Mostra tutto il testo
-        paragrafo.textContent = testoCompleto;
-        btnContinua.textContent = "Mostra meno";
-        eEspanso = true;
-      } else {
-        // Torna alla versione ridotta
-        paragrafo.textContent = testoRidotto;
-        btnContinua.textContent = "Continua a leggere →";
-        eEspanso = false;
-      }
-    });
-  } else {
-    // Se il testo è già corto, nasconde il pulsante "Continua"
-    btnContinua.style.display = "none";
-  }
-   </script>
 </body>
 </html>

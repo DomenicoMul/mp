@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI | Michele Petrocelli</title>
     <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style-temi_page.css">
     <!-- Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -70,8 +71,20 @@
            
             <div class="coral-half">
                 <span class="section-subtitle" style="color: #39001d;">IL TEMA</span> 
-                <p class="tema-testo">L’intelligenza artificiale ridisegna i mercati del lavoro, la formazione del consenso e il rapporto tra cittadini e istituzioni. Il tema raccoglie analisi sugli effetti economici e sui rischi per la democrazia, e indaga le condizioni perché l’innovazione produca benessere diffuso.</p>
-                <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;">Continua a leggere &rarr;</button>
+                <p class="tema-testo">
+                    L'intelligenza artificiale non è soltanto una nuova tecnologia: è una trasformazione, che sta modificando il modo in cui produciamo conoscenza, prendiamo decisioni, organizziamo il lavoro e progettiamo servizi. Per questo comprenderne il potenziale significa andare oltre i suoi aspetti tecnici: dati, algoritmi e sistemi intelligenti incidono sui processi decisionali e contribuiscono a definire opportunità, priorità e modelli di sviluppo.
+                   <br><br>
+                    Ogni tecnologia incorpora infatti una visione del futuro. Le piattaforme che utilizziamo, gli strumenti che adottiamo e gli algoritmi che guidano sempre più attività riflettono scelte progettuali, valori e obiettivi. Il futuro che viviamo oggi è il risultato di decisioni che qualcuno ha preso in passato; quello che costruiremo dipenderà dalle decisioni che sapremo prendere oggi.
+                    <br><br>
+                    L'intelligenza artificiale può amplificare enormemente la nostra capacità di elaborare informazioni, riconoscere schemi e affrontare problemi complessi. Ma esiste una dimensione che rimane profondamente umana: attribuire significato ai dati, interpretare i contesti, valutare le implicazioni delle scelte e assumerne la responsabilità. La vera sfida, quindi, non consiste nell'adottare nuove tecnologie, ma nello sviluppare le competenze necessarie per utilizzarle in modo consapevole. In un mondo in cui l'accesso alle informazioni è sempre più abbondante, ciò che fa la differenza non è disporre di più dati, ma possedere maggiore capacità di giudizio, visione strategica e pensiero critico.
+  <br><br>
+Questa sfida è collettiva e riguarda imprese, istituzioni, scuole e cittadini. Riguarda il modo in cui progettiamo organizzazioni, formiamo le nuove generazioni e orientiamo l'innovazione verso obiettivi condivisi.
+  <br><br>
+Governare l'intelligenza artificiale significa quindi creare le condizioni affinché il progresso tecnologico generi valore economico, sociale e pubblico, mantenendo la persona al centro dei processi decisionali. Il potenziale dell'AI è straordinario, ma il suo impatto dipenderà dalle scelte che saremo in grado di compiere e dalla responsabilità con cui decideremo di utilizzarla.
+                
+                </p>
+                 
+                <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;margin-bottom: 20px;">Continua a leggere &rarr;</button>
             </div>
 
             <div class="coral-half">
@@ -340,80 +353,7 @@
     </footer>
 
 <!-- Script JavaScript -->
-   <!-- Script JavaScript -->
-    <script>
-        // 1. Gestione Navbar trasparente/scrolled
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // 2. Gestione Menu Mobile Hamburger
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const toggleIcon = mobileMenuToggle.querySelector('i');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            if (navMenu.classList.contains('active')) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-xmark');
-            } else {
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            }
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            });
-        });
-    </script>
-
-    <script>
-  // Selezioniamo gli elementi
-  const paragrafo = document.querySelector(".tema-testo");
-  const btnContinua = document.getElementById("btn-continua");
-
-  // Salviamo il testo completo originale
-  const testoCompleto = paragrafo.textContent;
-  
-  // Imposta quanti caratteri mostrare nell'anteprima (es. 90 caratteri)
-  const limiteCaratteri = 260;
-
-  // Controlliamo se il testo è abbastanza lungo da dover essere troncato
-  if (testoCompleto.length > limiteCaratteri) {
-    // 1. Crea la versione ridotta con i puntini di sospensione
-    const testoRidotto = testoCompleto.substring(0, limiteCaratteri) + "...";
-    paragrafo.textContent = testoRidotto;
-
-    let eEspanso = false;
-
-    // 2. Gestisce il click sul pulsante
-    btnContinua.addEventListener("click", () => {
-      if (!eEspanso) {
-        // Mostra tutto il testo
-        paragrafo.textContent = testoCompleto;
-        btnContinua.textContent = "Mostra meno";
-        eEspanso = true;
-      } else {
-        // Torna alla versione ridotta
-        paragrafo.textContent = testoRidotto;
-        btnContinua.textContent = "Continua a leggere →";
-        eEspanso = false;
-      }
-    });
-  } else {
-    // Se il testo è già corto, nasconde il pulsante "Continua"
-    btnContinua.style.display = "none";
-  }
-</script>
+ <script src="assets/js/utility.js"></script>
+ 
 </body>
 </html>

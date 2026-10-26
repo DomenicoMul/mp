@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pubblicazioni | Michele Petrocelli</title>
-    <!-- Collegamento al file CSS esterno -->
+  <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style-pubblicazioni.css">
     <!-- Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -80,7 +81,7 @@
                     <div class="book-content">                         
                         <div class="pubblicazioni-book-tag">GAMBINI EDITORE - 2026 </div>
                         <div class="pubblicazioni-libri-title">GOVERARE I FUTURI</div>  
-                        <a href="#" class="book-btn">LEGGI SCHEDA</a>
+                        <a href="governare-i-futuri.html" class="book-btn">LEGGI SCHEDA</a>
                     </div>
                 </div>
             </div>
@@ -97,7 +98,7 @@
                     <div class="book-content">                       
                         <div class="pubblicazioni-book-tag">GAMBINI EDITORE - 2026 </div>
                         <div class="pubblicazioni-libri-title">IL PARADOSSO DIGITALE</div>   
-                        <a href="#" class="book-btn">LEGGI SCHEDA</a>
+                        <a href="il-paradosso-digitale.html" class="book-btn">LEGGI SCHEDA</a>
                     </div>
                 </div>
             </div>
@@ -358,92 +359,6 @@
     </footer>
 
 <!-- Script JavaScript -->
-
-    <script>
-        // 1. Gestione Navbar trasparente/scrolled
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // 2. Gestione Menu Mobile Hamburger
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const toggleIcon = mobileMenuToggle.querySelector('i');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            if (navMenu.classList.contains('active')) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-xmark');
-            } else {
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            }
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            });
-        });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const postCards = document.querySelectorAll('.post-id');
-    const searchInput = document.getElementById('searchInput');
-
-    function filterPosts() {
-        // Legge il testo cercato e lo mette in minuscolo
-        const searchTerm = searchInput.value.toLowerCase().trim();
-        
-        // Trova quale pulsante dei temi è attualmente attivo
-        const activeButton = document.querySelector('.filter-btn.active');
-        const filterValue = activeButton ? activeButton.getAttribute('data-filter').toLowerCase() : 'all';
-
-        postCards.forEach(card => {
-            const cardCategories = card.getAttribute('data-category').toLowerCase();
-            
-            // Estrae il testo specifico dall'elemento .temi-news-right
-            const textElement = card.querySelector('.temi-news-right');
-            const cardText = textElement ? textElement.textContent.toLowerCase() : '';
-
-            // Verifica se rispetta il filtro della categoria
-            const matchesCategory = (filterValue === 'all' || cardCategories.includes(filterValue));
-            
-            // Verifica se rispetta la ricerca testuale
-            const matchesSearch = cardText.includes(searchTerm);
-
-            // Se entrambe le condizioni sono vere, mostra la card, altrimenti la nasconde
-            if (matchesCategory && matchesSearch) {
-                card.style.setProperty('display', 'block', 'important');
-            } else {
-                card.style.setProperty('display', 'none', 'important');
-            }
-        });
-    }
-
-    // Ascolta il click sui bottoni dei temi
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            filterPosts(); // Esegue il filtro combinato
-        });
-    });
-
-    // Ascolta la digitazione dell'utente nella barra di ricerca in tempo reale
-    if (searchInput) {
-        searchInput.addEventListener('input', filterPosts);
-    }
-});
-    
-    </script>
+ <script src="assets/js/utility.js"></script>
 </body>
 </html>

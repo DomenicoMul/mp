@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formazione | Michele Petrocelli</title>
-    <!-- Collegamento al file CSS esterno -->
-   <link rel="stylesheet" href="assets/css/style-temi_page.css">
+   <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style-temi_page.css">
     <!-- Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Font Google Cursive per la scritta Post Digitale -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+   
 </head>
 <body>
 
@@ -70,7 +72,15 @@
         <div class="coral-container">
             <div class="coral-half">
                 <span class="section-subtitle" style="color: #39001d;">IL TEMA  </span>  
-                <p class="tema-testo">La scuola e l’università sono il primo luogo in cui si forma la coscienza digitale. Il tema raccoglie esperienze didattiche, dalla gamification alle simulazioni in aula, e riflessioni sul ruolo della formazione continua nella società della conoscenza.</p>
+                <p class="tema-testo">
+                    Oggi la formazione è una dimensione permanente dell'esperienza umana, uno strumento essenziale per comprendere il cambiamento e affrontare le trasformazioni che interessano lavoro, tecnologia e società. Formarsi non significa soltanto acquisire conoscenze, ma sviluppare gli elementi per comprenderle, collegarle e utilizzarle in modo consapevole.
+                    <br><br>
+                    La rivoluzione digitale e l'intelligenza artificiale stanno cambiando profondamente il modo in cui apprendiamo: le informazioni sono sempre più accessibili, personalizzabili e disponibili attraverso linguaggi e canali diversi. E questo rende possibile costruire percorsi di apprendimento più flessibili e coerenti con le caratteristiche di ciascuna persona, valorizzando differenti stili cognitivi, interessi e talenti. Non si tratta più soltanto di trasmettere conoscenze e riempire contenitori, ma di creare le condizioni affinché le persone possano apprendere, sperimentare e sviluppare il proprio potenziale.
+                    <br><br>
+                    Questa trasformazione riguarda la scuola e l'università, ma coinvolge anche imprese, istituzioni e organizzazioni, chiamate a promuovere una cultura dell'apprendimento continuo. I sistemi educativi sono chiamati a preparare le persone non soltanto alle professioni di oggi, ma a un futuro in continua evoluzione. E ciò richiede modelli didattici capaci di mettere al centro curiosità, partecipazione, sperimentazione e scoperta del proprio talento. In questo contesto, il docente, o formatore, non assume più un ruolo di semplice trasmettitore di conoscenze, ma di guida, necessaria per accompagnare percorsi di apprendimento differenti, sostenere la motivazione e aiutare ciascuno a sviluppare il proprio potenziale. La tecnologia può ampliare le opportunità educative, ma la relazione umana resta l'elemento decisivo di ogni processo formativo.
+                    <br><br>
+                    Investire nella formazione significa investire nelle persone e nella loro capacità di costruire il futuro. Perché in un mondo che cambia continuamente, la competenza più importante non è sapere tutto, ma continuare a imparare. E trasformare ogni cambiamento in un'opportunità di crescita, innovazione e sviluppo umano.
+                </p>
                  <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;">Continua a leggere &rarr;</button>
             </div>
 
@@ -256,15 +266,8 @@
                     </div>
                 </div>  
             </div>
-           
         </div>
-
-
     </section>
-
-
-
-
 
 <!-- Sezione: Contatti -->
     <section id="contatti" class="contact-section">
@@ -302,128 +305,7 @@
     </footer>
 
 <!-- Script JavaScript -->
-    <script>
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const toggleIcon = mobileMenuToggle.querySelector('i');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            if (navMenu.classList.contains('active')) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-xmark');
-            } else {
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            }
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            });
-        });
-
-        const cardsContainer = document.getElementById('cardsContainer');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        function getScrollAmount() {
-            const card = cardsContainer.querySelector('.card');
-            return card ? card.offsetWidth + 20 : 300; 
-        }
-
-        nextBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-        });
-
-        prevBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-        });
-
-        const postsContainer = document.getElementById('postsContainer');
-        const postPrevBtn = document.getElementById('postPrevBtn');
-        const postNextBtn = document.getElementById('postNextBtn');
-
-        function getPostScrollAmount() {
-            const postCard = postsContainer.querySelector('.post-card');
-            return postCard ? postCard.offsetWidth + 30 : 330;
-        }
-
-        postNextBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        postPrevBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: -getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        const timelineWrapper = document.getElementById('timelineWrapper');
-        const timelinePrevBtn = document.getElementById('timelinePrevBtn');
-        const timelineNextBtn = document.getElementById('timelineNextBtn');
-
-        function getTimelineScrollAmount() {
-            const item = timelineWrapper.querySelector('.timeline-item');
-            return item ? item.offsetWidth + 40 : 300;
-        }
-
-        timelineNextBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-
-        timelinePrevBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-    </script>
-
-    <script>
-  // Selezioniamo gli elementi
-  const paragrafo = document.querySelector(".tema-testo");
-  const btnContinua = document.getElementById("btn-continua");
-
-  // Salviamo il testo completo originale
-  const testoCompleto = paragrafo.textContent;
-  
-  // Imposta quanti caratteri mostrare nell'anteprima (es. 90 caratteri)
-  const limiteCaratteri = 260;
-
-  // Controlliamo se il testo è abbastanza lungo da dover essere troncato
-  if (testoCompleto.length > limiteCaratteri) {
-    // 1. Crea la versione ridotta con i puntini di sospensione
-    const testoRidotto = testoCompleto.substring(0, limiteCaratteri) + "...";
-    paragrafo.textContent = testoRidotto;
-
-    let eEspanso = false;
-
-    // 2. Gestisce il click sul pulsante
-    btnContinua.addEventListener("click", () => {
-      if (!eEspanso) {
-        // Mostra tutto il testo
-        paragrafo.textContent = testoCompleto;
-        btnContinua.textContent = "Mostra meno";
-        eEspanso = true;
-      } else {
-        // Torna alla versione ridotta
-        paragrafo.textContent = testoRidotto;
-        btnContinua.textContent = "Continua a leggere →";
-        eEspanso = false;
-      }
-    });
-  } else {
-    // Se il testo è già corto, nasconde il pulsante "Continua"
-    btnContinua.style.display = "none";
-  }
-   </script>
+ <script src="assets/js/utility.js"></script>
+     
 </body>
 </html>

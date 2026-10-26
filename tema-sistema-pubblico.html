@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valore pubblico | Michele Petrocelli</title>
     <!-- Collegamento al file CSS esterno -->
-   <link rel="stylesheet" href="assets/css/style-temi_page.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style-temi_page.css">
     <!-- Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Font Google Cursive per la scritta Post Digitale -->
@@ -70,7 +71,20 @@
         <div class="coral-container">
             <div class="coral-half">
                  <span class="section-subtitle" style="color: #39001d;">il tema  </span>  
-                <p class="tema-testo">La pubblica amministrazione è il luogo in cui la trasformazione digitale incontra la vita delle persone. Il tema riguarda la misura del valore pubblico e la progettazione di servizi empatici, e si chiede come si governa dopo la digitalizzazione, quando la tecnologia è data per scontata.</p>
+                <p class="tema-testo">
+                    Governare significa guidare, assumersi la responsabilità di scegliere una direzione, definire una rotta e orientare il cambiamento verso obiettivi di interesse collettivo. È questa, oggi più che mai, la sfida della Pubblica Amministrazione: in un contesto caratterizzato da trasformazioni profonde e continue, mantenere la capacità di guidare, prendendo decisioni efficaci e generando valore per cittadini, imprese e territori.
+                    <br><br>    
+                    Dati e tecnologie avanzate offrono oggi l'opportunità di comprendere meglio la realtà, analizzare fenomeni complessi e supportare i processi decisionali. Il loro valore, tuttavia, non dipende soltanto dalla disponibilità degli strumenti, ma dalla capacità delle istituzioni di
+                    integrarli con competenze, esperienza e visione. La tecnologia può amplificare la capacità di governo, ma non sostituire la responsabilità della decisione pubblica.
+                    <br><br>
+                    In questa prospettiva nasce il concetto di PA post-digitale: una pubblica amministrazione che considera tecnologie, dati e intelligenza artificiale non come obiettivi da raggiungere, ma come strumenti per migliorare la qualità delle decisioni e generare valore. Ciò che conta, infatti, non è la tecnologia in sé, ma la capacità delle istituzioni di utilizzarla per rispondere in modo più efficace ai bisogni collettivi e rendere così l'azione pubblica più vicina alle persone.
+                    <br><br>
+                    Ecco perché la PA post-digitale è anche una PA empatica: un'amministrazione capace di utilizzare dati e tecnologia per comprendere e anticipare i bisogni di cittadini e imprese, progettando servizi più utili, accessibili e inclusivi. L'obiettivo non è soltanto aumentare l'efficienza dei processi, ma migliorare concretamente l'esperienza delle persone e la qualità della vita delle comunità.
+                    <br><br>
+                    L'empatia istituzionale richiede apertura, collaborazione e apprendimento continuo. Una pubblica amministrazione capace di dialogare con università, imprese, startup, centri di ricerca e società civile è più preparata a interpretare il cambiamento e a sviluppare risposte efficaci alle sfide emergenti.
+                    <br><br>
+                    Una PA post-digitale è, in definitiva, un'amministrazione più consapevole, più vicina ai cittadini e più orientata al futuro. Un'istituzione capace di utilizzare innovazione, dati e conoscenza per comprendere il presente, anticipare il cambiamento e accompagnare lo sviluppo della società.
+                </p>
              <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;">Continua a leggere &rarr;</button>
             </div>
 
@@ -341,128 +355,7 @@
     </footer>
 
 <!-- Script JavaScript -->
-    <script>
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const toggleIcon = mobileMenuToggle.querySelector('i');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            if (navMenu.classList.contains('active')) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-xmark');
-            } else {
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            }
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            });
-        });
-
-        const cardsContainer = document.getElementById('cardsContainer');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        function getScrollAmount() {
-            const card = cardsContainer.querySelector('.card');
-            return card ? card.offsetWidth + 20 : 300; 
-        }
-
-        nextBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-        });
-
-        prevBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-        });
-
-        const postsContainer = document.getElementById('postsContainer');
-        const postPrevBtn = document.getElementById('postPrevBtn');
-        const postNextBtn = document.getElementById('postNextBtn');
-
-        function getPostScrollAmount() {
-            const postCard = postsContainer.querySelector('.post-card');
-            return postCard ? postCard.offsetWidth + 30 : 330;
-        }
-
-        postNextBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        postPrevBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: -getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        const timelineWrapper = document.getElementById('timelineWrapper');
-        const timelinePrevBtn = document.getElementById('timelinePrevBtn');
-        const timelineNextBtn = document.getElementById('timelineNextBtn');
-
-        function getTimelineScrollAmount() {
-            const item = timelineWrapper.querySelector('.timeline-item');
-            return item ? item.offsetWidth + 40 : 300;
-        }
-
-        timelineNextBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-
-        timelinePrevBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-    </script>
-
-     <script>
-  // Selezioniamo gli elementi
-  const paragrafo = document.querySelector(".tema-testo");
-  const btnContinua = document.getElementById("btn-continua");
-
-  // Salviamo il testo completo originale
-  const testoCompleto = paragrafo.textContent;
+ <script src="assets/js/utility.js"></script>
   
-  // Imposta quanti caratteri mostrare nell'anteprima (es. 90 caratteri)
-  const limiteCaratteri = 260;
-
-  // Controlliamo se il testo è abbastanza lungo da dover essere troncato
-  if (testoCompleto.length > limiteCaratteri) {
-    // 1. Crea la versione ridotta con i puntini di sospensione
-    const testoRidotto = testoCompleto.substring(0, limiteCaratteri) + "...";
-    paragrafo.textContent = testoRidotto;
-
-    let eEspanso = false;
-
-    // 2. Gestisce il click sul pulsante
-    btnContinua.addEventListener("click", () => {
-      if (!eEspanso) {
-        // Mostra tutto il testo
-        paragrafo.textContent = testoCompleto;
-        btnContinua.textContent = "Mostra meno";
-        eEspanso = true;
-      } else {
-        // Torna alla versione ridotta
-        paragrafo.textContent = testoRidotto;
-        btnContinua.textContent = "Continua a leggere →";
-        eEspanso = false;
-      }
-    });
-  } else {
-    // Se il testo è già corto, nasconde il pulsante "Continua"
-    btnContinua.style.display = "none";
-  }
-   </script>
 </body>
 </html>

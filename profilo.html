@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profilo | Michele Petrocelli</title>
     <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style-profilo.css">
     <!-- Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -75,17 +76,22 @@
     <!-- Blocco Testo a Sinistra -->
     <div class="about-text-side">
          <p >
-            Aiuto persone, organizzazioni e istituzioni a comprendere il cambiamento e a prendere decisioni migliori in contesti caratterizzati da crescente complessità e incertezza.
-            Il mio lavoro si concentra sull'incontro tra innovazione tecnologica, intelligenza artificiale, strategic foresight e sviluppo delle competenze. Credo che il futuro non sia qualcosa da prevedere, ma da costruire attraverso scelte consapevoli, capacità di immaginazione e responsabilità collettiva.
-            Per questo progetto metodi, strumenti e percorsi che aiutano decisori pubblici, manager, professionisti e studenti a sviluppare capacità anticipatorie, interpretare le trasformazioni in corso e trasformare l'innovazione in valore concreto.
+            La curiosità e l'apprendimento continuo orientano da sempre il mio percorso personale e professionale: alimentano il mio desiderio di comprendere come le trasformazioni culturali, sociali, economiche e tecnologiche influenzino la vita delle persone, le organizzazioni e le istituzioni.
+            <br><br>
+            Da molti anni studio il rapporto tra innovazione, intelligenza artificiale, pubblica amministrazione, formazione e sviluppo delle competenze. Lo faccio attraverso i diversi ruoli che ricopro, convinto che comprendere il cambiamento sia il primo passo per affrontarlo e governarlo in modo responsabile.
+            <br><br>
+            Per questo mi occupo di ricerca, formazione e divulgazione, progettando strumenti e iniziative che aiutano decisori pubblici, manager, professionisti e studenti a interpretare le trasformazioni in corso, sviluppare nuove competenze e tradurre l'innovazione in valore concreto.
         </p>
     </div>
 
     
     <div class="about-text-side">
-        <p >
-            In questa prospettiva, la tecnologia rappresenta una leva fondamentale, ma non il punto di arrivo. Sono convinto che l'intelligenza artificiale, i dati e gli strumenti digitali abbiano valore quando rafforzano il giudizio umano, ampliano la capacità di comprendere la realtà e rendono possibili decisioni più consapevoli e responsabili.
-            Questi temi guidano la mia attività di ricerca, formazione, divulgazione e progettazione, sia come Direttore Generale del Dipartimento del Tesoro presso il Ministero dell'Economia e delle Finanze, sia come docente universitario presso l'Università degli Studi Guglielmo Marconi.
+        <p>
+            Come Direttore Generale presso il Ministero dell'Economia e delle Finanze, mi confronto con le sfide che l'innovazione pone alle istituzioni pubbliche. Come docente presso l'Università degli Studi Guglielmo Marconi, accompagno studenti e professionisti nello sviluppo delle conoscenze necessarie per leggere e comprendere un contesto in continua evoluzione.
+            <br><br>
+            Credo che la tecnologia rappresenti una straordinaria opportunità, ma che il suo valore non risieda negli strumenti in sé. L'intelligenza artificiale, i dati e le piattaforme digitali diventano realmente significativi quando aiutano le persone a comprendere meglio la realtà, rafforzando la capacità di giudizio e rendendo possibili decisioni più consapevoli ed efficaci.
+            <br><br>
+            Per questo considero l'innovazione soprattutto una sfida umana. Le tecnologie possono ampliare le nostre possibilità, ma sono sempre le persone a determinarne il significato, la direzione e l'impatto.
         </p>
     </div>
 </section>
@@ -127,89 +133,6 @@
     </footer>
 
 <!-- Script JavaScript -->
-    <script>
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const toggleIcon = mobileMenuToggle.querySelector('i');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            if (navMenu.classList.contains('active')) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-xmark');
-            } else {
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            }
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            });
-        });
-
-        const cardsContainer = document.getElementById('cardsContainer');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        function getScrollAmount() {
-            const card = cardsContainer.querySelector('.card');
-            return card ? card.offsetWidth + 20 : 300; 
-        }
-
-        nextBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-        });
-
-        prevBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-        });
-
-        const postsContainer = document.getElementById('postsContainer');
-        const postPrevBtn = document.getElementById('postPrevBtn');
-        const postNextBtn = document.getElementById('postNextBtn');
-
-        function getPostScrollAmount() {
-            const postCard = postsContainer.querySelector('.post-card');
-            return postCard ? postCard.offsetWidth + 30 : 330;
-        }
-
-        postNextBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        postPrevBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: -getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        const timelineWrapper = document.getElementById('timelineWrapper');
-        const timelinePrevBtn = document.getElementById('timelinePrevBtn');
-        const timelineNextBtn = document.getElementById('timelineNextBtn');
-
-        function getTimelineScrollAmount() {
-            const item = timelineWrapper.querySelector('.timeline-item');
-            return item ? item.offsetWidth + 40 : 300;
-        }
-
-        timelineNextBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-
-        timelinePrevBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-    </script>
+   <script src="assets/js/utility.js"></script>
 </body>
 </html>

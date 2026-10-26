@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michele Petrocelli | Website</title>
-    <!-- Collegamento al file CSS esterno -->
+     <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style-home.css">
     <!-- Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -134,7 +135,7 @@
                         <p>
                             Ogni organizzazione ha un futuro, anche quando non lo nomina. Lo si vede nei piani, nei bilanci, nelle riforme, nelle tecnologie che scegliamo e nelle ipotesi che diamo per scontate. In un mondo attraversato da crisi climatiche, trasformazioni digitali, cambiamenti demografici e tensioni geopolitiche, basare le decisioni su un unico futuro atteso rende più vulnerabili piani e strategie. 
                         </p>
-                        <a href="#" class="book-btn" title="Leggi scheda">LEGGI SCHEDA</a>
+                        <a href="governare-i-futuri.html" class="book-btn" title="Leggi scheda">LEGGI SCHEDA</a>
                     </div>
                 </div>
             </div>
@@ -154,7 +155,7 @@
                             Un tempo pensata e progettata come strumento di emancipazione e libertà, la rivoluzione digitale ha finito per generare un mondo in cui le opportunità si concentrano nelle mani di pochi, mentre sorveglianza e manipolazione si diffondono ovunque. 
                             Cos’è andato storto? E, soprattutto, è ancora possibile invertire la rotta?
                         </p>
-                        <a href="#" class="book-btn" title="Leggi scheda">LEGGI SCHEDA</a>
+                        <a href="il-paradosso-digitale.html" class="book-btn" title="Leggi scheda">LEGGI SCHEDA</a>
                     </div>
                 </div>
             </div>
@@ -410,89 +411,6 @@
     </footer>
 
 <!-- Script JavaScript -->
-    <script>
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const toggleIcon = mobileMenuToggle.querySelector('i');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            if (navMenu.classList.contains('active')) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-xmark');
-            } else {
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            }
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            });
-        });
-
-        const cardsContainer = document.getElementById('cardsContainer');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        function getScrollAmount() {
-            const card = cardsContainer.querySelector('.card');
-            return card ? card.offsetWidth + 20 : 300; 
-        }
-
-        nextBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-        });
-
-        prevBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-        });
-
-        const postsContainer = document.getElementById('postsContainer');
-        const postPrevBtn = document.getElementById('postPrevBtn');
-        const postNextBtn = document.getElementById('postNextBtn');
-
-        function getPostScrollAmount() {
-            const postCard = postsContainer.querySelector('.post-card');
-            return postCard ? postCard.offsetWidth + 30 : 330;
-        }
-
-        postNextBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        postPrevBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: -getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        const timelineWrapper = document.getElementById('timelineWrapper');
-        const timelinePrevBtn = document.getElementById('timelinePrevBtn');
-        const timelineNextBtn = document.getElementById('timelineNextBtn');
-
-        function getTimelineScrollAmount() {
-            const item = timelineWrapper.querySelector('.timeline-item');
-            return item ? item.offsetWidth + 40 : 300;
-        }
-
-        timelineNextBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-
-        timelinePrevBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-    </script>
+    <script src="assets/js/utility.js"></script>
 </body>
 </html>

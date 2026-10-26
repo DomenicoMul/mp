@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persone | Michele Petrocelli</title>
-    <!-- Collegamento al file CSS esterno -->
+  <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style-temi_page.css">
     <!-- Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -70,8 +71,19 @@
         <div class="coral-container">
             <div class="coral-half">
                 <span class="section-subtitle" style="color: #39001d;">il tema  </span>  
-                <p class="tema-testo">Una trasformazione riesce quando le persone che la abitano la fanno propria. Il tema riguarda competenze, motivazione e leadership, e la capacità delle organizzazioni di trasformare l’innovazione in valore condiviso.</p>
-             <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;">Continua a leggere &rarr;</button>
+                <p class="tema-testo">
+                    In un mondo caratterizzato da trasformazioni continue, il vero fattore distintivo delle organizzazioni non risiede nelle tecnologie che utilizzano, ma nelle persone che le popolano. Sono le persone a interpretare il cambiamento, a dare significato alle informazioni, a trasformare la conoscenza in decisioni e le idee in innovazione. La capacità di evolvere, quindi, dipende soprattutto da quanto le organizzazioni riescono a sviluppare, valorizzare e mettere in relazione le competenze delle persone che ne fanno parte.    
+                    <br><br>
+                    Le organizzazioni che innovano sono, prima di tutto, organizzazioni che apprendono. Ambienti in cui la conoscenza circola, le competenze si contaminano e l'esperienza individuale diventa patrimonio comune. L'innovazione non nasce infatti da un'intuizione isolata, ma dall'incontro tra persone, idee e prospettive differenti, all'interno di una cultura che valorizza il confronto, la collaborazione e la sperimentazione.
+                    <br><br>
+                    Al centro di questo modello si trova il gruppo. È nei team che la conoscenza si trasforma in azione, che le competenze individuali si combinano e che la collaborazione genera risultati superiori alla somma dei singoli contributi. Quando le persone condividono obiettivi, responsabilità e fiducia reciproca, si creano le condizioni per l'apprendimento continuo e per l'innovazione diffusa. E in questo contesto si modifica anche il significato della leadership: guidare non significa esercitare controllo, ma creare le condizioni affinché le persone possano esprimere il proprio potenziale. Il leader è chiamato a sviluppare autonomia, favorire la crescita delle competenze, alimentare la fiducia e costruire un contesto in cui ciascuno possa contribuire al raggiungimento di una visione condivisa.
+                    <br><br>
+All'interno di questo processo, l’intelligenza artificiale può accelerare l'accesso alla conoscenza, supportare l'apprendimento e amplificare le capacità delle persone. Non sostituisce, però, ciò che rende l'essere umano insostituibile: la capacità di attribuire significato alle informazioni, esercitare il giudizio, elaborare idee e immaginare soluzioni nuove. Il valore nasce dall'integrazione tra intelligenza umana e tecnologie, non dalla sostituzione dell'una con l'altra.
+                    <br><br>
+Le organizzazioni più efficaci sono quelle che riescono a coniugare competenze, autonomia e senso di appartenenza. Perché, anche nell'era dell'intelligenza artificiale, sono le persone, attraverso la loro capacità di apprendere, creare e collaborare, a determinare il futuro delle organizzazioni.
+                
+                </p>
+                <button id="btn-continua" style="background: none; border: none; color: #3c0692; ; cursor: pointer; padding: 0; margin-top: 20px;">Continua a leggere &rarr;</button>
             </div>
 
             <div class="coral-half">
@@ -337,127 +349,6 @@
     </footer>
 
 <!-- Script JavaScript -->
-    <script>
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const toggleIcon = mobileMenuToggle.querySelector('i');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            if (navMenu.classList.contains('active')) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-xmark');
-            } else {
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            }
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-            });
-        });
-
-        const cardsContainer = document.getElementById('cardsContainer');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        function getScrollAmount() {
-            const card = cardsContainer.querySelector('.card');
-            return card ? card.offsetWidth + 20 : 300; 
-        }
-
-        nextBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-        });
-
-        prevBtn.addEventListener('click', () => {
-            cardsContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-        });
-
-        const postsContainer = document.getElementById('postsContainer');
-        const postPrevBtn = document.getElementById('postPrevBtn');
-        const postNextBtn = document.getElementById('postNextBtn');
-
-        function getPostScrollAmount() {
-            const postCard = postsContainer.querySelector('.post-card');
-            return postCard ? postCard.offsetWidth + 30 : 330;
-        }
-
-        postNextBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        postPrevBtn.addEventListener('click', () => {
-            postsContainer.scrollBy({ left: -getPostScrollAmount(), behavior: 'smooth' });
-        });
-
-        const timelineWrapper = document.getElementById('timelineWrapper');
-        const timelinePrevBtn = document.getElementById('timelinePrevBtn');
-        const timelineNextBtn = document.getElementById('timelineNextBtn');
-
-        function getTimelineScrollAmount() {
-            const item = timelineWrapper.querySelector('.timeline-item');
-            return item ? item.offsetWidth + 40 : 300;
-        }
-
-        timelineNextBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-
-        timelinePrevBtn.addEventListener('click', () => {
-            timelineWrapper.scrollBy({ left: -getTimelineScrollAmount(), behavior: 'smooth' });
-        });
-    </script>
-     <script>
-  // Selezioniamo gli elementi
-  const paragrafo = document.querySelector(".tema-testo");
-  const btnContinua = document.getElementById("btn-continua");
-
-  // Salviamo il testo completo originale
-  const testoCompleto = paragrafo.textContent;
-  
-  // Imposta quanti caratteri mostrare nell'anteprima (es. 90 caratteri)
-  const limiteCaratteri = 260;
-
-  // Controlliamo se il testo è abbastanza lungo da dover essere troncato
-  if (testoCompleto.length > limiteCaratteri) {
-    // 1. Crea la versione ridotta con i puntini di sospensione
-    const testoRidotto = testoCompleto.substring(0, limiteCaratteri) + "...";
-    paragrafo.textContent = testoRidotto;
-
-    let eEspanso = false;
-
-    // 2. Gestisce il click sul pulsante
-    btnContinua.addEventListener("click", () => {
-      if (!eEspanso) {
-        // Mostra tutto il testo
-        paragrafo.textContent = testoCompleto;
-        btnContinua.textContent = "Mostra meno";
-        eEspanso = true;
-      } else {
-        // Torna alla versione ridotta
-        paragrafo.textContent = testoRidotto;
-        btnContinua.textContent = "Continua a leggere →";
-        eEspanso = false;
-      }
-    });
-  } else {
-    // Se il testo è già corto, nasconde il pulsante "Continua"
-    btnContinua.style.display = "none";
-  }
-   </script>
+ <script src="assets/js/utility.js"></script>
 </body>
 </html>

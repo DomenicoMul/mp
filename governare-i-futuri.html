@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governare i fututri | Michele Petrocelli</title>
+     <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style-home.css">
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Google Cursive per la scritta Post Digitale -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        .book-details-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #f0e2e2!important ;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    background-color: #ffffff; /* Sfondo bianco come nell'esempio */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #39001d; /* Riprende il colore principale del tuo sito */
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+.detail-item {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 15px;
+    min-height: 2.4em; /* Allinea l'altezza in caso di testo su due righe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-icon {
+    font-size: 1.5rem;
+    color: #39001d;
+    margin-bottom: 12px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Se al posto di FontAwesome vuoi usare delle immagini tue (.png o .svg): */
+.detail-icon img {
+    max-height: 30px;
+    width: auto;
+}
+
+.detail-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Responsive per smartphone */
+@media (max-width: 768px) {
+    .book-details-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- Header / Barra di Navigazione -->
+    <header id="navbar">
+        <div class="nav-container">
+            <!-- Logo a sinistra -->
+            <div class="nav-logo">
+               <a href="index.html">Michele Petrocelli</a>
+            </div>
+
+<!-- Menu di navigazione a 7 voci (centrale) -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                   <li><a href="index.html" >Home</a></li>
+                    <li><a href="profilo.html">Profilo</a></li>
+                    <li><a href="temi.html">Temi</a></li>
+                    <li><a href="pubblicazioni.html" class="active">Pubblicazioni</a></li>
+                    <li><a href="eventi.html">Eventi</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="pillowle.html">Pillo(w)le</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+
+<!-- Sezione destra: Lente di ricerca e Hamburger toggle -->
+            <div class="nav-right">
+                <div class="nav-search">
+                    <button aria-label="Cerca" onclick="window.location.href='ricerca.html';" title="Ricerca"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="nav-toggle" id="mobileMenuToggle" aria-label="Apri menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Sezione Libri in Evidenza -->
+    <section class="coral-books-section" style="background-color: #fff;">
+        <div class="coral-container" style="margin-top: 80px;">
+            <div class="coral-half" style="background-color: #eae9e9; border-radius: 20px; position: relative; overflow: hidden;">
+                <div id="ribbon" style="position: absolute; top: 15px; right: -35px; width: 120px; height: 25px; background-color: red; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                    NOVIT&Agrave;
+                </div>
+                
+                <div class="book-inner">
+                    <div class="book-image-det" style="background-color: #eae9e9!important;">
+                        <img src="assets/images/book-2.png" alt="Il paradosso digiatle " style="background-color: #eae9e9!important">
+                    </div>
+
+
+                    <div class="book-content">
+                       <span class="section-subtitle" >GAMBINI EDITORE &bull; 2026</span>
+                         <!--titolo-->
+                        <h1 style="font-family: 'Playfair Display', Georgia, serif!important;  font-size: 2.8rem; line-height: 3.8rem; ">GOVERNARE I FUTURI</h1>
+
+                         <span class="section-subtitle" ><i class="fa-solid fa-user"></i> michele petrocelli</span>
+                          
+
+                    
+
+                        <p style="margin-top: 30px;">
+                           Perché un modello pensato per liberare le persone sta diventando un sistema di sorveglianza, controllo e monopolio. E come fare per trasformarlo a vantaggio delle persone.
+                        </p>
+
+                        <P class="testo-profilo-sub" style="margin-top: 20px;  padding: 10px; border-radius: 10px; font-size: 2rem;  color: #3a3939;">
+                            <a href="https://www.gambinieditore.it/wp-content/uploads/2026/10/estratto_governare-i-futuri.pdf" class="book-btn" title="Scarica l'estratto"><i class="fa-solid fa-file-pdf" style="font-size: 1.2rem;"></i> Scarica l'estratto</a>
+                            <a href="https://www.gambinieditore.it/governare-i-futuri-di-michele-petrocelli/" class="book-btn" style="background-color: blueviolet;" title="Acquista"><i class="fa-solid fa-basket-shopping" style="font-size: 1.2rem;"></i> acquista</a>
+                        </P>
+
+                      
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+        <div class="coral-container" style="margin-top: 20px;">  
+
+                <P class="testo-profilo-sub" style="font-family: 'Playfair Display', Georgia, serif!important; font-style: italic; font-size: 1.8rem; padding: 50px; text-align: center;">
+                    "Lo Strategic Foresight offre strumenti preziosi per orientare le decisioni in contesti complessi e incerti, ma troppo spesso rimane confinato alla teoria. Da qui l'esigenza di raccogliere metodi, esperienze e pratiche capaci di renderlo uno strumento concreto per persone, organizzazioni e istituzioni."
+                </P>
+   
+        </div>
+
+         <div class="coral-container" style="margin-top: 20px; text-align: justify; font-size: 1.2rem;">  
+
+                <p>Ogni organizzazione ha un futuro, anche quando non lo nomina. Lo si vede nei piani, nei bilanci, nelle riforme, nelle tecnologie che scegliamo e nelle ipotesi che diamo per scontate. In un mondo attraversato da crisi climatiche, trasformazioni digitali, cambiamenti demografici e tensioni geopolitiche, basare le decisioni su un unico futuro atteso rende più vulnerabili piani e strategie. Governare i futuri mostra come usare lo Strategic Foresight per rendere esplicite le ipotesi che orientano le nostre scelte, esplorare scenari alternativi e mettere alla prova le decisioni. Il libro unisce teoria, casi internazionali, esempi italiani e strumenti operativi. Propone il ciclo integrato dei futuri: un modello che collega esplorazione, decisione e apprendimento, con una biblioteca dei futuri per organizzare la conoscenza e un agente di intelligenza artificiale a supporto del giudizio umano. Una guida per amministrazioni, organizzazioni e decisori che vogliono costruire la capacità di anticipare il cambiamento e assumere, nelle scelte di oggi, la responsabilità delle conseguenze di lungo periodo.</p>
+        </div>
+
+        <div class="book-details-container" >
+    
+    <!-- Colonna 1 -->
+    <div class="detail-item">
+        <span class="detail-label">Lunghezza stampa</span>
+        <div class="detail-icon">
+            <i class="fa-solid fa-book-open"></i> <!-- Oppure un tag <img> se usi un'icona personalizzata -->
+        </div>
+        <span class="detail-value">310 pagine</span>
+    </div>
+
+    <!-- Colonna 2 -->
+    <div class="detail-item">
+        <span class="detail-label">Lingua</span>
+        <div class="detail-icon">
+            <i class="fa-solid fa-globe"></i>
+        </div>
+        <span class="detail-value">Italiano</span>
+    </div>
+
+    <!-- Colonna 3 -->
+    <div class="detail-item">
+        <span class="detail-label">Editore</span>
+        <div class="detail-icon">
+            <i class="fa-solid fa-building"></i>
+        </div>
+        <span class="detail-value">Gambini Editore</span>
+    </div>
+
+    <!-- Colonna 4 -->
+    <div class="detail-item">
+        <span class="detail-label">Data di pubblicazione</span>
+        <div class="detail-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <span class="detail-value">09 ottobre 2026</span>
+    </div>
+
+    <!-- Colonna 5 -->
+    <div class="detail-item">
+        <span class="detail-label">ISBN-13</span>
+        <div class="detail-icon">
+            <i class="fa-solid fa-barcode"></i>
+        </div>
+        <span class="detail-value">979-1281805910</span>
+    </div>
+
+</div>
+    </section>
+
+    <!-- Sezione: Ultimi Contenuti -->
+    <section class="latest-posts-section">
+        <div class="latest-container">
+            <div class="section-header">
+                <span class="section-subtitle">Media & Recensioni</span>
+                <h2 class="section-title">Dicono del libro</h2>
+                <div class="tratto"></div>
+            </div>
+
+            <div class="posts-carousel-wrapper">
+                <button class="post-carousel-btn post-prev-btn" id="postPrevBtn" aria-label="Post precedente">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="posts-grid" id="postsContainer">
+                    <div class="post-card">
+                        
+                        <div class="post-body">
+                           
+                            <h3>Il Paradosso Digitale: la trappola dell'iper-connessione spiegata da Michele Petrocell</h3>
+                            <p>Un'analisi nitida e profonda su come la promessa di un mondo libero e interconnesso si sia trasformata in una gabbia di sorveglianza e algoritmi. Il saggio offre una chiave di lettura fondamentale per comprendere le contraddizioni dell'era tecnologica contemporanea e recuperare il valore della centralità umana</p>
+                           
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                       
+                        <div class="post-body">
+                          
+                            <h3>Dai dati al monopolio: come la tecnologia sta ridefinendo il valore delle persone</h3>
+                            <p>Nel suo ultimo libro, Michele Petrocelli esplora il confine tra opportunità digitale e controllo economico. Attraverso un esame rigoroso dei modelli di business delle Big Tech, l'autore mostra come trasformare la dipendenza tecnologica in una nuova opportunità di sviluppo etico ed equo.</p>                           
+                            
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        
+                        <div class="post-body">
+                            
+                            <h3>Riconquistare la libertà nell'era dei dati: la proposta de "Il Paradosso Digitale"</h3>
+                            <p>Non solo una diagnosi delle distorsioni del web, ma una vera e propria tabella di marcia per il futuro. Riflessioni e spunti operativi per impedire che gli strumenti pensati per emanciparci finiscano per limitare la nostra autonomia decisionale.</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        
+                        <div class="post-body">
+                            
+                            <h3>Perché "Il Paradosso Digitale" è una lettura indispensabile per il lettore consapevole</h3>
+                            <p>Un volume chiaro e incisivo che sintetizza con maestria le sfide tra intelligenza artificiale, sorveglianza e diritti individuali. Un'opera essenziale per chiunque voglia sviluppare un pensiero critico nei confronti dell'innovazione tecnologica.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <button class="post-carousel-btn post-next-btn" id="postNextBtn" aria-label="Post successivo">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+                
+        </div>
+    </section>
+  
+<!-- Sezione: Contatti -->
+    <section id="contatti" class="contact-section">
+        <div class="contact-card">
+            <div class="contact-info">                
+                 <h2 class="section-title">Restiamo in contatto</h2>
+                 <div class="tratto"></div>               
+            </div>             
+            <div class="contact-buttons">
+                <a href="mailto:m.petrocelli@unimarconi.it" target="_blank" class="contact-btn" aria-label="Invia un'email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Profilo LinkedIn">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Sezione: Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                &copy; 2026 Michele Petrocelli. Tutti i diritti riservati.
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookie-policy.html" title="Cookie Policy">Cookie Policy</a>
+                <a href="termini.html" title="Termini di Servizio">Termini di Servizio</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Script JavaScript -->
+    <script src="assets/js/utility.js"></script>
+</body>
+</html>
