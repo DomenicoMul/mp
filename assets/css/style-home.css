@@ -191,7 +191,6 @@
     height: auto;
     border-radius: 8px;
     object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .book-image-det {
@@ -206,7 +205,6 @@
     height: auto;
     border-radius: 8px;
     object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .book-content {
