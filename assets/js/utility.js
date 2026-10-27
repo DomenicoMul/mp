@@ -97,7 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+
     // --- 5. TEMA TESTO (LEGGI DI PIÙ) ---
+    /*
     const paragrafo = document.querySelector(".tema-testo");
     const btnContinua = document.getElementById("btn-continua");
 
@@ -126,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
             btnContinua.style.display = "none";
         }
     }
+    */    
 
     // --- 6. FILTRAGGIO COMBINATO (Categorie multiple + Barra di Ricerca) ---
     const filterButtons = document.querySelectorAll('.filter-btn');
