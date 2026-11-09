@@ -39,22 +39,26 @@ content:
             - name: pubblicazioni
               label: Pubblicazioni
     
+     
       - name: tags
         label: Temi
-        type: list
-        field:
-          type: select
-          options:
-            - label: AI
-              value: AI
-            - label: PA Post-Digitale
-              value: PA Post-Digitale
-            - label: Futuro
-              value: Futuro
-            - label: Persone
-              value: Persone
-            - label: Formazione
-              value: Formazione
+        type: select
+        required: true
+        options:
+          multiple: true
+          min: 1
+          values:
+            - name: AI
+              label: AI
+            - name: PA Post-Digitale
+              label: PA Post-Digitale
+            - name: Futuro
+              label: Futuro
+            - name: Persone
+              label: Persone
+            - name: Formazione
+              label: Formazione
+
           
 
       - name: cover
