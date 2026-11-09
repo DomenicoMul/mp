@@ -1,30 +1,29 @@
+media:
+  input: assets/images
+  output: /assets/images
+
 content:
   - name: posts
     label: "Articoli"
     type: collection
-    # Salva il file nella sottocartella corrispondente alla categoria scelta
     path: "_posts/{fields.categories}"
-    
-    # Formato del nome file standard per Jekyll
     filename: "{year}-{month}-{day}-{slug}.md"
-    
     format: yaml-frontmatter
-    
     fields:
       - name: title
         label: Titolo
         type: string
         required: true
-        
+
       - name: sub-title
         label: Sottotitolo
         type: string
-        
+
       - name: date
         label: Data
         type: date
         required: true
-        
+
       - name: categories
         label: Categoria
         type: select
@@ -35,29 +34,30 @@ content:
             - media
             - pillowle
             - pubblicazioni
-            
+
       - name: tags
         label: Tema
         type: list
         required: true
         field:
           type: select
-          values:
-            - AI
-            - PA Post-digitale
-            - Persone
-            - Futuro
-            - Formazione
-        
+          options:
+            values:
+              - AI
+              - PA Post-digitale
+              - Persone
+              - Futuro
+              - Formazione
+
       - name: cover
         label: Immagine di Copertina
         type: image
         required: true
-        
+
       - name: description
         label: Descrizione
         type: text
-        
+
       - name: body
         label: Contenuto
         type: rich-text
