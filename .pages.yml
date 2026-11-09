@@ -37,10 +37,15 @@ content:
 
       - name: tags
         label: Tema
-        type: list
+        type: select
         required: true
-        field:
-          type: string
+        multiple: true
+        options:
+          values:
+            - eventi
+            - media
+            - pillowle
+            - pubblicazioni
 
       - name: cover
         label: Immagine di Copertina
