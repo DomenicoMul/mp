@@ -30,6 +30,12 @@ content:
         required: true
         options:
           values:
+            - name: eventi
+            - label: Eventi
+            - name: media
+            - label: Media
+            - name: pillowle
+            - label: Pillo(w)le
             - eventi
             - media
             - pillowle
