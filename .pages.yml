@@ -37,13 +37,11 @@ content:
             - pubblicazioni
             
       - name: tags
-        label: Tema
-        type: list
-        required: true
-        options:
-        field:
-          type: select
-          options:
+          label: Tema
+          type: list
+          required: true
+          field:
+            type: select
             values:
               - AI
               - PA Post-digitale
