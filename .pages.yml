@@ -40,7 +40,12 @@ content:
         type: select
         multiple: true
         options:
-          values: [eventi, media, pillowle, pubblicazioni]
+          values:
+            - AI
+            - PA Post-digitale
+            - Persone
+            - Futuro
+            - Formazione
 
       - name: cover
         label: Immagine di Copertina
