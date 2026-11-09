@@ -44,6 +44,7 @@ content:
         label: Temi
         type: select
         required: true
+        multiple: true
         options:
           values:
             - name: AI
