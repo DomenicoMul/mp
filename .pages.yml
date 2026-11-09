@@ -37,10 +37,9 @@ content:
 
       - name: tags
         label: Tema
-        type: list
-        multiple: true
+        type: select
         field:
-          type: select
+          type: list
           options:
             values:
               - AI
