@@ -38,6 +38,7 @@ content:
       - name: tags
         label: Tema
         type: list
+        multiple: true
         field:
           type: select
           options:
