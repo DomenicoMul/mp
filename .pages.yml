@@ -38,15 +38,18 @@ content:
             
       - name: tags
         label: Tema
-        type: select
+        type: list
         required: true
         options:
-          values:
-            - AI
-            - PA Post-digitale
-            - Persone
-            - Futuro
-            - Formazione
+        field:
+          type: select
+          options:
+            values:
+              - AI
+              - PA Post-digitale
+              - Persone
+              - Futuro
+              - Formazione
         
       - name: cover
         label: Immagine di Copertina
