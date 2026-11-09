@@ -47,6 +47,7 @@ content:
         options:
           multiple: true
           min: 1
+          max: 5
           values:
             - name: AI
               label: AI
