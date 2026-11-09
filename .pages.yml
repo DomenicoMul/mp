@@ -37,7 +37,7 @@ content:
 
       - name: tags
         label: Tema
-        type: select
+        type:  select
         field:
           type: list
           options:
