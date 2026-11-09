@@ -39,7 +39,7 @@ content:
         label: Tema
         type: select
         required: true
-        multiple: true
+        min: 1
         options:
           values:
             - eventi
