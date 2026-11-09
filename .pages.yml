@@ -39,13 +39,6 @@ content:
         label: Tema
         type: list
         required: true
-        options:
-          values:
-            - AI
-            - PA Post-digitale
-            - Persone
-            - Futuro
-            - Formazione
 
       - name: cover
         label: Immagine di Copertina
