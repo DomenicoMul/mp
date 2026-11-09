@@ -1,21 +1,29 @@
+
 media:
   input: assets/images
   output: /assets/images
 
+settings:
+  content:
+    merge: true
+
 content:
-  - name: posts
-    label: "Articoli"
+  # ==================================
+  # PUBBLICAZIONI
+  # ==================================
+  - name: pubblicazioni
+    label: Pubblicazioni
     type: collection
-    path: "_posts/{fields.categories}"
+    path: "_posts/pubblicazioni"
     filename: "{year}-{month}-{day}-{slug}.md"
     format: yaml-frontmatter
-    fields:
+    fields: &pubblicazioni_fields
       - name: title
         label: Titolo
         type: string
         required: true
 
-      - name: sub-title 
+      - name: sub-title
         label: Sottotitolo
         type: string
 
@@ -26,20 +34,10 @@ content:
 
       - name: categories
         label: Categoria
-        type: select
-        required: true
-        options:
-          values:
-            - name: eventi
-              label: Eventi
-            - name: media
-              label: Media
-            - name: pillowle
-              label: Pillo(w)le
-            - name: pubblicazioni
-              label: Pubblicazioni
-    
-     
+        type: string
+        hidden: true
+        default: Pubblicazioni
+
       - name: tags
         label: Temi
         type: select
@@ -60,10 +58,255 @@ content:
             - name: Formazione
               label: Formazione
 
-          
+      - name: cover
+        label: Immagine di copertina
+        type: image
+        required: true
+
+      - name: description
+        label: Descrizione
+        type: text
+
+      # Campi specifici pubblicazioni
+
+      - name: is_libro
+        label: È un libro?
+        type: boolean
+
+      - name: copertina
+        label: Copertina del libro
+        type: image
+
+      - name: editore
+        label: Editore
+        type: string
+
+      - name: pagine
+        label: Pagine
+        type: number
+
+      - name: lingua
+        label: Lingua
+        type: string
+
+      - name: isbn
+        label: ISBN
+        type: string
+
+      - name: pubblicazione
+        label: Data pubblicazione libro
+        type: string
+
+      - name: estratto
+        label: URL estratto
+        type: string
+
+      - name: carrello
+        label: URL acquisto
+        type: string
+
+      - name: novita
+        label: Novità
+        type: boolean
+
+      - name: body
+        label: Contenuto
+        type: rich-text
+
+  # ==================================
+  # EVENTI
+  # ==================================
+  - name: eventi
+    label: Eventi
+    type: collection
+    path: "_posts/eventi"
+    filename: "{year}-{month}-{day}-{slug}.md"
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Titolo
+        type: string
+        required: true
+
+      - name: sub-title
+        label: Sottotitolo
+        type: string
+
+      - name: date
+        label: Data
+        type: date
+        required: true
+
+      - name: categories
+        label: Categoria
+        type: string
+        hidden: true
+        default: Eventi
+
+      - name: tags
+        label: Temi
+        type: select
+        required: true
+        options:
+          multiple: true
+          min: 1
+          max: 5
+          values:
+            - name: AI
+              label: AI
+            - name: PA Post-Digitale
+              label: PA Post-Digitale
+            - name: Futuro
+              label: Futuro
+            - name: Persone
+              label: Persone
+            - name: Formazione
+              label: Formazione
 
       - name: cover
-        label: Immagine di Copertina
+        label: Immagine di copertina
+        type: image
+        required: true
+
+      - name: description
+        label: Descrizione
+        type: text
+
+      # Campi specifici eventi
+
+      - name: img-link
+        label: URL video
+        type: string
+
+      - name: body
+        label: Contenuto
+        type: rich-text
+
+  # ==================================
+  # MEDIA
+  # ==================================
+  - name: media
+    label: Media
+    type: collection
+    path: "_posts/media"
+    filename: "{year}-{month}-{day}-{slug}.md"
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Titolo
+        type: string
+        required: true
+
+      - name: sub-title
+        label: Sottotitolo
+        type: string
+
+      - name: date
+        label: Data
+        type: date
+        required: true
+
+      - name: categories
+        label: Categoria
+        type: string
+        hidden: true
+        default: Media
+
+      - name: tags
+        label: Temi
+        type: select
+        required: true
+        options:
+          multiple: true
+          min: 1
+          max: 5
+          values:
+            - name: AI
+              label: AI
+            - name: PA Post-Digitale
+              label: PA Post-Digitale
+            - name: Futuro
+              label: Futuro
+            - name: Persone
+              label: Persone
+            - name: Formazione
+              label: Formazione
+
+      - name: cover
+        label: Immagine di copertina
+        type: image
+        required: true
+
+      - name: description
+        label: Descrizione
+        type: text
+
+      # Campi specifici media
+
+      - name: img-link
+        label: URL video
+        type: string
+
+      - name: fonte
+        label: Fonte
+        type: string
+
+      - name: body
+        label: Contenuto
+        type: rich-text
+
+  # ==================================
+  # PILLO(W)LE
+  # ==================================
+  - name: pillowle
+    label: Pillo(w)le
+    type: collection
+    path: "_posts/pillowle"
+    filename: "{year}-{month}-{day}-{slug}.md"
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Titolo
+        type: string
+        required: true
+
+      - name: sub-title
+        label: Sottotitolo
+        type: string
+
+      - name: date
+        label: Data
+        type: date
+        required: true
+
+      - name: categories
+        label: Categoria
+        type: string
+        hidden: true
+        default: Pillowle
+
+      - name: tags
+        label: Temi
+        type: select
+        required: true
+        options:
+          multiple: true
+          min: 1
+          max: 5
+          values:
+            - name: AI
+              label: AI
+            - name: PA Post-Digitale
+              label: PA Post-Digitale
+            - name: Futuro
+              label: Futuro
+            - name: Persone
+              label: Persone
+            - name: Formazione
+              label: Formazione
+
+      - name: cover
+        label: Immagine di copertina
         type: image
         required: true
 
