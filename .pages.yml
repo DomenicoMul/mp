@@ -31,13 +31,13 @@ content:
         options:
           values:
             - name: eventi
-            - label: Eventi
+              label: Eventi
             - name: media
-            - label: Media
+              label: Media
             - name: pillowle
-            - label: Pillo(w)le
+              label: Pillo(w)le
             - name: pubblicazioni
-            - label: Pubblicazioni
+              label: Pubblicazioni
             
 
       - name: tags
