@@ -35,10 +35,12 @@ content:
             - pillowle
             - pubblicazioni
 
-      - name: tags
+     - name: tags
         label: Tema
         type: list
         required: true
+        field:
+          type: string
 
       - name: cover
         label: Immagine di Copertina
