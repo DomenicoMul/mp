@@ -39,14 +39,8 @@ content:
         label: Tema
         type: select
         required: true
-        min: 1
-        max: 5
         options:
-          values:
-            - eventi
-            - media
-            - pillowle
-            - pubblicazioni
+          values: [eventi, media, pillowle, pubblicazioni]
 
       - name: cover
         label: Immagine di Copertina
