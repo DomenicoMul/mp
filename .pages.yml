@@ -74,7 +74,7 @@ content:
       - name: title
         label: Titolo
         type: string
-        required: true
+        required: true 
 
       - name: sub-title
         label: Sottotitolo
