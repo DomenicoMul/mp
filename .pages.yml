@@ -36,10 +36,8 @@ content:
             - label: Media
             - name: pillowle
             - label: Pillo(w)le
-            - eventi
-            - media
-            - pillowle
-            - pubblicazioni
+            - name: pubblicazioni
+            - label: Pubblicazioni
 
       - name: tags
         label: Tema
