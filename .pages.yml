@@ -41,8 +41,17 @@ content:
             
 
       - name: tags
-        label: Tema
-        type: list
+        label: Temi
+        type: select
+        required: true
+        options:
+          values:
+            - name: AI
+            - name: PA Post-Digitale           
+            - name: Futuro         
+            - name: Persone          
+            - name: Formazione
+        
 
       - name: cover
         label: Immagine di Copertina
