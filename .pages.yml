@@ -1,31 +1,62 @@
-media:
-  input: public/images
-  output: /images
-
 content:
-  - name: articoli
-    label: Articoli del Blog
+  - name: posts
+    label: "Articoli"
     type: collection
-    path: content/posts
+    # Salva il file nella sottocartella corrispondente alla categoria scelta
+    path: "_posts/{fields.categories}"
+    
+    # Formato del nome file standard per Jekyll
+    filename: "{year}-{month}-{day}-{slug}.md"
+    
+    format: yaml-frontmatter
+    
     fields:
       - name: title
-        label: Titolo dell'articolo
+        label: Titolo
         type: string
         required: true
-      - name: category
-        label: Categoria
-        type: select
-        options:
-          values:
-            - Tecnologie
-            - Viaggi
-            - Vita Personale
-            - Tutorial
-        required: true
+        
+      - name: sub-title
+        label: Sottotitolo
+        type: string
+        
       - name: date
         label: Data
         type: date
         required: true
+        
+      - name: categories
+        label: Categoria
+        type: select
+        required: true
+        options:
+          values:
+            - eventi
+            - media
+            - pillowle
+            - pubblicazioni
+            
+      - name: tags
+        label: Tema
+        type: select
+        required: true
+        options:
+          values:
+            - AI
+            - PA Post-digitale
+            - Persone
+            - Futuro
+            - Formazione
+        
+      - name: cover
+        label: Immagine di Copertina
+        type: image
+        required: true
+        
+      - name: description
+        label: Descrizione
+        type: text
+        
       - name: body
-        label: Contenuto dell'articolo
+        label: Contenuto
         type: rich-text
