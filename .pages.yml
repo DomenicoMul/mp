@@ -39,19 +39,19 @@ content:
             - name: pubblicazioni
               label: Pubblicazioni
     
-    - name: tags
-       label: Temi
-       type: list
-       fields:
-         - type: select
-           options:
-             values:
-               - AI
-               - PA Post-Digitale
-               - Futuro
-               - Persone
-               - Formazione
-        
+      - name: tags
+        label: Temi
+        type: list
+        fields:
+          - type: select
+            options:
+              values:
+                - AI
+                - PA Post-Digitale
+                - Futuro
+                - Persone
+                - Formazione
+          
 
       - name: cover
         label: Immagine di Copertina
