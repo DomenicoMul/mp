@@ -42,15 +42,19 @@ content:
       - name: tags
         label: Temi
         type: list
-        fields:
-          - type: select
-            options:
-              values:
-                - AI
-                - PA Post-Digitale
-                - Futuro
-                - Persone
-                - Formazione
+        field:
+          type: select
+          options:
+            - label: AI
+              value: AI
+            - label: PA Post-Digitale
+              value: PA Post-Digitale
+            - label: Futuro
+              value: Futuro
+            - label: Persone
+              value: Persone
+            - label: Formazione
+              value: Formazione
           
 
       - name: cover
