@@ -37,17 +37,17 @@ content:
             - pubblicazioni
             
       - name: tags
-          label: Tema
-          type: list
-          required: true
-          field:
-            type: select
-            values:
-              - AI
-              - PA Post-digitale
-              - Persone
-              - Futuro
-              - Formazione
+        label: Tema
+        type: list
+        required: true
+        field:
+          type: select
+          values:
+            - AI
+            - PA Post-digitale
+            - Persone
+            - Futuro
+            - Formazione
         
       - name: cover
         label: Immagine di Copertina
