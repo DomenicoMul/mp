@@ -15,7 +15,7 @@ content:
         type: string
         required: true
 
-      - name: sub-title
+      - name: sub-title 
         label: Sottotitolo
         type: string
 
