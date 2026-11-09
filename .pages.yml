@@ -38,7 +38,7 @@ content:
       - name: tags
         label: Tema
         type: select
-        required: true
+        multiple: true
         options:
           values: [eventi, media, pillowle, pubblicazioni]
 
