@@ -42,16 +42,16 @@ content:
 
       - name: tags
         label: Temi
-        type: select
-        required: true
-        multiple: true
-        options:
-          values:
-            - name: AI
-            - name: PA Post-Digitale           
-            - name: Futuro         
-            - name: Persone          
-            - name: Formazione
+        type: list
+        field:
+          type: select
+          options:
+            values:
+              - AI
+              - PA Post-Digitale
+              - Futuro
+              - Persone
+              - Formazione
         
 
       - name: cover
