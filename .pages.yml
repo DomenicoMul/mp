@@ -312,7 +312,7 @@ content:
 
       - name: description
         label: Descrizione
-        type: text
+        type: text 
 
       - name: body
         label: Contenuto
