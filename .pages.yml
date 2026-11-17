@@ -316,6 +316,8 @@ content:
       - name: cover
         label: Immagine di copertina
         type: image
+        options:
+          path: pillowle
         required: true
 
       - name: description
