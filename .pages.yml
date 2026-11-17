@@ -167,10 +167,12 @@ content:
             - name: Formazione
               label: Formazione
 
-      - name: cover
-        label: Immagine di copertina
-        type: image
-        required: true
+            - name: cover
+              label: Immagine di copertina
+              type: image
+              options:
+                path: eventi
+              required: true
 
       - name: description
         label: Descrizione
