@@ -241,6 +241,8 @@ content:
       - name: cover
         label: Immagine di copertina
         type: image
+        options:
+          path: media
         required: true
 
       - name: description
