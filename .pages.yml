@@ -95,7 +95,7 @@ content:
         label: Copertina del libro
         type: image
         options:
-          path: pubblicazioni
+          media: pubblicazioni
 
       - name: editore
         label: Editore
@@ -133,7 +133,7 @@ content:
         label: Contenuto
         type: rich-text
         options:
-          path: pubblicazioni
+          media: pubblicazioni
 
   # ==================================
   # EVENTI
@@ -189,7 +189,7 @@ content:
         label: Immagine di copertina
         type: image
         options:
-          path: eventi
+          media: eventi
         required: true
 
       - name: description
@@ -206,7 +206,7 @@ content:
         label: Contenuto
         type: rich-text
         options:
-          path: eventi
+          media: eventi
 
   # ==================================
   # MEDIA
@@ -262,7 +262,7 @@ content:
         label: Immagine di copertina
         type: image
         options:
-          path: media
+          media: media
         required: true
 
       - name: description
@@ -283,7 +283,7 @@ content:
         label: Contenuto
         type: rich-text
         options:
-          path: media
+          media: media
 
   # ==================================
   # PILLO(W)LE
@@ -339,7 +339,7 @@ content:
         label: Immagine di copertina
         type: image
         options:
-          path: pillowle
+          media: pillowle
         required: true
 
       - name: description
@@ -350,4 +350,4 @@ content:
         label: Contenuto
         type: rich-text
         options:
-          path: pillowle
+          media: pillowle
