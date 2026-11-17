@@ -1,7 +1,23 @@
-
 media:
-  input: assets/images
-  output: /assets/images
+  - name: pubblicazioni
+    label: Immagini pubblicazioni
+    input: assets/images/pubblicazioni
+    output: /assets/images/pubblicazioni
+
+  - name: eventi
+    label: Immagini eventi
+    input: assets/images/eventi
+    output: /assets/images/eventi
+
+  - name: media
+    label: Immagini media
+    input: assets/images/media
+    output: /assets/images/media
+
+  - name: pillowle
+    label: Immagini pillowle
+    input: assets/images/pillowle
+    output: /assets/images/pillowle
 
 settings:
   content:
