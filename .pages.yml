@@ -61,6 +61,8 @@ content:
       - name: cover
         label: Immagine di copertina
         type: image
+        options:
+          path: pubblicazioni
         required: true
 
       - name: description
@@ -76,6 +78,8 @@ content:
       - name: copertina
         label: Copertina del libro
         type: image
+        options:
+          path: pubblicazioni
 
       - name: editore
         label: Editore
