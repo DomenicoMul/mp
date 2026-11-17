@@ -22,7 +22,7 @@ Se c’è un messaggio che ha attraversato l’intera conversazione è che la qu
 Un ringraziamento a tutte le persone che hanno partecipato all’incontro e hanno contribuito con domande, osservazioni e punti di vista diversi. Un ringraziamento particolare a Pietro De Leo per aver accompagnato la conversazione, alla libreria Mondadori per l’ospitalità e a Gambini Editore, che ha creduto fin dall’inizio in un progetto editoriale che parla di consapevolezza prima ancora che di intelligenza artificiale.
 
 
-| ![](</assets/images/pubblicazioni/WhatsApp Image 2026-11-16 at 11.26.40.jpeg>) | ![](</assets/images/pubblicazioni/WhatsApp Image 2026-11-16 at 11.29.28.jpeg>) | ![](</assets/images/pubblicazioni/WhatsApp Image 2026-11-16 at 11.29.43.jpeg>) |
+| ![](</assets/images/eventi/WhatsApp Image 2026-11-16 at 11.26.40.jpeg>) | ![](</assets/images/eventi/WhatsApp Image 2026-11-16 at 11.29.28.jpeg>) | ![](</assets/images/eventi/WhatsApp Image 2026-11-16 at 11.29.43.jpeg>) |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |  |
 |  |  |  |
