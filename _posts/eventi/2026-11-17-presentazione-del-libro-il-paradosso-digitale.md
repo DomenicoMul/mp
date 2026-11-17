@@ -8,13 +8,9 @@ tags:
   - Futuro
 cover: /assets/images/eventi/paradosso-digitale_presentazione_cover.jpg
 ---
-Ogni trasformazione tecnologica porta con sé una domanda fondamentale: chi sta decidendo la direzione del cambiamento?
-
-
-
 È una domanda che accompagna da anni il mio percorso di ricerca e che è diventata sempre più urgente osservando l’impatto delle tecnologie digitali sul lavoro, sull’educazione, sull’informazione e, più in generale, sulla vita delle persone.
 
-
+È una domanda che accompagna da anni il mio percorso di ricerca e che è diventata sempre più urgente osservando l’impatto delle tecnologie digitali sul lavoro, sull’educazione, sull’informazione e, più in generale, sulla vita delle persone.
 
 Da questa riflessione nasce Il Paradosso Digitale, un libro che affronta il tema dell’intelligenza artificiale non come una questione riservata agli specialisti o alle grandi piattaforme tecnologiche, ma come una trasformazione destinata a influenzare tutti noi, il modo in cui lavoriamo, apprendiamo, prendiamo decisioni ed esercitiamo i nostri diritti.  
 
