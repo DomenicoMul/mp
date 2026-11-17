@@ -116,6 +116,8 @@ content:
       - name: body
         label: Contenuto
         type: rich-text
+        options:
+          path: pubblicazioni
 
   # ==================================
   # EVENTI
@@ -187,6 +189,8 @@ content:
       - name: body
         label: Contenuto
         type: rich-text
+        options:
+          path: eventi
 
   # ==================================
   # MEDIA
