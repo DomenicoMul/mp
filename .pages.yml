@@ -333,3 +333,5 @@ content:
       - name: body
         label: Contenuto
         type: rich-text
+        options:
+          path: pillowle
