@@ -78,7 +78,7 @@ content:
         label: Immagine di copertina
         type: image
         options:
-          path: pubblicazioni
+          media: pubblicazioni
         required: true
 
       - name: description
